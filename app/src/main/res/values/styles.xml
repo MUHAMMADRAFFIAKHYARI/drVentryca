@@ -1,0 +1,53 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/bleu_de_france</item>
+        <item name="colorPrimaryDark">@color/bleu_de_france</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/rajah</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme3" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/dark_cerulian</item>
+        <item name="colorAccent">@color/dark_cerulian</item>
+        <item name="android:statusBarColor">@color/colorWhite</item>
+    </style>
+
+    <style name="SpinnerTextViewItem" >
+        <item name="android:textSize" >16sp</item>
+        <item name="android:fontFamily" >@font/monts_regular</item>
+    </style>
+
+    <style name="AppTheme4" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorAccent">@color/dark_cerulian</item>
+        <item name="colorPrimaryDark">@color/colorWhite</item>
+    </style>
+
+    <style name="AppTheme5" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/rajah</item>
+    </style>
+
+    <style name="ForAnimationAct" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@style/customAnimation</item>
+    </style>
+
+    <style name="customAnimation" parent="ForAnimationAct">
+        <item name="colorPrimaryDark">@color/dark_cerulian</item>
+        <item name="android:activityOpenEnterAnimation">@anim/left_slide_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/right_slide_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/right_slide_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/left_slide_out_paralax</item>
+    </style>
+
+</resources>

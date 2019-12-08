@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <!-- <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">-->
+
+        <RelativeLayout android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:id="@+id/mb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view2"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/monts_regular"
+                android:text="70"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/imt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view2"
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="186dp"
+                android:layout_toEndOf="@+id/goldar"
+                android:fontFamily="@font/monts_regular"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view2"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="60dp"
+                android:layout_toEndOf="@+id/mb"
+                android:fontFamily="@font/monts_regular"
+                android:text="kg"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/mb"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="166dp"
+                android:layout_marginTop="-2dp"
+                android:fontFamily="@font/monts_regular"
+                android:text="170"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tb"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toEndOf="@+id/tb"
+                android:fontFamily="@font/monts_regular"
+                android:text="cm"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="352dp"
+                android:layout_marginTop="-30dp"
+                android:background="@drawable/round_style1" />
+
+            <TextView
+                android:id="@+id/nama_depan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="210dp"
+                android:fontFamily="@font/monts_black"
+                android:text="BAMBANG"
+                android:textColor="@color/dark_cerulian"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bigText4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nama_depan"
+                android:layout_alignStart="@+id/nama_depan"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/monts_regular"
+                android:text="PRASETYO"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/user_image"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="-150dp"
+                android:layout_marginEnd="-40dp"
+                app:srcCompat="@drawable/kuuga4" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mb"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/monts_regular"
+                android:text="Massa Tubuh"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/imageView4"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/imageView4"
+                android:fontFamily="@font/monts_regular"
+                android:text="Laki-Laki"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/age"
+                android:layout_alignStart="@+id/imageView12"
+                android:layout_marginTop="55dp"
+                android:fontFamily="@font/monts_regular"
+                android:text="Dugaan saya: Demam Tifoid (Tifus)"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView29"
+                android:layout_alignStart="@+id/imageView12"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/monts_regular"
+                android:text="Hasil diagonis: Perotinitis"
+                android:textSize="16sp" />
+
+            <!--android:fontFamily="@font/monts_regular"-->
+
+            <!--<Button
+                android:id="@+id/cek_mt"
+                android:layout_width="124dp"
+                android:layout_height="25dp"
+                android:layout_alignBottom="@+id/age"
+                android:layout_marginStart="75dp"
+                android:layout_marginBottom="1dp"
+                android:layout_toEndOf="@+id/age"
+                android:background="@drawable/round_style5"
+                android:foregroundGravity="center|center_horizontal"
+                android:gravity="center|center_horizontal"
+                android:text="Cek IMT saya"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />-->
+
+            <TextView
+                android:id="@+id/goldar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/imageView11"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/imageView11"
+                android:fontFamily="@font/monts_regular"
+                android:text="O"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/imageView12"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/imageView12"
+                android:fontFamily="@font/monts_regular"
+                android:text="20 Tahun"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/textView"
+                android:layout_marginStart="30dp"
+                android:layout_toEndOf="@+id/textView"
+                android:fontFamily="@font/monts_regular"
+                android:text="Tinggi Badan"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/textView"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="38dp"
+                app:srcCompat="@drawable/icon_gender" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/imageView4"
+                android:layout_alignStart="@+id/imageView4"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/icon_blood" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/imageView11"
+                android:layout_alignStart="@+id/imageView11"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/icon_age" />
+
+        </RelativeLayout>
+    <!--</ScrollView>-->
+
+
+</RelativeLayout>

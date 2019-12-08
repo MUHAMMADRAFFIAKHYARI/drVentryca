@@ -1,0 +1,154 @@
+<resources xmlns:app="http://schemas.android.com/apk/res-auto">
+    <string name="app_name">dr Ventryca</string>
+    <string name="starter_text">Imunitas tubuh kita dibentuk di pencernaan, yang terus membedakan mana bakteri baik dan buruk untuk kesehatan tubuh secara umum.</string>
+    <string name="app_desc">Aplikasi ini bernama dr Ventryca, aplikasi ini dibuat untuk membantu pengguna untuk mendiagnosis masalah pencernaan juga dengan fitur lainnya yang membantu pengguna untuk menjalani hidup lebih sehat. Dibuat untuk memenuhi tugas besar matakuliah PAB dan PAIM.
+    </string>
+    <string name="app_desc2"><b>DIAGNOSIS</b>\nIdentifikasi penyakit pencernaan dengan cara mencocokkan gejala yang ada dan dirasakan pengguna dan akan muncul penyakit yang diduga kuat diderita. \n \n<b>DATA PENYAKIT</b>
+        \nTerdapat data penyakit yang berhubungan dengan pencernaan definisi, deskripsi, cara mengobati, saran penyembuhan dan lain-lain.\n \n<b>FAKTA &amp; TIPS</b>
+        \nBerisi tentang fakta &amp; tips untuk menjaga kesehatan badan melalui makanan dan kebiaasan yang mendukung fitalitas dan imunitas tubuh.
+    </string>
+
+    <string name="link_sumber">
+        http://repository.uinjkt.ac.id/dspace/handle/123456789/15363
+    </string>
+    <string name="bio_ihya">
+        Ihya Fathurrahman \n(17523126) \n
+        Informatika UII 2017 \n
+    </string>
+    <string name="bio_arif">
+        Muhammad Arif Idris (17523127)\n
+        Informatika UII 2017\n
+
+    </string>
+    <string name="bio_toni">
+        Hirzin Fathoni\n
+        (17523128)\n
+        Informatika UII 2017\n
+
+    </string>
+    <string name="bio_raffi">
+        Muhammad Raffi Akhyari (17523207)\n
+        Informatika UII 2017\n
+
+    </string>
+    <string name="card_text3"><![CDATA[Fakta & Tips Kesehatan]]></string>
+    <string name="ready_diagnosis">
+        Anda akan melakukan serangkaian test dengan menjawab beberapa pertanyaan
+        mengenai gejala-gejala yang anda rasakan untuk mengetahui penyakit yang diderita
+    </string>
+    <string-array name="goldar">
+        <item>Golongan Darah</item>
+        <item>A</item>
+        <item>B</item>
+        <item>O</item>
+        <item>AB</item>
+    </string-array>
+
+    <string-array name="fakta_tips">
+        <item>Solusi nutrisi dari percernaan yang terbaik ada dua yaitu prebiotik dan probiotik</item>
+        <item>Air kelapa mengandung asam amino yang tinggi dan sifat mineral didalamnya nano maka air kelapa sangatlah steril dan isotonik dengan tubuh manusia.</item>
+        <item>Ibu hamil sangat bagus dan butuh nutrisi yang diperlukan janinnya seperti asam folat, asam amino &amp; zat besi. Maka mengkonsumsi 1 sendok madu, 1 sendok zaitun dan 7 butir kurma setiap harinya selama masa kehamilan nutrisi-nutrisi tersebut akan terpenuhi.</item>
+        <item>Detoksifikasi tubuh dapat dilakukan dengan mengkonsumi air nano/air alkali/infused water, dan salah satunya adalah air kelapa terutama air kelapa muda</item>
+        <item>Daun pandan dapat memberikan efek sedatif (penenang) pada tubuh ketika dikonsumi</item>
+        <item>Tubuh yang kelebihan berat badan adalah dikarenakan banyaknya lemak yang tertimbun</item>
+        <item>Lemak yang tertimbun akibat dari pada glukosa yang tidak terpakai yang berubah menjadi glikogen dan akhirnya menjadi lemak</item>
+        <item>Nasi, tepung, gula adalah contoh glukosa yang mana zaman sekarang sering dan banyak dikomsumsi</item>
+        <item>80% ekspresi gen kita dalam tiga bulan dapat diubah dengan makan makanan berbasis buah dan sayur</item>
+        <item>saya ada sesuatu nih gan</item>
+    </string-array>
+
+    <string-array name="penjelasan">
+        <item>penjelasan1</item>
+        <item>penjelasan2</item>
+        <item>penjelasan3</item>
+        <item>penjelasan4</item>
+        <item>penjelasan5</item>
+        <item>penjelasan6</item>
+        <item>penjelasan7</item>
+        <item>penjelasan8</item>
+        <item>penjelasan9</item>
+        <item>penjelasan10</item>
+        <item>penjelasan11</item>
+        <item>penjelasan12</item>
+        <item>penjelasan13</item>
+        <item>penjelasan14</item>
+        <item>penjelasan15</item>
+        <item>penjelasan16</item>
+        <item>penjelasan17</item>
+        <item>penjelasan18</item>
+        <item>penjelasan19</item>
+        <item>penjelasan20</item>
+        <item>penjelasan21</item>
+        <item>penjelasan22</item>
+        <item>penjelasan23</item>
+        <item>penjelasan24</item>
+        <item>penjelasan25</item>
+        <item>penjelasan26</item>
+        <item>penjelasan27</item>
+        <item>penjelasan28</item>
+        <item>penjelasan29</item>
+        <item>penjelasan30</item>
+        <item>penjelasan31</item>
+        <item>penjelasan32</item>
+        <item>penjelasan33</item>
+        <item>penjelasan34</item>
+        <item>penjelasan35</item>
+        <item>penjelasan36</item>
+        <item>penjelasan37</item>
+        <item>penjelasan38</item>
+        <item>penjelasan39</item>
+        <item>penjelasan30</item>
+        <item>penjelasan41</item>
+        <item>penjelasan42</item>
+        <item>penjelasan43</item>
+        <item>penjelasan44</item>
+    </string-array>
+
+    <string-array name="disease_list">
+        <item>1. Esofagitis</item>
+        <item>2. Striktur Esofagus</item>
+        <item>3. Karsinoma Esofagus</item>
+        <item>4. Hernia Hiatus Esofagus</item>
+        <item>5. GERD(Gastroesofageal Refluks Disorder)</item>
+        <item>6. Akalasia</item>
+        <item>7. Kolesistitis</item>
+        <item>8. Grastitis Kronik</item>
+        <item>9. Grastitis Akut Kronik</item>
+        <item>10. Leiomiasarkoma Gaster</item>
+        <item>11. Ulkus Peptikum</item>
+        <item>12. Refluk Empedu</item>
+        <item>13. Ulkus Duodenum</item>
+        <item>14. Ulkus Gastrikum</item>
+        <item>15. Gastroentitis</item>
+        <item>16. Ileus</item>
+        <item>17. Penyakit Crohn</item>
+        <item>18. Bulimia Nervosa</item>
+        <item>19. Disentri Basilar</item>
+        <item>20. Divertikulitis</item>
+        <item>21. Apendisitis</item>
+        <item>22. Peritonitis</item>
+        <item>23. Demam Tifoid (Tifus)</item>
+        <item>24. Entritis</item>
+        <item>25. Stenosis Pilorus</item>
+        <item>26. Duodenitis</item>
+        <item>27. Karsinoma Lambung</item>
+        <item>28. Kolitis Crohn</item>
+        <item>29. Pencernaan Lemah</item>
+        <item>30. Kolitis Hemoragika</item>
+        <item>31. Penyakit Whipple</item>
+        <item>32. Travellers Diarrhea</item>
+        <item>33. Diare Akut</item>
+        <item>34. Diare Kronik</item>
+        <item>35. Divertikulosis</item>
+        <item>36. Kolitis Ulsaretiva</item>
+        <item>37. Amubiasis</item>
+        <item>38. Penyakit Seliak</item>
+        <item>39. Irritable Bowel Syndrom</item>
+        <item>40. Gatal Anus</item>
+        <item>41. Fissura Anus</item>
+        <item>42. Hemoroid</item>
+        <item>43. Penyakit Pilonidal</item>
+        <item>44. Abses Anorektal</item>
+    </string-array>
+
+</resources>
