@@ -63,53 +63,313 @@
     </string-array>
 
     <string-array name="penjelasan">
-        <item><b>Penjelasan</b>\n
+        <item>
+            <b>Penjelasan</b>\n
             Esofagitis adalah peradangan esophagus. Tekanan esophagus minimal 3mmHg. Jika kurang, makan akan terjadi refluk. Refluk ini akan mempengaruhi kepakaan selaput lender esophagus terhadap bahan refluk. Akibat rangsangan dari hasil refluk terhadap selaput lender esophagus ini dapat menimbulkan peradangan dan menimbulkan esophagitis. Perlu dilakukan tes Berntein dan esofagoskopi untuk menegakkan diagnosa.\n\n
-        <b>Pengobatan</b>\n
-        Untuk pengobatan awal, makanlah dengan jumlah sedikit tetapi sering dan tidak makan lagi 2-3 jam sebelum tidur. Saat tidur, posisi kepala ditinggikan sekitar 60 cm agar tekanan dalam lambung tidak meningkat. Kurangi pekerjaan yang perlu mengangkat beban yang berat untuk mengurangi tekanaan dalam lambung. Segeralah berobat ke dokter untuk penanganan lebih lanjut, karena mencegah lebih baik daripada mengobati.</item>
-        <item>penjelasan2</item>
-        <item>penjelasan3</item>
-        <item>penjelasan4</item>
-        <item>penjelasan5</item>
-        <item>penjelasan6</item>
-        <item>penjelasan7</item>
-        <item>penjelasan8</item>
-        <item>penjelasan9</item>
-        <item>penjelasan10</item>
-        <item>penjelasan11</item>
-        <item>penjelasan12</item>
-        <item>penjelasan13</item>
-        <item>penjelasan14</item>
-        <item>penjelasan15</item>
-        <item>penjelasan16</item>
-        <item>penjelasan17</item>
-        <item>penjelasan18</item>
-        <item>penjelasan19</item>
-        <item>penjelasan20</item>
-        <item>penjelasan21</item>
-        <item>penjelasan22</item>
-        <item>penjelasan23</item>
-        <item>penjelasan24</item>
-        <item>penjelasan25</item>
-        <item>penjelasan26</item>
-        <item>penjelasan27</item>
-        <item>penjelasan28</item>
-        <item>penjelasan29</item>
-        <item>penjelasan30</item>
-        <item>penjelasan31</item>
-        <item>penjelasan32</item>
-        <item>penjelasan33</item>
-        <item>penjelasan34</item>
-        <item>penjelasan35</item>
-        <item>penjelasan36</item>
-        <item>penjelasan37</item>
-        <item>penjelasan38</item>
-        <item>penjelasan39</item>
-        <item>penjelasan30</item>
-        <item>penjelasan41</item>
-        <item>penjelasan42</item>
-        <item>penjelasan43</item>
-        <item>penjelasan44</item>
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, makanlah dengan jumlah sedikit tetapi sering dan tidak makan lagi 2-3 jam sebelum tidur. Saat tidur, posisi kepala ditinggikan sekitar 60 cm agar tekanan dalam lambung tidak meningkat. Kurangi pekerjaan yang perlu mengangkat beban yang berat untuk mengurangi tekanaan dalam lambung. Segeralah berobat ke dokter untuk penanganan lebih lanjut, karena mencegah lebih baik daripada mengobati.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Struktur esophagus merupakan lumen karena fibrosis dinding esophagus. Proses ini terjadi akibat reaksi inflamasi yang disebabkan iritasi zat irita endogen refluks asam lambung atau oksigen (bahan korosif). Perlu dilakukan pemeriksaan secara radiologi dan esofagoskopi untuk menegakkan diagnose.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, makanlah makanan yang bergizi secara teratur dan pilihlah makanan yang mudah dicerna oleh lambung. Bila sakit berlanjut, segera berobat ke dokter untuk pengobatan selanjutnya.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Karsinoma esophagus adalah keganasan pada esophagus yang biasanya berupa karsinoma jenis epidermal dan berasal dari epitel skuamosa. Perlu dilakukan pemeriksaan diagnostic seperti : radiologi, endoskopi, sitology, USG, ataupun CT Scan, untuk menegakkan diagnosa.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatanya, segeralah berobat ke dokter agar mendapat pengobatan yang efektif karena penyakit ini termasuk penyakit yang sangat berbahaya.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Hernia Hiatus Esofagus, adalah suatu keadaan dimana terjadi perpindahan secara intermitter (sementara) atau permanen (menetap) bagian lambung, disertai perpindahan bagian esophagus dari intra abdomen ke dalam rongga dada melalui hiatus esophagus yang normal. Perlu dilakukan pemeriksaan diagnostic radiografi dan endoskopi untuk meneggakan diagnosa.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, makanalah makanan secara teratur, jangan sampai telat makan. Makanalah makanan yang lunak dan mudah dicerna. Bila sakitnya belum ada perubahan segera berobat ke dokter untuk penanganan lebih lanjut.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            GERD ( Gastroesofageal Refluks Disorder) merupakan kerusakan mukosa esophagus karena isi lambung kembali ke esophagus (refluks) yang terjadi berulang-ulang dalam jangka waktu yang lama. Perlu dilakukan pemeriksaan laboratorium.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, makanlah makanan yang mudah dicerna secara teratur. Lakukanlah penurunan berat badan secara sehat, misalnya diet makanan yang disertai olahraga ringan. Jika sakit berlanjut, segera berobat ke dokter agar mendapat perawatan intensif. Biasanya akan diberikan proto pump inhibitor, prokinetik dan H2 Bloker.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Akalasia adalah suatu keadaan yang ditandai oleh ketidak mampuan sfinkter bawah esophagus untuk melemas dan membuka pada saat proses menelan, perlu dilakukan pemeriksaan diagnostic/laboratorium, untuk menegakkan diagnose berupa radiologi dan biopsy.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, makanlah makanan yang cair, lunak dan hangat. Segeralah berobat ke dokter untuk pengobatan lebih lanjut.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Kolesistis adalah reaksi inflamasi akut dinding kandung empedu yang disertai keluhan nyeri perut kanan atas, nyeri tekan dan badan panas. Perlu dilakukan pemeriksaan diagnostic USG, Scintigrafi, untuk menegakkan diagnosa.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatanya, istirahat total. Berikan antibiotic agar dapat mengurangi nyeri. Segera berobat ke dokter untuk pengobatan lebih lanjut. Biasanya akan diberikan obat untuk mengurangi nyeri, seperti pirezepin, reseptor H2, simetidin dan ranitidine. Dan kurangi pemeberian antropin.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Gastritis Kronik adalah suatu peradangan bagian mukosa lambung yang menahan. Gastritis kronik baru merupakan diagnose setelah didasarkan pada hasil pemeriksaan hispatologi.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, istirahatlah yang cukup dan makanlah makanan yang cair dan lembek. Jika anda perokok, maka cobalah hindari karena dapat menghambat penyembuhan.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Gastritis akut erosive atau radang lambung (biasa disebut maag) merupakan suatu peradangan permukaan mukosa lambung yang akut dengan kerusakan-kerusakan erosi. Erosif karena perlukaan hanya pada bagian mukosa lambung yang disebabkan oleh alcohol, stress. Perlu dilakukan pemeriksaan diagnostic berupa : Endoskopi, Hispatologi biopsy mukosa lambung, Radiologi dengan kontras ganda untuk menegakkan diagnosa.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, hindari penyebab penyakit seperti mengkonsumsi alcohol atau narkoba, dan segeralah berobat ke dokter untuk pengobatan lebih lanjut Obat-obatan untuk penyakit iri adalah antacid sepereti H2 Bloker, dan ppi atau obat ulkus lambung yang lain. Bila perlu, dapat dilakukan operasi bedah.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Leiomiosarkoma Gaster adalah tumor non epithelial yang berasal dari otot polos yang berada di seluruh saluran cerna terutama pada lambungnya. Perlu dilakukan pemeriksaan diagnostic: Foto barium, Endoskopi, Biopsi, Angiogram, CT Scan; untuk menegakkan diagnosa.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatanya, segera berobat ke dokter karena sangat berbahaya dan merupakan penyakit ganas.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Ulkus Peptikum adalah suatu kelainan berupa adanya tukak terutama pada daerah proksimal duodenum dang gaster. Kelainan tersebut berhubungan dengan pepsin dan asam lambung, perlu dilakukan pemeriksaan endoskopi untuk meneggakan diagnosa.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, hindari makanan seperti cabe, lada, asam. Hindari merokok, karena dapat menghambat sembuhnya penyakit. Minumlah obat penetralisir asam pada lambung dan segera berobat ke dokter karena jika terjadi pendarahan akan dilakukan pembedahan.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Refluk Empedu merupakan masuknya kembali isi usus ke lambung sehingga mencemari isi lambung dan merupakan proses yang berlawanan dengan pengosongan lambung. Perlu dilakukan pemeriksaan diagnostik, seperti : Endoskopi, Hispatologi biopsi mukosa lambung dan Radiologi.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, istirahatlan yang cukup, makanlah makanan yang lunak dalam jumlah sedikit tetapi sering. Segeralah berobat ke dokter bila terasa sangat sakit di lambung. Biasanya akan diberikan obat 112 Bloking, Kolisteramin, Metoklopramid, Demperidon. Dapat dilakukan pembedahan jika terjadi komplikasi.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Ulkus Duodenum adalah tukak yang terjadi di duodenum dan disebabkan oleh infeksi Helicobacterpylori. Perlu dilakukan pemeriksaaan diagnostic : Radiologi, Endoskopi, Sinar Rontgen; untuk menegakkan diagnosa.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, makanlah makanan yang lunak dan mudah di cerna. Hindari pemakaian bumbu-bumbu yang terlalu keras. Jika penderita perokok, hindari merokok karena dapat menghambat penyembuhan. Segeralah berobat ke dokter untuk pengobatan lebih lanjut. Biasanya akan diberikan obat penekan sintesis asam lambnug beruba H2 Bloker, ppi, Amoksilin + PPI, bismuth + Tetrasiklin + metronidazole.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Ulkus Gastrikum merupakan suatu penyakit yang terjadi di slengkung atas lambung dan cenderung timbul di kemudian hari. Ulkus gastrikum cenderung menyebabkan pembekakan jaringan ke usus halus, sehingga dapat menghalangi lewatnya makanan yang berasa dari lambung.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, hindari makanan pedas dan berlemak. Minumlah obat penetralisir asam lambung. Segera berobat ke dokter jika nyeri semakin bertambah.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Gastrocntritis merupakan infeksi pada saluran pencernaan, yang biasanya disebabkan oleh infeksi yang menyebar melalui air dan makanan yang sudah tercemar oleh tinja yang terinfeksi.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatanya, biasakan mencuci tangan sebelum makan dan masaklah makanan dengan baik dan benar. Makanlah makanan yang lunak dan mudah dicerna. Hindari makanan pedas dan berlemak. Segera berobat ke dokter untuk pengobatan lebih lanjut.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Ileus adalah suatu keadaan di mana pergerakan kontraksi normal dinding usus untuk sementara waktu berhenti. Ileus dapat disebabkan oleh suatu infeksi atau bekuan darah di dalam perut. Untuk menetapkan diagnosa, perlu dilakukan pemeriksaan foto rontgen perut.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatanya, segera bawa berobat ke dokter untuk mendapatkan infus dan pengobatan medis lainya.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Crohn adalah inflamasi pada dinding usus. Penyakit ini biasanya menyerang pada usia 20-60 tahun. Perlu dilakukan pemeriksaan diagnostic untuk menegakkan diagnosa, seperti : Radiologi, Biopsi rectal, Sigmoideskopi, Periksa lab : darah rutin, LED, C, Reaktif protein.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal. Berikan makanan yang lunak, tidak merangsang, tinggi serat dan rendah lemak kepada penderita. Segera berobat ke dokter untuk pengobatan lebih lanjut. Biasanya akan diberikan obat sulfalazin, mesdazin, steroid imunosupresif.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Bulimia Nervosa adalah penyakit mental yang ditandai dengan pola makan yang berlebihan dan berbahaya. Penyakit ini merupakan gangguan makanan yang dikarakterisitikkan oleh kelebihan makanan yang mengandung laksatif, diuretic dan muntah yang dirangsang sendiri untuk saluran khusus terhadap makanan.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatanya, ijinkan penderita memilih makanan dan menerangkan keadaan yang dialami. Jangan biarkan penderita mengemut makanan. Segera berobat ke dokter untuk atas dehidrasi dan bahkan bisa merujuk ke ahli jiwa.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Disentri Basilar adalah suatu infeksi akut radang kolon yang disebabkan kuman genus shigella yang terdapat di lingkungan yang buruk.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, istirahat yang cukup dan makanlah makanan yang lunak. Berikan antibiotic berupa sulfanamid sesuai dosis. Segera berobat ke dokter jika kondisi belum membaik.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Divertkulitis merupakan protusi mukosa keluar kuman melalui lapisan otot sirkular dinding kolon, kemudian membentuk suatu kantung yang hanya terdiri atas lapisan mukosa dan terjadi infeksi. Perlu dilakukan kolonoskopi untuk menegakkan diagnose.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatanya, segera berobat ke dokter bila nyeri dan demamnya semakin bertambah.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Apendisitis adalah peradangan pada usus buntu (apendiks). Usus buntu merupakan penonjolan kecil yang berbentuk seperti jari, yang terdapat di usus besar.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, hindari makanan pedas dan berlemak. Makanlah makanan yang lunak seperti bubur, dan kunya dengan halus makanan yang dikonsumsi. Segeralah berobat ke dokter untuk pengobatan lebih lanjut.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Perionitis adalah peradangan yang biasanya disebabkan oleh infeksi pada selaput rongga perut.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatanya, segera berobat ke dokter, karena termasuk penyakit yang parah.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Tipus merupakan salah satu gangguan pencernaan yang cukup banyak diderita di Indonesia. Tipus disebabkan oleh kuman atau bakteri yang disebut Salmonella Typi (S. Typhi). Penyakit ini menular melalui makanan atau minuman yang terkontaminasi dengan kuman tipus.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, makanlah yang lunak dan mudah dicerna secara teratur. Jagalah kebersihan diri dan lingkungan dan hindari makanan pedas dan berlemak. Jika sakit berlanjut segera hubungi dokter untuk pengobatan lebih lanjut. Atau berikan antibiotic sesuai dosis agar kebal terhadap penyakit.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Enetritis merupakan peradangan usus besar dan usus halus yang disebabkan oleh infeksi seperti keracunan bakteri dalam makanan, khususnya bakteri salmonella.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, makanlah secara teratur dengan menu seimbang. Hindari makanan pedas dan berlemak. Segera hubungi dokter bila sakit perut tidak tertahan lagi.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Stenosis pylorus merupakan komplikasi pada ulkus duodenum dan umumnya terjadi pada orang dewasa dengan gejala nyeri perut, mual, dan muntah. Muntah menyembur keluar melalui hidung dan mulut dan terjadi penurunan berat badan.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatanya, hindari makanan yang pedas dan berlemak. Minumlah cairan yang banyak dan segera berobat ke dokter jika belum juga ada perubahan.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Duodenitis merupakan suatu radang pada mukosa duodenum, umumnya terletak pada bulbus dengan infiltrasi sel-sel radang terutama sel mononuclear pada lapisan superficial yang dapat sampai pada lapisan dalam. Perlu dilakukan pemeriksaan diagnostic seperti: radiologis dengan barium meal, andoskopi, atau hispatologi; untuk menegakkan diagnosa. \n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, makanlah makanan yang lunak dan mudah dicerna. Hindar merokok, karena dapat menghambat penyembuhan. Dan segera berobat ke dokter jika terjadi komplikasi.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Karsinoma Lambung adalah keganasan pada lambung (Kanker lambung) yang dapat disebabkan oleh makanan seperti acar, daging, dan ikan yang diasap atau yang mengandung banyak garam. Perlu dilakukan pemeriksaan diagnostic yaitu barium lambung dan endoskopi untuk menegakkan diagnose. Gejalanya adalah nyeri pada perut, mual dan tidak muntah, nyeri perut seperti ditusuk-tusuk, nyeri tulang, tinja berwarna kehitaman.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatanya, segera berobat ke dokter karena sudah sangat berbahaya. Biasanya akan dilakukan Reseksi lambung dan Kemoterapi terapi dengna 5-Fluorouracil, doxorubicin dan mitonyein C.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Kolitis Crohn adalah penyakit yang menyerupai penyakit crohn. Penyakit ini menyerang semua bagian saluran cerna. Perlu dilakukan pemeriksaan dengan radiologi untuk menegakkan diagnosa. Gejalanya adalah nyeri pada perut, mual dan tidak muntah, nyeri perut seperti ditusuk-tusuk, nyeri tekan pada perut, dinding perut tebal dan kaku dan demam.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, makanlah makanan yang lunak dan mudah dicerna. Segera berobat ke dokter untuk pengobatan lebih lanjut. Obat-obatan untuk penyakit ini adalah sulfalazin, mesdezin, steroid, imunosupresif. Jika terjadi kegagalan dengan pemberian obat, dapat dilakukan operasi.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Pencernaan pada manusia yang lemah dalam mencerna makanan. Penderita yang mengalami gangguan pencernaan lemah akan mengalamai berbagai gangguan pencernaan dan umumnya disebabkan oleh pola makan yang kurang baik. Gejalanya adalah nyeri pada perut, mual, dan tidak muntah, panas pada perut, sering buang air besar, tinja cair, dan berlendir.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, hindarilah makanan yang pedas, santan dan berlemak. Makanlah secara teratur agar terhindar dari maag. Segera hubungi dokter untuk pengobatan lebih lanjut.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Kolitis Hemoragika merupakan salah satu bentuk penyakit yang disebabkan oleh bakteri E. Coli yang menginfeksi usus besar dan menghasilkan racun (toksin) yang secara tiba-tiba menyebabkan diare berdarah. Gejalanya adalah nyeri pada perut, mual dan tidak muntah, sakit pada perut, sakit dan nyeri seperti teriris, tinja cair lalu berdarah selama 1-8 hari.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, minumlah cairan yang cukup untuk menggantikan cairan yang hilang. Makanlah makanan yang lunak dan mudah dicerna. Segera berobat ke dokter jika terjadi komplikasi.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Penyakit Whipple adalah suatu kelainan yang jarang ditemukan, terutama menyerang pria berusa 30-60 tahun. Penyebabnya adalah infeksi oleh Tropheryma Whippelli. Infeksi ini dapat menyebar ke organ lain seperti jantung, hati, paru-paru, otak, sendi dan mata. Untuk menetapkan diagnose, lakukan biopsy usus. Gejalanya adalah nyeri pada perut, sering buang air besar, batu dan nyeri saat bernafas, warna kulit jadi lebih gelap, tinja cair dan banyak.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatanya, segeralah berobat ke dokter agar mendapat perawatan intensif. Biasanya dokter akan memberikan antibiotic berupa tetracylin, sulfalazin, ampicillin dan penicillin.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Traveller’s Diarrhea adalah suatu keadaan yang ditandai dengan diare, mual dan muntah yang biasanya terjadi pada para wisatawan (pelancong). Penyebabnya adalah bakter E. coli. Gejalanya adalah nyeri  pada perut, sering buang air besar, mules dan kembung, panas pada perut, terjadi pada pelancong, tinja cair dan berlendir.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatanya, hindarilah makanan yang kasar dan keras seperti kacang-kacangan dan biji-bijian. Perbanyak minum air putih dan minumlah cairan oralit bila perlu. Segera hubungi dokter untuk pengobatan lebih lanjut.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Diare akut adalah pengeluaran kotoran (tinja) yang lebih sering dari biasanya dan biasanya perut terasa sakit dan kembung. Gejalanya adalah nyeri pada perut, sering buang air besar, mules dan kembung, panas pada perut, tinja cair.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, makanlah makanan yang kaya serat. Minumlah obat diare dan caira oralit bila perlu. Segera berobat ke dokter jika diare belum juga berhenti.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Diare Kronik adalah suatu keadaan bertambahnya kekerapan dan cairnya buang air besar. Masih dianggap normal jika frekuensinya dalam sehari sekitar 1-3 kali dan banyaknya 200-250 gram. Diare kronik timbul perlahan-lahan bahkan sampai berbulan-bulan. Gejalanya adalah nyeri pada perut, sering buang air besar, mules dan kembung, panas pada perut , tinja berlendir dan berbuih.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, istirahatlah yang cukup baik fisik maupun mental. Makanlah makanan yang kaya serat dan minumlah obat diare dan caira eletrolit. Segera berobat ke dokter jika terjadi komplikasi.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Divertikulosis adalah penyakit yang ditandai dengan adanya diverticula, biasanya pada usus besar dan penyebabnya adalah makanan rendah serat. Perlu dilakukan kolonoskopi untuk menegakkan diagnose pada penyakit. Gejalanya adalah nyeri pada perut, sering buang air besar, perut kaku, tinja cair, terjadi pendarahan pada divertikulum.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, konsumsi makanan yang cukup serat setiap hari. Lakukan pemeriksaan fisik dengan colok dubur untuk menegtahui nyeri tekan, penyumbatan maupun darah. Hal ini biasanya dilakukan oleh dokter. Segera berobat ke dokter untuk pengobatan lebih lanjut.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Kolitis Ulserativa adalah suatu penyakit kronik pada mukosa kolon (perut sebelah kiri) yang merupakan perluasan rectum. Perlu dilakukan pemeriksaan diagnostik: radiologi dan endoskopi untuk menegakkan diagnose. Gejalanya adalah nyeri pada perut, perut kembung, demam, anemia, panjang kolon/usus memanjang, tinja berdarah. \n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, makanlah makanan yang tinggi kalori dan protein. Jangan minum susu selama diare. Berikan nutrisi dan cairan elektrolit seperti oralit. Dan segera berobat ke dokter untuk pengobatan lebih lanjut.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Amubiasis adalah suatu infeksi parasite entarmoeba Histolytica didalam usus besar. Parasite dapat menetap didalam tubuh tanpa menimbulkan tanda maupun gejala penyakit pada penderita. Tetapi penderita tersebut dapat menulari orang lain. Perlu dilakukan pemeriksaan tinja untuk menegakkan diagnose. Gejalanya adalah nyeri pada perut, perut kembung, demam, menggigil, nyeri dada tengah, tinja berlendir dan berbuih.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, jagalah kebersihan diri dan lingkungan segara hubungi dokter untuk pengobatan lebih lanjut.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Penyakit seliak adalah suatu penyakit keturunan dimana terjadi alergi karena intoleransi terhadap gluten (sejenis protein) yang menyebabkan perubahan dalam usus sehingga terjadi malabsorpsi. Gejalanya adalah nyeri pada perut, perut kembung, perut panas seperti terbakar, nyeri tulang, perut bunci, tinja banyak dan bau busuk.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, hindari gluten seperti yang terdapat dalam saus, sup, es krim dan hot dog. Makalan secara teratur dengan menu seimbang. Segeralah berobat ke dokter untuk pengobatan lebih lanjut.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Irritable Bowel Syndrome merupakan suatu kelainan fungsional yang bersifat kronik yang ditandai dengan nyeri perut. Gejalanya adalah nyeri pada perut, perut kembung, perut panas seperti terbakar, nyeri perut bawah, tinja banyak dan berlendir.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatanya, dianjurkan makan makanan yang tinggi serat. Segera berobat ke dokter untuk pengobatan lebih lanjut dan mendapat perawatan medis lainya. Biasanya akan diberikan antidepresan berupa amitripilin dan antipasmodik berupa mebevesin.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Gatal anus merupakan penyakit yang gejala utamanya adalah rasa gatal yang timbul disekitar anus. Gejalanya adalah gatal sekitar anus, sering berkeringat punya kencing manis dan alergi pada kulit.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, bersihkan diri setiap hari minimal dua kali sehari. Kurangi makanan seperti ikan, atau makanan apapun yang menyebabkan alergi pada kulit anda. Segera berobat ke dokter jika terjadi ada perubahan setelah diobati.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Fissura Anus adalah suatu penyakit disekitar anus dengan gejala nyeri sekitar anus, nyeri saat buang air besar, terdapat luka di sekitar anus dan tinja yang keras dan kadang disertai darah. Gejalanya adalah nyeri disekitar anus, kesulitan duduk nyeri saat buang air besar, terdapat luka di sekitar anus, tinja keras dan berdarah.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, hindari makanan yang keras dan makanlah makanan yang lunak dan mudah dicerna. Segera hubungi dokter bila tinja memang berdarah.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Hemoroid atau yang biasa dikenal dengan wasir adalah pembesaran vena dalam rectum (usus besar) dan sekitar dubur (anus). Gejalanya adalah nyeri sekitar anus, kesulitan duduk, nyeri saat buang air besar, terdapat benjolan lunak di anus, sulit buang air besar.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatan awal, perbanyak minum cairan dan makanan berserat tinggi. Duduklah berendam dengan air hangat. Oleskan salep obat bius local. Lalu lakukan pengompresan dengan kemiri. Periksa rectum pasien, ini biasa dilakukan oleh dokter dan menganjurkan pemakaian obat pelunak tinja atau psilium.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Penyakit pilonidal adalah infeksi yang disebabkan oleh rambut yang melukai kulit diujung atas dari celah diantara bokong. Penyakit ini biasanya terjadi pada pria muda kulit putih yang berambut tebal. Perlu dilakukan pemeriksaan di bokong oleh dokter untuk menegakkan diagnose. Gejalanya adalah nyeri disekitar anus, kesulitan duduk, ada pengumpulan nanah di anus, terjadi pembengkakan, terdapat luka kering yang menahun.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatanya, segera berobat ke dokter karena termasuk penyakit yang parah dan harus segera dioperasi.
+        </item>
+
+        <item>
+            <b>Penjelasan</b>\n
+            Abses Anorektal merupakan suatu pengumpulan nanah yang disebabkan oleh masuknya bakteri ke ruangan di sekitar anus dan rektum. Gejalanya adalah nyeri sekitar anus, kesulitan duduk, ada pengumpulan nanah di anus, terjadi pembengkakan, nyeri perut bawah.\n\n
+            <b>Pengobatan</b>\n
+            Untuk pengobatanya, segera berobat ke dokter jika terdapat benjolan atau nanah di sekitar anus dan terasa sangat sakit.
+        </item>
     </string-array>
 
     <string-array name="disease_list">
