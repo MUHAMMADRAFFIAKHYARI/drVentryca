@@ -9,11 +9,14 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.AnimationUtils;
 import android.view.animation.OvershootInterpolator;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ReadyDiag extends AppCompatActivity {
     private TextView readyDiag;
+    private ImageView imageDiag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,14 +26,15 @@ public class ReadyDiag extends AppCompatActivity {
         Window window = getWindow();
 
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE |
-                View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+                View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.AUTOFILL_FLAG_INCLUDE_NOT_IMPORTANT_VIEWS);
 
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(Color.TRANSPARENT);
         readyDiag = findViewById(R.id.diag_text);
+        imageDiag = findViewById(R.id.image_diag);
 
-        readyDiag.animate().scaleX(1f).scaleY(1f).alpha(1f).setInterpolator(new OvershootInterpolator()).start();
-
+        readyDiag.setAnimation(AnimationUtils.loadAnimation(this,R.anim.translate_y_show3));
+        imageDiag.setAnimation(AnimationUtils.loadAnimation(this,R.anim.translate_y_show));
     }
 
     float x1,x2,y1,y2;

@@ -9,7 +9,6 @@ public class DiseaseModel {
         this.explan_= explan;
     }
 
-
     public String getTitle_() {
         return title_;
     }

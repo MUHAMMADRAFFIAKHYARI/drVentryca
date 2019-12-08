@@ -41,7 +41,7 @@ public class FTSliderAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
 
-        RelativeLayout all_ft;
+        CardView all_ft;
 
         layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
         View view = layoutInflater.inflate(R.layout.slide_fakta_tips,container,false);
@@ -49,9 +49,10 @@ public class FTSliderAdapter extends PagerAdapter {
 
         TextView text_faktatips = view.findViewById(R.id.text_FaktaTips);
         TextView text_count = view.findViewById(R.id.hal_count);
+        text_faktatips.setAnimation(AnimationUtils.loadAnimation(context, R.anim.translate_y_show3));
 
-        all_ft = view.findViewById(R.id.all_ft);
-        all_ft.setAnimation(AnimationUtils.loadAnimation(context, R.anim.translate_y_show3));
+        /*all_ft = view.findViewById(R.id.all_ft);
+        all_ft.setAnimation(AnimationUtils.loadAnimation(context, R.anim.translate_y_show3));*/
 
 
         text_faktatips.setText(faktatips_slide[position]);
@@ -68,4 +69,5 @@ public class FTSliderAdapter extends PagerAdapter {
     public void destroyItem( ViewGroup container, int position, Object object) {
         container.removeView((RelativeLayout)object);
     }
+
 }

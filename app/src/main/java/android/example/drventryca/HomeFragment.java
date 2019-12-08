@@ -1,7 +1,5 @@
 package android.example.drventryca;
 
-import android.animation.AnimatorSet;
-import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +8,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
-import android.view.animation.OvershootInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,17 +15,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
 
 public class HomeFragment extends Fragment {
 
-    private CardView klikDiag;
-    private CardView klikData;
-    private CardView klikFakta;
-    private CardView klikLemak;
+    private CardView klikDiag, klikData, klikFakta, berita1, berita2, berita3;
     private ImageView news;
     private PropertyValuesHolder scaleX, scaleY, aplha;
-    private TextView appTitle;
+    private TextView appTitle, halo, nama, kabar, bawah1, bawah2;
 
     @Nullable
     @Override
@@ -40,12 +33,31 @@ public class HomeFragment extends Fragment {
          klikDiag = view.findViewById(R.id.goDiag);
          klikData = view.findViewById(R.id.goData);
          klikFakta = view.findViewById(R.id.goFakta);
-         klikLemak = view.findViewById(R.id.card_lemak);
          news = view.findViewById(R.id.news);
          TextView lihat_ = view.findViewById(R.id.lihat_tips_lain);
+         halo = view.findViewById(R.id.halo);
+         nama = view.findViewById(R.id.nama);
+         kabar = view.findViewById(R.id.kabar);
+         bawah1 = view.findViewById(R.id.text_bawah1);
+         /*bawah2 = view.findViewById(R.id.text_bawah2);*/
+         berita1 = view.findViewById(R.id.berita1);
+         berita2 = view.findViewById(R.id.berita2);
+         /*berita3 = view.findViewById(R.id.ber)*/
 
 
+         /*kabar.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.left_slide_in2));*/
+         halo.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.left_slide_in_home));
+         nama.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.left_slide_in_home));
          appTitle.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.showed_up));
+         /*news.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.left_slide_in));*/
+         klikDiag.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.translate_y_show3));
+         klikData.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.translate_y_show3));
+         klikFakta.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.translate_y_show3));
+         /*bawah1.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.left_slide_in2));*/
+        /* bawah2.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.right_slide_in));*/
+         berita1.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.right_slide_in_home));
+         berita2.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.left_slide_in_home));
+
 
          news.setOnClickListener(new View.OnClickListener() {
              @Override
@@ -88,12 +100,6 @@ public class HomeFragment extends Fragment {
              }
          });
 
-         klikLemak.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View v) {
-                 startActivity(new Intent(getActivity(), FaktaTips.class));
-             }
-         });
 
          return view;
     }

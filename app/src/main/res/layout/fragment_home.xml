@@ -26,7 +26,7 @@
         </androidx.cardview.widget.CardView>
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/halo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -41,20 +41,20 @@
             app:layout_constraintTop_toBottomOf="@+id/app_title" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/nama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:fontFamily="@font/mosnt_bold"
-            android:text="Ariff"
+            android:text="RAFFI!"
             android:textColor="#1B1B1B"
             android:textSize="36sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/textView6"
-            app:layout_constraintStart_toEndOf="@+id/textView6" />
+            app:layout_constraintBottom_toBottomOf="@+id/halo"
+            app:layout_constraintStart_toEndOf="@+id/halo" />
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/kabar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -63,7 +63,7 @@
             android:text="Bagaimana kabar anda hari ini?"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+            app:layout_constraintTop_toBottomOf="@+id/halo" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/goDiag"
@@ -74,7 +74,7 @@
             app:cardBackgroundColor="@color/bleu_de_france"
             app:cardCornerRadius="20dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView8">
+            app:layout_constraintTop_toBottomOf="@+id/kabar">
 
             <ImageView
                 android:id="@+id/goDiag1"
@@ -109,7 +109,7 @@
             app:cardCornerRadius="20dp"
             app:layout_constraintEnd_toStartOf="@+id/goFakta"
             app:layout_constraintStart_toEndOf="@+id/goDiag"
-            app:layout_constraintTop_toBottomOf="@+id/textView8">
+            app:layout_constraintTop_toBottomOf="@+id/kabar">
 
             <ImageView
                 android:id="@+id/goData1"
@@ -143,7 +143,7 @@
             app:cardBackgroundColor="@color/medium_torquise"
             app:cardCornerRadius="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView8">
+            app:layout_constraintTop_toBottomOf="@+id/kabar">
 
             <ImageView
                 android:id="@+id/goFakta1"
@@ -170,7 +170,7 @@
 
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/card_lemak"
+            android:id="@+id/berita1"
             android:layout_width="355dp"
             android:layout_height="192dp"
             android:layout_marginStart="16dp"
@@ -180,7 +180,7 @@
             app:cardCornerRadius="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView12" >
+            app:layout_constraintTop_toBottomOf="@+id/text_bawah1" >
 
             <TextView
                 android:id="@+id/textView3"
@@ -206,7 +206,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/view6"
+            android:id="@+id/berita2"
             android:layout_width="355dp"
             android:layout_height="192dp"
             android:layout_marginStart="16dp"
@@ -216,7 +216,7 @@
             app:cardCornerRadius="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/card_lemak">
+            app:layout_constraintTop_toBottomOf="@+id/berita1">
 
         </androidx.cardview.widget.CardView>
 
@@ -232,20 +232,20 @@
             app:layout_constraintBottom_toTopOf="@+id/lihat_tips_lain"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view6">
+            app:layout_constraintTop_toBottomOf="@+id/berita2">
 
         </androidx.cardview.widget.CardView>
 
         <TextView
-            android:id="@+id/textView12"
-            android:layout_width="127dp"
+            android:id="@+id/text_bawah1"
+            android:layout_width="240dp"
             android:layout_height="24dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="28dp"
             android:background="@drawable/round_style5"
             android:fontFamily="@font/monts_regular"
             android:gravity="center"
-            android:text="Tips Teratas"
+            android:text="Info Kesehatan Teratas"
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="16sp"
@@ -259,16 +259,17 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:fontFamily="@font/monts_regular"
-            android:text="Lihat tips lainnya"
+            android:text="Lihat info lainnya"
             android:textColor="@color/dark_cerulian"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view7" />
+<!--
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/text_bawah2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
@@ -279,8 +280,9 @@
             android:text="Berita Kesehatan"
             android:textColor="@color/dark_cerulian"
             android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/textView12"
-            app:layout_constraintTop_toTopOf="@+id/textView12" />
+            app:layout_constraintStart_toEndOf="@+id/text_bawah1"
+            app:layout_constraintTop_toTopOf="@+id/text_bawah1" />
+-->
 
         <TextView
             android:id="@+id/app_title"

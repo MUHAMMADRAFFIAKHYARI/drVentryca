@@ -7,12 +7,10 @@
 
 
     <RelativeLayout
-        android:id="@+id/all_ft"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/card_faktatips"
             android:layout_width="315dp"
             android:layout_height="530dp"
             android:layout_alignParentTop="true"
