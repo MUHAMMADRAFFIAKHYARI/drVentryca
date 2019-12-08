@@ -36,6 +36,11 @@
         Anda akan melakukan serangkaian test dengan menjawab beberapa pertanyaan
         mengenai gejala-gejala yang anda rasakan untuk mengetahui penyakit yang diderita
     </string>
+    <string name="contoh_explain"><b>Penjelasan</b>\n
+        Esofagitis adalah peradangan esophagus. Tekanan esophagus minimal 3mmHg. Jika kurang, makan akan terjadi refluk. Refluk ini akan mempengaruhi kepakaan selaput lender esophagus terhadap bahan refluk. Akibat rangsangan dari hasil refluk terhadap selaput lender esophagus ini dapat menimbulkan peradangan dan menimbulkan esophagitis. Perlu dilakukan tes Berntein dan esofagoskopi untuk menegakkan diagnosa.\n\n
+        <b>Pengobatan</b>\n
+        Untuk pengobatan awal, makanlah dengan jumlah sedikit tetapi sering dan tidak makan lagi 2-3 jam sebelum tidur. Saat tidur, posisi kepala ditinggikan sekitar 60 cm agar tekanan dalam lambung tidak meningkat. Kurangi pekerjaan yang perlu mengangkat beban yang berat untuk mengurangi tekanaan dalam lambung. Segeralah berobat ke dokter untuk penanganan lebih lanjut, karena mencegah lebih baik daripada mengobati.
+    </string>
     <string-array name="goldar">
         <item>Golongan Darah</item>
         <item>A</item>
@@ -58,7 +63,10 @@
     </string-array>
 
     <string-array name="penjelasan">
-        <item>penjelasan1</item>
+        <item><b>Penjelasan</b>\n
+            Esofagitis adalah peradangan esophagus. Tekanan esophagus minimal 3mmHg. Jika kurang, makan akan terjadi refluk. Refluk ini akan mempengaruhi kepakaan selaput lender esophagus terhadap bahan refluk. Akibat rangsangan dari hasil refluk terhadap selaput lender esophagus ini dapat menimbulkan peradangan dan menimbulkan esophagitis. Perlu dilakukan tes Berntein dan esofagoskopi untuk menegakkan diagnosa.\n\n
+        <b>Pengobatan</b>\n
+        Untuk pengobatan awal, makanlah dengan jumlah sedikit tetapi sering dan tidak makan lagi 2-3 jam sebelum tidur. Saat tidur, posisi kepala ditinggikan sekitar 60 cm agar tekanan dalam lambung tidak meningkat. Kurangi pekerjaan yang perlu mengangkat beban yang berat untuk mengurangi tekanaan dalam lambung. Segeralah berobat ke dokter untuk penanganan lebih lanjut, karena mencegah lebih baik daripada mengobati.</item>
         <item>penjelasan2</item>
         <item>penjelasan3</item>
         <item>penjelasan4</item>

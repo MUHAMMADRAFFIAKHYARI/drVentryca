@@ -96,7 +96,7 @@ public class HomeFragment extends Fragment {
          lihat_.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-                 startActivity(new Intent(getActivity(), FaktaTips.class));
+                 startActivity(new Intent(getActivity(), HealthNews.class));
              }
          });
 

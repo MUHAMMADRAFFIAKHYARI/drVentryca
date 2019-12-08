@@ -18,6 +18,7 @@ public class DetailDisease extends AppCompatActivity {
         setContentView(R.layout.activity_detail_disease);
 
         TextView mExplan = findViewById(R.id.disease_expl);
+        TextView mTitle = findViewById(R.id.disease_title);
         Window window = getWindow();
 
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE |
@@ -28,5 +29,6 @@ public class DetailDisease extends AppCompatActivity {
 
         Intent intent = getIntent();
         mExplan.setText(intent.getStringExtra("penjelasan"));
+        mTitle.setText(intent.getStringExtra("judul_"));
     }
 }

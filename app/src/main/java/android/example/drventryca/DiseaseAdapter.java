@@ -68,6 +68,7 @@ public class DiseaseAdapter extends RecyclerView.Adapter<DiseaseAdapter.ViewHold
 
             Intent explDisease = new Intent(mContext, DetailDisease.class);
             explDisease.putExtra("penjelasan", currentExpl.getExplan_());
+            explDisease.putExtra("judul_",currentExpl.getTitle_());
 
             mContext.startActivity(explDisease);
         }
