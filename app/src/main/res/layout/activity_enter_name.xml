@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -28,16 +27,16 @@
             android:textStyle="bold" />
 
         <RadioGroup
-            android:id="@+id/radio_gender"
+            android:id="@+id/rg_kelamin"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/editText2"
+            android:layout_below="@+id/et_namaBelakang"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="15dp"
             android:requiresFadingEdge="horizontal">
 
             <RadioButton
-                android:id="@+id/radioButton3"
+                android:id="@+id/rb_laki"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/monts_regular"
@@ -45,7 +44,7 @@
                 android:textSize="16sp" />
 
             <RadioButton
-                android:id="@+id/radioButton4"
+                android:id="@+id/rb_perempuan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="160dp"
@@ -56,10 +55,10 @@
         </RadioGroup>
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/et_namaBelakang"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:layout_below="@+id/editText"
+            android:layout_below="@+id/et_namaDepan"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
             android:background="@drawable/fill_text"
@@ -72,10 +71,10 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editText5"
+            android:id="@+id/et_usia"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:layout_below="@+id/editText3"
+            android:layout_below="@+id/et_massaBadan"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:background="@drawable/fill_text"
@@ -88,10 +87,10 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editText4"
+            android:id="@+id/et_tinggiBadan"
             android:layout_width="140dp"
             android:layout_height="50dp"
-            android:layout_alignTop="@+id/editText3"
+            android:layout_alignTop="@+id/et_massaBadan"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="50dp"
@@ -106,10 +105,10 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/et_massaBadan"
             android:layout_width="140dp"
             android:layout_height="50dp"
-            android:layout_below="@+id/gold_spin"
+            android:layout_below="@+id/spin_goldar"
             android:layout_alignParentStart="true"
             android:layout_marginStart="50dp"
             android:layout_marginTop="15dp"
@@ -124,7 +123,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/et_namaDepan"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_below="@+id/bigText2"
@@ -140,11 +139,11 @@
             android:textSize="16sp" />
 
         <Spinner
-            android:id="@+id/gold_spin"
+            android:id="@+id/spin_goldar"
             style="@style/SpinnerTextViewItem"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:layout_below="@id/radio_gender"
+            android:layout_below="@id/rg_kelamin"
             android:layout_alignParentStart="false"
             android:layout_marginStart="50dp"
             android:layout_marginTop="15dp"
@@ -153,10 +152,10 @@
             android:popupBackground="@drawable/fill_text" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/bt_submit"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/editText4"
+            android:layout_below="@+id/et_tinggiBadan"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="115dp"
             android:background="@drawable/round_style5"
