@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:fontFamily="@font/mosnt_bold"
-            android:text="Raffi"
+            android:text="Ariff"
             android:textColor="#1B1B1B"
             android:textSize="36sp"
             android:textStyle="bold"
