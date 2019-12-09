@@ -99,7 +99,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/bigText4"
+                android:id="@+id/nama_belakang"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/nama_depan"

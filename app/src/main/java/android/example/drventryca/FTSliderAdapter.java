@@ -9,6 +9,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.cardview.widget.CardView;
 import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 
 public class FTSliderAdapter extends PagerAdapter {
@@ -26,6 +27,19 @@ public class FTSliderAdapter extends PagerAdapter {
 
     public String[] faktatips_slide;
 
+    public static class DetailOnPageChangeListener extends ViewPager.SimpleOnPageChangeListener {
+
+        private int currentPage;
+
+        @Override
+        public void onPageSelected(int position) {
+            currentPage = position;
+        }
+
+        public final int getCurrentPage() {
+            return currentPage;
+        }
+    }
 
     @Override
     public int getCount() {
@@ -48,7 +62,7 @@ public class FTSliderAdapter extends PagerAdapter {
 
 
         TextView text_faktatips = view.findViewById(R.id.text_FaktaTips);
-        TextView text_count = view.findViewById(R.id.hal_count);
+        /*TextView text_count = view.findViewById(R.id.hal_count);*/
         text_faktatips.setAnimation(AnimationUtils.loadAnimation(context, R.anim.translate_y_show3));
 
         /*all_ft = view.findViewById(R.id.all_ft);
@@ -58,7 +72,7 @@ public class FTSliderAdapter extends PagerAdapter {
         text_faktatips.setText(faktatips_slide[position]);
         int total = faktatips_slide.length;
 
-        text_count.setText(position+1+" / "+total);
+        /*text_count.setText(position+1+" / "+total);*/
         container.addView(view);
 
         return view;

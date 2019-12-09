@@ -17,6 +17,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -29,6 +30,8 @@ public class EnterName extends AppCompatActivity implements AdapterView.OnItemSe
 
     // Variable yang akan merefers Firebase Realtime Database.
     DatabaseReference database;
+
+    private TextView toHome;
 
     // Variable fields EditText dan Button
     private Button btSubmitDB;
@@ -49,10 +52,13 @@ public class EnterName extends AppCompatActivity implements AdapterView.OnItemSe
         etTinggiBadan = findViewById(R.id.et_tinggiBadan);
         etUsia = findViewById(R.id.et_usia);
         btSubmitDB = findViewById(R.id.bt_submit);
+
 //        goldar = (Spinner)findViewById(R.id.spin_goldar);
 //        gender = (RadioGroup)findViewById(R.id.rg_kelamin);
 
         //get reference Firebase Database
+
+        toHome = findViewById(R.id.toHome);
         database = FirebaseDatabase.getInstance().getReference();
 
         // setOnclick pada button submit
@@ -111,6 +117,8 @@ public class EnterName extends AppCompatActivity implements AdapterView.OnItemSe
 
     }
 
+
+
     private void submitData(Data data) {
         database.child("Data User : ").push().setValue(data).addOnSuccessListener(this, new OnSuccessListener<Void>() {
             @Override
@@ -141,5 +149,9 @@ public class EnterName extends AppCompatActivity implements AdapterView.OnItemSe
     }
 
     public void useUser(View view) {
+    }
+
+    public void skipHome(View view) {
+        startActivity(new Intent(this,Landing.class));
     }
 }

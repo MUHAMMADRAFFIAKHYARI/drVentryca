@@ -46,8 +46,8 @@ public class HomeFragment extends Fragment {
 
 
          /*kabar.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.left_slide_in2));*/
-         halo.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.left_slide_in_home));
-         nama.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.left_slide_in_home));
+         halo.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.left_slide_in_smooth));
+         nama.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.left_slide_in_smooth));
          appTitle.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.showed_up));
          /*news.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.left_slide_in));*/
          klikDiag.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.translate_y_show3));
@@ -55,8 +55,8 @@ public class HomeFragment extends Fragment {
          klikFakta.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.translate_y_show3));
          /*bawah1.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.left_slide_in2));*/
         /* bawah2.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.right_slide_in));*/
-         berita1.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.right_slide_in_home));
-         berita2.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.left_slide_in_home));
+         berita1.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.right_slide_in_smooth));
+         berita2.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.left_slide_in_smooth));
 
 
          news.setOnClickListener(new View.OnClickListener() {

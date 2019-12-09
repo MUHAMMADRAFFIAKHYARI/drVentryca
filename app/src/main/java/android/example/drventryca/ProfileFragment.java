@@ -26,7 +26,7 @@ import static java.lang.String.valueOf;
 public class ProfileFragment extends Fragment {
 
     private ImageView image_user;
-    private TextView massa, tinggi, gender, goldar, age,imt;
+    private TextView massa, tinggi, gender, goldar, age,namdep, nambel;
     private Button cek_imt;
 
 
@@ -43,6 +43,8 @@ public class ProfileFragment extends Fragment {
         gender = view.findViewById(R.id.gender);
         goldar = view.findViewById(R.id.goldar);
         age = view.findViewById(R.id.age);
+        namdep = view.findViewById(R.id.nama_depan);
+        nambel = view.findViewById(R.id.nama_belakang);
 
         /*imt = view.findViewById(R.id.imt);
         cek_imt = view.findViewById(R.id.cek_mt);*/
@@ -80,6 +82,8 @@ public class ProfileFragment extends Fragment {
         gender.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.fade_right_show));
         goldar.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.fade_right_show));
         age.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.right_slide_in));
+        namdep.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.left_slide_in_smooth));
+        nambel.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.right_slide_in_smooth));
 
         ValueAnimator animate_massa, animate_tinggi;
 
