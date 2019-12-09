@@ -5,12 +5,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.PagerSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
@@ -19,6 +21,7 @@ public class Diagnosis extends AppCompatActivity {
     private RecyclerView questionRecycler;
     private DiagnosisAdapter diagnosisAdapter;
     private ArrayList<QuestionModel> questionAll;
+    private Button done_diag;
 
 
     @Override
@@ -26,7 +29,7 @@ public class Diagnosis extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diagnosis);
 
-
+        done_diag = findViewById(R.id.done_diag);
         questionRecycler = findViewById(R.id.quest_recycler);
         questionRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false));
         PagerSnapHelper helper = new PagerSnapHelper() ;
@@ -38,7 +41,14 @@ public class Diagnosis extends AppCompatActivity {
         initializeQuestion();
         changeStatusBarColor();
 
+        done_diag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getBaseContext(), Result.class));
+            }
+        });
     }
+
 
     void changeStatusBarColor() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

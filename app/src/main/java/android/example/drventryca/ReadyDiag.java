@@ -49,8 +49,6 @@ public class ReadyDiag extends AppCompatActivity {
         });
     }
 
-
-
     float x1,x2,y1,y2;
     public boolean onTouchEvent(MotionEvent motionEvent){
         switch (motionEvent.getAction()){

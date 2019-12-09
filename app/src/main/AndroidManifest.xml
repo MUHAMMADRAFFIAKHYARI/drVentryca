@@ -9,8 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Result"></activity>
-        <activity android:name=".Diagnosis" />
+        <activity android:name=".Login"></activity>
+        <activity
+            android:name=".Result"
+            android:noHistory="true" />
+        <activity
+            android:name=".Diagnosis"
+            android:noHistory="true" />
         <activity
             android:name=".HealthNews"
             android:theme="@style/customAnimation" />
@@ -23,12 +28,18 @@
             android:theme="@style/AppTheme3" />
         <activity
             android:name=".SplashScreen"
+            android:noHistory="true"
             android:theme="@style/AppTheme4" />
         <activity
-            android:name=".EnterName"
+            android:name=".Register"
+            android:noHistory="true"
             android:theme="@style/AppTheme4" />
-        <activity android:name=".IntroduceSlide" />
-        <activity android:name=".GetStarted">
+        <activity
+            android:name=".IntroduceSlide"
+            android:noHistory="true" />
+        <activity
+            android:name=".GetStarted"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

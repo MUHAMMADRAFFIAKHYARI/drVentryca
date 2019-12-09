@@ -26,12 +26,12 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class EnterName extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class Register extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     // Variable yang akan merefers Firebase Realtime Database.
     DatabaseReference database;
 
-    private TextView toHome;
+    private TextView toHome, goLogin;
 
     // Variable fields EditText dan Button
     private Button btSubmitDB;
@@ -43,11 +43,11 @@ public class EnterName extends AppCompatActivity implements AdapterView.OnItemSe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_enter_name);
+        setContentView(R.layout.activity_register);
 
         // inisialisasi
-        etNamaDepan = findViewById(R.id.et_namaDepan);
-        etNamaBelakang = findViewById(R.id.et_namaBelakang);
+        etNamaDepan = findViewById(R.id.userName);
+        etNamaBelakang = findViewById(R.id.password);
         etBeratBadan = findViewById(R.id.et_massaBadan);
         etTinggiBadan = findViewById(R.id.et_tinggiBadan);
         etUsia = findViewById(R.id.et_usia);
@@ -110,6 +110,7 @@ public class EnterName extends AppCompatActivity implements AdapterView.OnItemSe
             spinner.setAdapter(adapter);
         }
 
+
     }
 
     private boolean isEmpty(String s) {
@@ -129,7 +130,7 @@ public class EnterName extends AppCompatActivity implements AdapterView.OnItemSe
                 etTinggiBadan.setText("");
                 etUsia.setText("");
                 Snackbar.make(findViewById(R.id.bt_submit), "Data Berhasil Ditambahkan", Snackbar.LENGTH_LONG).show();
-                startActivity(EnterName.getActIntent(EnterName.this));
+                startActivity(Register.getActIntent(Register.this));
             }
         });
     }
@@ -148,7 +149,8 @@ public class EnterName extends AppCompatActivity implements AdapterView.OnItemSe
 
     }
 
-    public void useUser(View view) {
+    public void toLogin(View view){
+        startActivity(new Intent(this, Login.class));
     }
 
     public void skipHome(View view) {

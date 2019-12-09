@@ -120,14 +120,13 @@ public class IntroduceSlide extends AppCompatActivity {
     };
 
     public void skipPage(View view) {
-        startActivity(new Intent(this, EnterName.class));
+        startActivity(new Intent(this, Register.class));
         /*mSlideViewPager.setCurrentItem(mCurrentPage -1);*/
     }
 
     public void nextPage(View view) {
         if (nextButton.getText() == "Got It"){
-            Intent intent = new Intent(this, EnterName.class);
-            startActivity(intent);
+            startActivity(new Intent(this, Landing.class));
         }else{
             mSlideViewPager.setCurrentItem(mCurrentPage +1);
         }
