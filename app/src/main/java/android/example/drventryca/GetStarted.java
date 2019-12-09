@@ -13,7 +13,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class GetStarted extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

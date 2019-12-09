@@ -32,7 +32,6 @@ public class DataDisease extends AppCompatActivity {
         title_fitur =findViewById(R.id.title_fitur);
         title_fitur.setAnimation(AnimationUtils.loadAnimation(this,R.anim.translate_y_show));
 
-
         diseaseRecycler_ = findViewById(R.id.diseaseRecycler);
         diseaseRecycler_.setLayoutManager(new LinearLayoutManager(this));
         diseaseList = new ArrayList<>();
@@ -49,6 +48,18 @@ public class DataDisease extends AppCompatActivity {
         diseaseRecycler_.setAdapter(diseaseAdapter);
         initializeDiseaseList();
 
+    }
+
+    public void initializeDiseaseList(){
+        String[] title_disease = getResources().getStringArray(R.array.disease_list);
+        String[] expl_disease = getResources().getStringArray(R.array.penjelasan);
+
+        diseaseList.clear();
+
+        for (int i=0; i<title_disease.length;i++){
+            diseaseList.add(new DiseaseModel(title_disease[i],expl_disease[i]));
+        }
+        diseaseAdapter.notifyDataSetChanged();
     }
 
     float x1,x2,y1,y2;
@@ -74,16 +85,6 @@ public class DataDisease extends AppCompatActivity {
         return false;
     }
 
-    public void initializeDiseaseList(){
-        String[] title_disease = getResources().getStringArray(R.array.disease_list);
-        String[] expl_disease = getResources().getStringArray(R.array.penjelasan);
 
-        diseaseList.clear();
-
-        for (int i=0; i<title_disease.length;i++){
-            diseaseList.add(new DiseaseModel(title_disease[i],expl_disease[i]));
-        }
-        diseaseAdapter.notifyDataSetChanged();
-    }
 
 }

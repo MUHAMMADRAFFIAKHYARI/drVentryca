@@ -419,4 +419,27 @@
         <item>44. Abses Anorektal</item>
     </string-array>
 
+    <string-array name="pertanyaan">
+        <item>pertanyaan1</item>
+        <item>pertanyaan2</item>
+        <item>pertanyaan3</item>
+        <item>pertanyaan4</item>
+        <item>pertanyaan5</item>
+        <item>pertanyaan6</item>
+        <item>pertanyaan7</item>
+        <item>pertanyaan8</item>
+        <item>pertanyaan9</item>
+        <item>pertanyaan10</item>
+        <item>pertanyaan11</item>
+        <item>pertanyaan12</item>
+        <item>pertanyaan13</item>
+        <item>pertanyaan14</item>
+        <item>pertanyaan15</item>
+        <item>pertanyaan16</item>
+        <item>pertanyaan17</item>
+        <item>pertanyaan18</item>
+        <item>pertanyaan19</item>
+        <item>pertanyaan20</item>
+    </string-array>
+
 </resources>

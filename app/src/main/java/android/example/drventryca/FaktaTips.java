@@ -18,7 +18,7 @@ public class FaktaTips extends AppCompatActivity {
 
     private ViewPager mFaktaTipsPager;
     private FTSliderAdapter ftSliderAdapter;
-    private TextView title, counter;
+    private TextView title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,7 @@ public class FaktaTips extends AppCompatActivity {
         setContentView(R.layout.activity_fakta_tips);
 
         hideStatusBar();
+
         mFaktaTipsPager = findViewById(R.id.slideFaktaTips);
         title = findViewById(R.id.title_fakta);
         title.setAnimation(AnimationUtils.loadAnimation(this,R.anim.fade_right_show));
@@ -33,9 +34,40 @@ public class FaktaTips extends AppCompatActivity {
         ftSliderAdapter = new FTSliderAdapter(this);
         mFaktaTipsPager.setAdapter(ftSliderAdapter);
 
+
+        mFaktaTipsPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+
+
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                String[] faktatips = getResources().getStringArray(R.array.fakta_tips);
+                int banyak_ft = faktatips.length;
+                TextView counter = findViewById(R.id.counter);
+
+                for (int i  = 1; i< banyak_ft; i++){
+                    counter.setText(position + 1+ " / " +banyak_ft);
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
+
     }
 
-
+    /*private void setCounter(){
+        int a = mFaktaTipsPager.getCurrentItem();
+        TextView counter = findViewById(R.id.counter);
+        counter.setText(a);
+    }*/
 
     public void hideStatusBar(){
         Window window = getWindow();
@@ -46,6 +78,5 @@ public class FaktaTips extends AppCompatActivity {
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(Color.TRANSPARENT);
     }
-
 
 }

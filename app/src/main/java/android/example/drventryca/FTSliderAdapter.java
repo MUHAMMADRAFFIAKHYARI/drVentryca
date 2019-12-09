@@ -7,16 +7,21 @@ import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import androidx.cardview.widget.CardView;
+
+import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 
-public class FTSliderAdapter extends PagerAdapter {
+public class FTSliderAdapter extends PagerAdapter{
 
     Context context;
     LayoutInflater layoutInflater;
 
+    @Override
+    public void notifyDataSetChanged() {
+        super.notifyDataSetChanged();
+    }
 
 
     public FTSliderAdapter(Context context){
@@ -25,25 +30,21 @@ public class FTSliderAdapter extends PagerAdapter {
         faktatips_slide = context.getResources().getStringArray(R.array.fakta_tips);
     }
 
+    public interface OnItemClickListener {
+        void onChoiceClick(int position);
+    }
+
     public String[] faktatips_slide;
 
-    public static class DetailOnPageChangeListener extends ViewPager.SimpleOnPageChangeListener {
-
-        private int currentPage;
-
-        @Override
-        public void onPageSelected(int position) {
-            currentPage = position;
-        }
-
-        public final int getCurrentPage() {
-            return currentPage;
-        }
-    }
 
     @Override
     public int getCount() {
         return faktatips_slide.length;
+    }
+
+    @Override
+    public int getItemPosition(@NonNull Object object) {
+        return super.getItemPosition(object);
     }
 
     @Override
@@ -52,36 +53,31 @@ public class FTSliderAdapter extends PagerAdapter {
     }
 
 
+
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
-
-        CardView all_ft;
 
         layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
         View view = layoutInflater.inflate(R.layout.slide_fakta_tips,container,false);
 
 
         TextView text_faktatips = view.findViewById(R.id.text_FaktaTips);
-        /*TextView text_count = view.findViewById(R.id.hal_count);*/
+        /*TextView text_count = view.findViewById(R.id.counter_hal);*/
         text_faktatips.setAnimation(AnimationUtils.loadAnimation(context, R.anim.translate_y_show3));
-
-        /*all_ft = view.findViewById(R.id.all_ft);
-        all_ft.setAnimation(AnimationUtils.loadAnimation(context, R.anim.translate_y_show3));*/
-
-
         text_faktatips.setText(faktatips_slide[position]);
-        int total = faktatips_slide.length;
 
-        /*text_count.setText(position+1+" / "+total);*/
+        /*int total = getCount();
+        text_count.setText(position+1+" / "+total);
+*/
         container.addView(view);
 
         return view;
     }
 
 
+
     @Override
     public void destroyItem( ViewGroup container, int position, Object object) {
         container.removeView((RelativeLayout)object);
     }
-
 }

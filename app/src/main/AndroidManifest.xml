@@ -9,9 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HealthNews"
-            android:theme="@style/customAnimation"
-            ></activity>
+        <activity android:name=".Result"></activity>
+        <activity android:name=".Diagnosis" />
+        <activity
+            android:name=".HealthNews"
+            android:theme="@style/customAnimation" />
         <activity android:name=".DetailDisease" />
         <activity android:name=".FaktaTips" />
         <activity android:name=".ReadyDiag" />
@@ -26,7 +28,7 @@
             android:name=".EnterName"
             android:theme="@style/AppTheme4" />
         <activity android:name=".IntroduceSlide" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".GetStarted">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
