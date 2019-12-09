@@ -35,7 +35,21 @@ public class ReadyDiag extends AppCompatActivity {
 
         readyDiag.setAnimation(AnimationUtils.loadAnimation(this,R.anim.translate_y_show3));
         imageDiag.setAnimation(AnimationUtils.loadAnimation(this,R.anim.translate_y_show));
+
+        goTest();
     }
+
+    void goTest(){
+        TextView toTest = findViewById(R.id.ready);
+        toTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getBaseContext(), Diagnosis.class));
+            }
+        });
+    }
+
+
 
     float x1,x2,y1,y2;
     public boolean onTouchEvent(MotionEvent motionEvent){

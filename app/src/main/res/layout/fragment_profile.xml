@@ -93,7 +93,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="210dp"
                 android:fontFamily="@font/monts_black"
-                android:text="MUHAMMAD"
+                android:text="RAFFI"
                 android:textColor="@color/dark_cerulian"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -107,7 +107,7 @@
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="6dp"
                 android:fontFamily="@font/monts_regular"
-                android:text="RAFFI AKHYARI"
+                android:text="AKHYARI"
                 android:textColor="@android:color/white"
                 android:textSize="24sp"
                 android:textStyle="bold" />

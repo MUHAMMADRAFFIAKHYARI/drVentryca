@@ -7,7 +7,7 @@
     tools:context=".ReadyDiag">
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/ready"
         android:layout_width="258dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
