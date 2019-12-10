@@ -1,7 +1,6 @@
 package android.example.drventryca;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -9,7 +8,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -18,24 +16,31 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.material.snackbar.Snackbar;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Register extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     // Variable yang akan merefers Firebase Realtime Database.
-    DatabaseReference database;
+    DatabaseReference root; // untuk mengambil rootnya
+    FirebaseAuth auth;
+    FirebaseUser user; // untuk mengambil user
 
     private TextView toHome, goLogin;
 
     // Variable fields EditText dan Button
     private Button btSubmitDB;
-    EditText etNamaDepan, etNamaBelakang, etBeratBadan, etTinggiBadan, etUsia;
+    EditText etNamaDepan, etNamaBelakang, etBeratBadan, etTinggiBadan, etUsia, etUserName, etPassword;
     Spinner goldar;
     RadioGroup gender;
     RadioButton jenisKelamin;
@@ -46,45 +51,52 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
         setContentView(R.layout.activity_register);
 
         // inisialisasi
-        etNamaDepan = findViewById(R.id.userName);
-        etNamaBelakang = findViewById(R.id.password);
+        etNamaDepan = findViewById(R.id.edt_email);
+        etNamaBelakang = findViewById(R.id.edt_password);
         etBeratBadan = findViewById(R.id.et_massaBadan);
         etTinggiBadan = findViewById(R.id.et_tinggiBadan);
         etUsia = findViewById(R.id.et_usia);
-        btSubmitDB = findViewById(R.id.bt_submit);
-
-//        goldar = (Spinner)findViewById(R.id.spin_goldar);
-//        gender = (RadioGroup)findViewById(R.id.rg_kelamin);
-
-        //get reference Firebase Database
-
+        btSubmitDB = findViewById(R.id.bt_login);
         toHome = findViewById(R.id.toHome);
-        database = FirebaseDatabase.getInstance().getReference();
+        etUserName = findViewById(R.id.edt_userName);
+        etPassword = findViewById(R.id.password_);
 
-        // setOnclick pada button submit
+        // Ranah Firebase
+        auth = FirebaseAuth.getInstance();
+        root = FirebaseDatabase.getInstance().getReference();
+
         btSubmitDB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!isEmpty(etNamaDepan.getText().toString()) &&
-                        !isEmpty(etNamaBelakang.getText().toString()) &&
-                        !isEmpty(etBeratBadan.getText().toString()) &&
-                        !isEmpty(etTinggiBadan.getText().toString()) &&
-                        !isEmpty(etUsia.getText().toString()))
+                final String namaDepan, namaBelakang, username, password;
+                final int massaBadan, tinggiBadan, usia;
 
-                    submitData(new Data(
-                            etNamaDepan.getText().toString(),
-                            etNamaBelakang.getText().toString(),
-                            etBeratBadan.getText().toString(),
-                            etTinggiBadan.getText().toString(),
-                            etUsia.getText().toString()));
-                else
-                    Snackbar.make(findViewById(R.id.bt_submit), "Data Tidak Boleh Kosong !",
-                            Snackbar.LENGTH_LONG).show();
+                namaDepan = etNamaDepan.getText().toString().trim();
+                namaBelakang = etNamaBelakang.getText().toString().trim();
+                username = etUserName.getText().toString().trim();
+                password = etPassword.getText().toString().trim();
 
-                InputMethodManager imm = (InputMethodManager)
-                        getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(
-                        etNamaDepan.getWindowToken(), 0);
+                massaBadan = Integer.parseInt(etBeratBadan.getText().toString().trim());
+                tinggiBadan = Integer.parseInt(etTinggiBadan.getText().toString().trim());
+                usia = Integer.parseInt(etUsia.getText().toString().trim());
+
+                auth.createUserWithEmailAndPassword(username, password)
+                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    user = auth.getCurrentUser(); // dia mengambil user yang terbaru;
+                                    Data data = new Data(namaDepan, namaBelakang, String.valueOf(massaBadan), String.valueOf(tinggiBadan), String.valueOf(usia));
+                                    root.child("User:").child(user.getUid()).setValue(data)
+                                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<Void> task) {
+                                                    Toast.makeText(getApplicationContext(), "Data Berhasil Ditambah ke Realtime Database", Toast.LENGTH_LONG).show();
+                                                }
+                                            });
+                                }
+                            }
+                        });
 
             }
         });
@@ -119,21 +131,20 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
     }
 
 
-
-    private void submitData(Data data) {
-        database.child("Data User : ").push().setValue(data).addOnSuccessListener(this, new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
-                etNamaDepan.setText("");
-                etNamaBelakang.setText("");
-                etBeratBadan.setText("");
-                etTinggiBadan.setText("");
-                etUsia.setText("");
-                Snackbar.make(findViewById(R.id.bt_submit), "Data Berhasil Ditambahkan", Snackbar.LENGTH_LONG).show();
-                startActivity(Register.getActIntent(Register.this));
-            }
-        });
-    }
+//    private void submitData(Data data) {
+//        database.child("Data User : ").push().setValue(data).addOnSuccessListener(this, new OnSuccessListener<Void>() {
+//            @Override
+//            public void onSuccess(Void aVoid) {
+//                etNamaDepan.setText("");
+//                etNamaBelakang.setText("");
+//                etBeratBadan.setText("");
+//                etTinggiBadan.setText("");
+//                etUsia.setText("");
+//                Snackbar.make(findViewById(R.id.bt_submit), "Data Berhasil Ditambahkan", Snackbar.LENGTH_LONG).show();
+//                startActivity(Register.getActIntent(Register.this));
+//            }
+//        });
+//    }
 
     public static Intent getActIntent(Activity activity) {
         return new Intent(activity, Landing.class);
