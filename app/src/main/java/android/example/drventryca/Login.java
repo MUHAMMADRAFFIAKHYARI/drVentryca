@@ -47,8 +47,11 @@ public class Login extends AppCompatActivity {
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                Toast.makeText(getApplicationContext(), "Login Sukses !", Toast.LENGTH_LONG).show();
-                                startActivity(new Intent(getApplicationContext(), Landing.class));
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(getApplicationContext(), "Login Sukses !", Toast.LENGTH_LONG).show();
+                                    startActivity(new Intent(getApplicationContext(), Landing.class));
+                                } else
+                                    Toast.makeText(getApplicationContext(), "Login Gagal !", Toast.LENGTH_LONG).show();
                             }
                         });
             }
