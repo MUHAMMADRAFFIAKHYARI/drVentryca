@@ -2,6 +2,7 @@ package android.example.drventryca;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -46,8 +47,8 @@ public class ProfileFragment extends Fragment {
         namdep = view.findViewById(R.id.nama_depan);
         nambel = view.findViewById(R.id.nama_belakang);
 
-        /*imt = view.findViewById(R.id.imt);
-        cek_imt = view.findViewById(R.id.cek_mt);*/
+        /*imt = view.findViewById(R.id.imt);*/
+        cek_imt = view.findViewById(R.id.goIMT);
 
         String massa__, tinggi__;
 
@@ -77,6 +78,13 @@ public class ProfileFragment extends Fragment {
 
             }
         });*/
+
+        cek_imt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), BMICalc.class));
+            }
+        });
 
         /*image_user.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.translate_y_show2));*/
         gender.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.fade_right_show));

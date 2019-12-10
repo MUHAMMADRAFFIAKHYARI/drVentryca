@@ -111,8 +111,10 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="63dp"
             android:background="@drawable/round_style2"
-            android:text="Submit"
-            android:textColor="@color/dark_cerulian" />
+            android:fontFamily="@font/monts_regular"
+            android:text="Login"
+            android:textColor="@color/dark_cerulian"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 

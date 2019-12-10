@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">-->
 
-        <RelativeLayout android:layout_height="match_parent"
+    <RelativeLayout android:layout_height="match_parent"
             android:layout_width="match_parent">
 
             <TextView
@@ -146,30 +146,7 @@
                 android:text="Laki-Laki"
                 android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/textView29"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/age"
-                android:layout_alignStart="@+id/imageView12"
-                android:layout_marginTop="55dp"
-                android:fontFamily="@font/monts_regular"
-                android:text="Dugaan saya: Demam Tifoid (Tifus)"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/textView30"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView29"
-                android:layout_alignStart="@+id/imageView12"
-                android:layout_marginStart="2dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/monts_regular"
-                android:text="Hasil diagonis: Perotinitis"
-                android:textSize="16sp" />
-
-            <!--android:fontFamily="@font/monts_regular"-->
+        <!--android:fontFamily="@font/monts_regular"-->
 
             <!--<Button
                 android:id="@+id/cek_mt"
@@ -249,7 +226,20 @@
                 android:layout_marginTop="10dp"
                 app:srcCompat="@drawable/icon_age" />
 
-        </RelativeLayout>
+            <Button
+                android:id="@+id/goIMT"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/age"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="76dp"
+                android:background="@drawable/round_style5"
+                android:fontFamily="@font/monts_regular"
+                android:text="Hitung IMT"
+                android:textColor="@color/rajah"
+                android:textStyle="bold" />
+
+    </RelativeLayout>
     <!--</ScrollView>-->
 
 

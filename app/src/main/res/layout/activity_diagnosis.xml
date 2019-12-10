@@ -58,8 +58,10 @@
         android:layout_gravity="center|center_horizontal"
         android:layout_marginTop="-65dp"
         android:background="@drawable/button3_style"
+        android:fontFamily="@font/monts_regular"
         android:foregroundGravity="center|center_horizontal"
         android:text="DONE"
-        android:textColor="@android:color/white" />
+        android:textColor="@color/rajah"
+        android:textStyle="bold" />
 
 </LinearLayout>
