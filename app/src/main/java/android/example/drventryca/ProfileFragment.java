@@ -1,34 +1,37 @@
 package android.example.drventryca;
 
 import android.animation.ValueAnimator;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.*;
-
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import org.w3c.dom.Text;
-
-import static android.webkit.ConsoleMessage.MessageLevel.LOG;
-import static java.lang.String.valueOf;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class ProfileFragment extends Fragment {
 
     private ImageView image_user;
-    private TextView massa, tinggi, gender, goldar, age,namdep, nambel;
+    TextView massa, tinggi, gender, goldar, age, namdep, nambel;
     private Button cek_imt;
+    DatabaseReference reference;
+    FirebaseUser user;
+    FirebaseAuth auth;
 
 
     @Nullable
@@ -40,7 +43,6 @@ public class ProfileFragment extends Fragment {
         image_user = view.findViewById(R.id.user_image);
         massa = view.findViewById(R.id.mb);
         tinggi = view.findViewById(R.id.tb);
-        tinggi = view.findViewById(R.id.tb);
         gender = view.findViewById(R.id.gender);
         goldar = view.findViewById(R.id.goldar);
         age = view.findViewById(R.id.age);
@@ -50,16 +52,64 @@ public class ProfileFragment extends Fragment {
         /*imt = view.findViewById(R.id.imt);*/
         cek_imt = view.findViewById(R.id.goIMT);
 
-        String massa__, tinggi__;
 
-        massa__ = massa.getText().toString();
-        final double massa_ = Double.parseDouble(massa__);
-        int massa_count = Integer.valueOf(massa__);
+        auth = FirebaseAuth.getInstance();
+        user = auth.getCurrentUser();
 
-        tinggi__=tinggi.getText().toString();
-        final double tinggi_= Double.parseDouble(tinggi__);
-        int tinggi_count = Integer.valueOf(tinggi__);
 
+        reference = FirebaseDatabase.getInstance().getReference().child("User:").child(user.getUid());
+
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String namaDepan = dataSnapshot.child("namaDepan").getValue().toString();
+                namdep.setText(namaDepan);
+                String namaBelakang = dataSnapshot.child("namaBelakang").getValue().toString();
+                nambel.setText(namaBelakang);
+                String beratBadan = dataSnapshot.child("massaBadan").getValue().toString();
+                massa.setText(beratBadan);
+                String tinggiBadan = dataSnapshot.child("tinggiBadan").getValue().toString();
+                tinggi.setText(tinggiBadan);
+
+                Log.d("Check", beratBadan);
+                Log.d("Check", tinggiBadan);
+
+                beratBadan = massa.getText().toString();
+                final double massa_ = Double.parseDouble(beratBadan);
+                int massa_count = Integer.valueOf(beratBadan);
+
+                tinggiBadan = tinggi.getText().toString();
+                final double tinggi_ = Double.parseDouble(tinggiBadan);
+                int tinggi_count = Integer.valueOf(tinggiBadan);
+
+                ValueAnimator animate_massa, animate_tinggi;
+
+                animate_massa = ValueAnimator.ofInt(0, massa_count);
+                animate_massa.setDuration(2000);
+                animate_massa.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                    public void onAnimationUpdate(ValueAnimator animation) {
+                        massa.setText(animation.getAnimatedValue().toString());
+                    }
+                });
+
+                animate_tinggi = ValueAnimator.ofInt(0, tinggi_count);
+                animate_tinggi.setDuration(3000);
+                animate_tinggi.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                    public void onAnimationUpdate(ValueAnimator animation) {
+                        tinggi.setText(animation.getAnimatedValue().toString());
+                    }
+                });
+
+
+                animate_massa.start();
+                animate_tinggi.start();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
         /*cek_imt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,27 +143,7 @@ public class ProfileFragment extends Fragment {
         namdep.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.left_slide_in_smooth));
         nambel.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.right_slide_in_smooth));
 
-        ValueAnimator animate_massa, animate_tinggi;
 
-        animate_massa = ValueAnimator.ofInt(0, massa_count);
-        animate_massa.setDuration(2000);
-        animate_massa.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            public void onAnimationUpdate(ValueAnimator animation) {
-                massa.setText(animation.getAnimatedValue().toString());
-            }
-        });
-
-        animate_tinggi= ValueAnimator.ofInt(0, tinggi_count);
-        animate_tinggi.setDuration(3000);
-        animate_tinggi.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            public void onAnimationUpdate(ValueAnimator animation) {
-                tinggi.setText(animation.getAnimatedValue().toString());
-            }
-        });
-
-
-        animate_massa.start();
-        animate_tinggi.start();
 
         return view;
     }
