@@ -1,5 +1,6 @@
-package android.example.drventryca;
+package android.example.drventryca.Fragment;
 
+import android.example.drventryca.R;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;

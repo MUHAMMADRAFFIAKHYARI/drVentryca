@@ -1,4 +1,4 @@
-package android.example.drventryca;
+package android.example.drventryca.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,7 @@ import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.example.drventryca.R;
 import android.graphics.Color;
 import android.graphics.Path;
 import android.os.Build;
@@ -108,7 +109,7 @@ public class BMICalc extends AppCompatActivity {
                 circleResult.setBackgroundResource(R.drawable.circle_green);
                 circleResult.setTransitionAlpha(xHasil);
             } else if(result_ > 24.9 && result_ <= 29.9){
-                status_ = "Waduh kamu kelebihan berat badan, harus \n diet nih";
+                status_ = "Waduh kamu kelebihan berat badan, harus diet nih";
                 circleResult.setBackgroundResource(R.drawable.circle_red);
                 circleResult.setTransitionAlpha(xHasil);
             } else if (result_ > 29.9){

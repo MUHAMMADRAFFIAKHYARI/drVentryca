@@ -1,4 +1,4 @@
-package android.example.drventryca;
+package android.example.drventryca.Model;
 
 public class QuestionModel {
 

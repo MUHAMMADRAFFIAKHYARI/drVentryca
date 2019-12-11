@@ -1,7 +1,8 @@
-package android.example.drventryca;
+package android.example.drventryca.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.example.drventryca.R;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;

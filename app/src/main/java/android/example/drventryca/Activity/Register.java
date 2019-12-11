@@ -1,7 +1,9 @@
-package android.example.drventryca;
+package android.example.drventryca.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.example.drventryca.Data;
+import android.example.drventryca.R;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;

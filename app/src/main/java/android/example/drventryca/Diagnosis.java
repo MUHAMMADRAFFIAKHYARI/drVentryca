@@ -6,6 +6,9 @@ import androidx.recyclerview.widget.PagerSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.example.drventryca.Activity.Result;
+import android.example.drventryca.Adapter.DiagnosisAdapter;
+import android.example.drventryca.Model.QuestionModel;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -30,7 +33,7 @@ public class Diagnosis extends AppCompatActivity {
         setContentView(R.layout.activity_diagnosis);
 
         done_diag = findViewById(R.id.done_diag);
-        questionRecycler = findViewById(R.id.quest_recycler);
+        questionRecycler = findViewById(R.id.quest_teng_recycler);
         questionRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false));
         PagerSnapHelper helper = new PagerSnapHelper() ;
         helper.attachToRecyclerView(questionRecycler);

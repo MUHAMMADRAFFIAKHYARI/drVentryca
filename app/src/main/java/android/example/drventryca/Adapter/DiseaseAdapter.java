@@ -1,7 +1,10 @@
-package android.example.drventryca;
+package android.example.drventryca.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.example.drventryca.Activity.DetailDisease;
+import android.example.drventryca.Model.DiseaseModel;
+import android.example.drventryca.R;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +22,7 @@ public class DiseaseAdapter extends RecyclerView.Adapter<DiseaseAdapter.ViewHold
     private Context mContext;
     private ArrayList<DiseaseModel> diseaseModel;
 
-    DiseaseAdapter(Context context, ArrayList<DiseaseModel> disease_list){
+    public DiseaseAdapter(Context context, ArrayList<DiseaseModel> disease_list){
         this.mContext = context;
         this.diseaseModel = disease_list;
     }

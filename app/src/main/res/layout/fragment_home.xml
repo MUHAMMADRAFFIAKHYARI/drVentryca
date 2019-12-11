@@ -15,15 +15,17 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:paddingBottom="10dp">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toTopOf="@+id/goData"
-                app:layout_constraintTop_toBottomOf="@+id/app_title">
-
-            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="365dp"
+                android:layout_height="195dp"
+                app:layout_constraintEnd_toEndOf="@+id/goFakta"
+                app:layout_constraintStart_toStartOf="@+id/text_bawah1"
+                app:layout_constraintTop_toBottomOf="@+id/berita2"
+                app:srcCompat="@drawable/card2" />
 
             <TextView
                 android:id="@+id/halo"
@@ -165,67 +167,6 @@
             </androidx.cardview.widget.CardView>
 
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/berita1"
-                android:layout_width="365dp"
-                android:layout_height="192dp"
-                android:layout_marginTop="10dp"
-                app:cardBackgroundColor="@color/coral_reef"
-                app:cardCornerRadius="20dp"
-                app:layout_constraintEnd_toEndOf="@+id/goFakta"
-                app:layout_constraintStart_toStartOf="@+id/text_bawah1"
-                app:layout_constraintTop_toBottomOf="@+id/text_bawah1">
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="7dp"
-                    android:layout_marginTop="130dp"
-                    android:fontFamily="@font/monts_black"
-                    android:text=" energi yang tidak terpakai?"
-                    android:textColor="@android:color/white"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/textView13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginTop="110dp"
-                    android:fontFamily="@font/monts_regular"
-                    android:text="Lemak adalah"
-                    android:textColor="@android:color/white"
-                    android:textSize="16sp" />
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/berita2"
-                android:layout_width="365dp"
-                android:layout_height="192dp"
-                android:layout_marginTop="10dp"
-                app:cardBackgroundColor="@color/indico"
-                app:cardCornerRadius="20dp"
-                app:layout_constraintEnd_toEndOf="@+id/berita1"
-                app:layout_constraintStart_toStartOf="@+id/berita1"
-                app:layout_constraintTop_toBottomOf="@+id/berita1">
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/view7"
-                android:layout_width="365dp"
-                android:layout_height="192dp"
-                android:layout_marginTop="10dp"
-                app:cardBackgroundColor="@color/bleu_de_france"
-                app:cardCornerRadius="20dp"
-                app:layout_constraintBottom_toTopOf="@+id/lihat_tips_lain"
-                app:layout_constraintEnd_toEndOf="@+id/berita2"
-                app:layout_constraintStart_toStartOf="@+id/berita2"
-                app:layout_constraintTop_toBottomOf="@+id/berita2">
-
-            </androidx.cardview.widget.CardView>
-
             <TextView
                 android:id="@+id/text_bawah1"
                 android:layout_width="220dp"
@@ -245,16 +186,16 @@
                 android:id="@+id/lihat_tips_lain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/monts_regular"
+                android:foregroundGravity="center|center_horizontal"
+                android:gravity="center|center_horizontal"
                 android:text="Lihat info lainnya"
                 android:textColor="@color/dark_cerulian"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view7" />
+                app:layout_constraintEnd_toEndOf="@+id/imageView13"
+                app:layout_constraintStart_toStartOf="@+id/imageView13"
+                app:layout_constraintTop_toBottomOf="@+id/imageView13" />
             <!--
 
         <TextView
@@ -307,6 +248,25 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/app_title"
                 app:srcCompat="@drawable/bmi_icon" />
+
+            <ImageView
+                android:id="@+id/berita1"
+                android:layout_width="365dp"
+                android:layout_height="195dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/goFakta"
+                app:layout_constraintStart_toStartOf="@+id/text_bawah1"
+                app:layout_constraintTop_toBottomOf="@+id/text_bawah1"
+                app:srcCompat="@drawable/card3" />
+
+            <ImageView
+                android:id="@+id/berita2"
+                android:layout_width="365dp"
+                android:layout_height="195dp"
+                app:layout_constraintEnd_toEndOf="@+id/goFakta"
+                app:layout_constraintStart_toStartOf="@+id/text_bawah1"
+                app:layout_constraintTop_toBottomOf="@+id/berita1"
+                app:srcCompat="@drawable/card1" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

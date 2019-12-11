@@ -1,9 +1,11 @@
-package android.example.drventryca;
+package android.example.drventryca.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
+import android.example.drventryca.Adapter.SliderAdapter;
+import android.example.drventryca.R;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Html;
@@ -126,7 +128,7 @@ public class IntroduceSlide extends AppCompatActivity {
 
     public void nextPage(View view) {
         if (nextButton.getText() == "Got It"){
-            startActivity(new Intent(this, Landing.class));
+            startActivity(new Intent(this, Register.class));
         }else{
             mSlideViewPager.setCurrentItem(mCurrentPage +1);
         }

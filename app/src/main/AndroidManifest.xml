@@ -9,40 +9,45 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BMICalc"
-            android:theme="@style/slideToRight"></activity>
-        <activity android:name=".Login"
-            android:theme="@style/AppTheme4"
-            android:noHistory="true"/>
+        <activity android:name=".Activity.DiagStepTengPart"></activity>
+        <activity android:name=".Activity.DiagStepTeng" />
+        <activity android:name=".Activity.DiagStepGeneral" />
         <activity
-            android:name=".Result"
+            android:name=".Activity.BMICalc"
+            android:theme="@style/slideToRight" />
+        <activity
+            android:name=".Activity.Login"
+            android:noHistory="true"
+            android:theme="@style/AppTheme4" />
+        <activity
+            android:name=".Activity.Result"
             android:noHistory="true" />
         <activity
             android:name=".Diagnosis"
             android:noHistory="true" />
         <activity
-            android:name=".HealthNews"
+            android:name=".Activity.HealthNews"
             android:theme="@style/slideToLeft" />
-        <activity android:name=".DetailDisease" />
-        <activity android:name=".FaktaTips" />
-        <activity android:name=".ReadyDiag" />
-        <activity android:name=".DataDisease" />
+        <activity android:name=".Activity.DetailDisease" />
+        <activity android:name=".Activity.FaktaTips" />
+        <activity android:name=".Activity.ReadyDiag" />
+        <activity android:name=".Activity.DataDisease" />
         <activity
-            android:name=".Landing"
+            android:name=".Activity.Landing"
             android:theme="@style/AppTheme3" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".Activity.SplashScreen"
             android:noHistory="true"
             android:theme="@style/AppTheme4" />
         <activity
-            android:name=".Register"
+            android:name=".Activity.Register"
             android:noHistory="true"
             android:theme="@style/AppTheme4" />
         <activity
-            android:name=".IntroduceSlide"
+            android:name=".Activity.IntroduceSlide"
             android:noHistory="true" />
         <activity
-            android:name=".GetStarted"
+            android:name=".Activity.GetStarted"
             android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

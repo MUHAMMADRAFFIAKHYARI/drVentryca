@@ -4,7 +4,7 @@
     android:id="@+id/bg_relative"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IntroduceSlide">
+    tools:context=".Activity.IntroduceSlide">
 
 
     <androidx.viewpager.widget.ViewPager

@@ -1,16 +1,18 @@
-package android.example.drventryca;
+package android.example.drventryca.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import android.content.Intent;
+import android.example.drventryca.Fragment.AboutFragment;
+import android.example.drventryca.Fragment.HomeFragment;
+import android.example.drventryca.Fragment.ProfileFragment;
+import android.example.drventryca.R;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;

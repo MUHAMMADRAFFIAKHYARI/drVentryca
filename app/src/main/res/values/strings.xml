@@ -442,4 +442,13 @@
         <item>pertanyaan20</item>
     </string-array>
 
+    <string-array name="question_tenggorokan">
+        <item>Apakah anda mengalami pemuntahan kembali isi kerongkongan ?</item>
+        <item>Apakah nyeri yang anda alami bertambah pada saat membungkuk ?</item>
+        <item>Apakah nyeri tersebut hilang saat berdiri ?</item>
+        <item>Terasa penuh di tenggorokan ?</item>
+        <item>Apakah nafsu makan anda menurun ?</item>
+        <item>Apakah anda tampak seperti kurang gizi ?</item>
+    </string-array>
+
 </resources>

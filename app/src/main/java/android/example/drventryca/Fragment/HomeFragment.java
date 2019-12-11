@@ -1,22 +1,25 @@
-package android.example.drventryca;
+package android.example.drventryca.Fragment;
 
 import android.animation.PropertyValuesHolder;
 import android.content.Intent;
+import android.example.drventryca.Activity.BMICalc;
+import android.example.drventryca.Activity.DataDisease;
+import android.example.drventryca.Activity.FaktaTips;
+import android.example.drventryca.Activity.HealthNews;
+import android.example.drventryca.R;
+import android.example.drventryca.Activity.ReadyDiag;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
-import androidx.core.view.ScrollingView;
 import androidx.fragment.app.Fragment;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -29,7 +32,8 @@ import com.google.firebase.database.ValueEventListener;
 
 public class HomeFragment extends Fragment {
 
-    private CardView klikDiag, klikData, klikFakta, berita1, berita2, berita3;
+    private CardView klikDiag, klikData, klikFakta;
+    private ImageView berita1, berita2, berita3;
     private ImageView news, goImt;
     private PropertyValuesHolder scaleX, scaleY, aplha;
     TextView appTitle, halo, etNama, kabar, bawah1, bawah2;
@@ -143,7 +147,7 @@ public class HomeFragment extends Fragment {
          goImt.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-                 startActivity(new Intent(getActivity(),BMICalc.class));
+                 startActivity(new Intent(getActivity(), BMICalc.class));
              }
          });
 

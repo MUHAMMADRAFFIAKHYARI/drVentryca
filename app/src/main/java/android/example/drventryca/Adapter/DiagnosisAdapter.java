@@ -1,6 +1,8 @@
-package android.example.drventryca;
+package android.example.drventryca.Adapter;
 
 import android.content.Context;
+import android.example.drventryca.Model.QuestionModel;
+import android.example.drventryca.R;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
