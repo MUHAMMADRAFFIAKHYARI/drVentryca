@@ -9,7 +9,6 @@ import android.example.drventryca.Model.DiseaseModel;
 import android.example.drventryca.R;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -37,6 +36,14 @@ public class DataDisease extends AppCompatActivity {
         diseaseRecycler_.setLayoutManager(new LinearLayoutManager(this));
         diseaseList = new ArrayList<>();
 
+        diseaseAdapter = new DiseaseAdapter(this, diseaseList);
+        diseaseRecycler_.setAdapter(diseaseAdapter);
+        initializeDiseaseList();
+
+        removeNotifBar();
+    }
+
+    public void removeNotifBar(){
         Window window = getWindow();
 
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE |
@@ -44,16 +51,11 @@ public class DataDisease extends AppCompatActivity {
 
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(Color.TRANSPARENT);
-
-        diseaseAdapter = new DiseaseAdapter(this, diseaseList);
-        diseaseRecycler_.setAdapter(diseaseAdapter);
-        initializeDiseaseList();
-
     }
 
     public void initializeDiseaseList(){
         String[] title_disease = getResources().getStringArray(R.array.disease_list);
-        String[] expl_disease = getResources().getStringArray(R.array.penjelasan);
+        String[] expl_disease = getResources().getStringArray(R.array.disease_explan);
 
         diseaseList.clear();
 
@@ -62,30 +64,6 @@ public class DataDisease extends AppCompatActivity {
         }
         diseaseAdapter.notifyDataSetChanged();
     }
-
-    float x1,x2,y1,y2;
-    public boolean onTouchEvent(MotionEvent motionEvent){
-        switch (motionEvent.getAction()){
-            case MotionEvent.ACTION_DOWN:
-                x1 = motionEvent.getX();
-                y1 = motionEvent.getY();
-                break;
-
-            case MotionEvent.ACTION_UP:
-                x2 = motionEvent.getX();
-                y2 = motionEvent.getY();
-
-                if (x1<x2){
-                    finish();
-                } else if (x2<x1){
-
-                }
-                break;
-        }
-
-        return false;
-    }
-
 
 
 }

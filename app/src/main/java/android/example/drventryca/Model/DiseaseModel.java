@@ -9,11 +9,11 @@ public class DiseaseModel {
         this.explan_= explan;
     }
 
-    public String getTitle_() {
+    public String getTitle() {
         return title_;
     }
 
-    public String getExplan_(){
+    public String getExplan(){
         return explan_;
     }
 

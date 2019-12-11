@@ -19,7 +19,7 @@ public class DetailDisease extends AppCompatActivity {
         setContentView(R.layout.activity_detail_disease);
 
         TextView mExplan = findViewById(R.id.disease_expl);
-        TextView mTitle = findViewById(R.id.disease_title);
+        TextView mTitle = findViewById(R.id.disease_name);
         Window window = getWindow();
 
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE |

@@ -122,7 +122,7 @@ public class HomeFragment extends Fragment {
          klikData.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-                 if (v.getId() == R.id.goData || v.getId() == R.id.goData1 || v.getId() == R.id.goData2){
+                 if (v.getId() == R.id.goData){
                      startActivity(new Intent(getActivity(), DataDisease.class));
                  }
              }

@@ -62,7 +62,7 @@
         <item>saya ada sesuatu nih gan</item>
     </string-array>
 
-    <string-array name="penjelasan">
+    <string-array name="disease_explan">
         <item>
             <b>Penjelasan</b>\n
             Esofagitis adalah peradangan esophagus. Tekanan esophagus minimal 3mmHg. Jika kurang, makan akan terjadi refluk. Refluk ini akan mempengaruhi kepakaan selaput lender esophagus terhadap bahan refluk. Akibat rangsangan dari hasil refluk terhadap selaput lender esophagus ini dapat menimbulkan peradangan dan menimbulkan esophagitis. Perlu dilakukan tes Berntein dan esofagoskopi untuk menegakkan diagnosa.\n\n
