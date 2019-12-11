@@ -29,6 +29,13 @@ public class DiagStepTengPart extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diag_step_teng_part);
 
+        //Intent
+        Bundle bundle = getIntent().getExtras();
+
+        if(bundle != null){
+            String data = bundle.getString("data");
+        }
+
         Window window = getWindow();
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE |
                 View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.AUTOFILL_FLAG_INCLUDE_NOT_IMPORTANT_VIEWS);

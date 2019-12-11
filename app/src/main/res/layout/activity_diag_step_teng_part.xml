@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/bleu_de_france"
     android:orientation="vertical"
-    tools:context=".Diagnosis">
+    tools:context=".Activity.DiagStepTengPart">
 
 
     <TextView
