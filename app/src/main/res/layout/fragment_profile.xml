@@ -46,18 +46,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/mb"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/user_image"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="60dp"
-                    android:layout_marginTop="-150dp"
-                    android:fontFamily="@font/monts_regular"
-                    android:text="70"
-                    android:textSize="30sp"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/mb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_image"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="-170dp"
+                android:fontFamily="@font/monts_regular"
+                android:text="70"
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textView28"
@@ -182,15 +182,15 @@
                     android:text="Tinggi Badan"
                     android:textSize="16sp" />
 
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_below="@+id/textView"
-                    android:layout_alignStart="@+id/textView"
-                    android:layout_marginStart="-5dp"
-                    android:layout_marginTop="38dp"
-                    app:srcCompat="@drawable/icon_gender" />
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/textView"
+                android:layout_alignStart="@+id/textView"
+                android:layout_marginStart="-5dp"
+                android:layout_marginTop="40dp"
+                app:srcCompat="@drawable/icon_gender" />
 
                 <ImageView
                     android:id="@+id/imageView11"
@@ -209,6 +209,35 @@
                     android:layout_alignStart="@+id/imageView11"
                     android:layout_marginTop="10dp"
                     app:srcCompat="@drawable/icon_age" />
+
+            <TextView
+                android:id="@+id/textLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/age"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="false"
+                android:layout_marginLeft="145dp"
+                android:layout_marginTop="95dp"
+                android:layout_marginEnd="164dp"
+                android:fontFamily="@font/monts_regular"
+                android:text="Logout"
+                android:textColor="@color/red_circle"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgLogout"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@+id/textLogout"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="145dp"
+                android:layout_marginTop="-4dp"
+                android:layout_marginEnd="0dp"
+                android:layout_toStartOf="@+id/textLogout"
+                app:srcCompat="@drawable/logout" />
 
         </RelativeLayout>
     <!--</ScrollView>-->

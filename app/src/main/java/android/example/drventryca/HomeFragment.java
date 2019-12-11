@@ -9,12 +9,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
+import androidx.core.view.ScrollingView;
 import androidx.fragment.app.Fragment;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -35,13 +37,13 @@ public class HomeFragment extends Fragment {
     DatabaseReference reference;
     FirebaseUser user;
     FirebaseAuth auth;
-    View view;
+
 
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_home, container, false);
+       View view = inflater.inflate(R.layout.fragment_home, container, false);
 
 
          appTitle = view.findViewById(R.id.app_title);
@@ -81,6 +83,7 @@ public class HomeFragment extends Fragment {
 
             }
         });
+
 
          /*kabar.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.left_slide_in2));*/
          halo.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.left_slide_in_smooth));
@@ -149,11 +152,9 @@ public class HomeFragment extends Fragment {
     }
 
 
-    float x1,x2,y1,y2;
+    /*float x1,x2,y1,y2;
 
-    void onSwipe(){
 
-    }
     public boolean onTouchEvent(MotionEvent motionEvent){
         switch (motionEvent.getAction()){
             case MotionEvent.ACTION_DOWN:
@@ -174,6 +175,6 @@ public class HomeFragment extends Fragment {
         }
 
         return false;
-    }
+    }*/
 
 }

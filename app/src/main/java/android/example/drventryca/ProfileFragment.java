@@ -1,7 +1,10 @@
 package android.example.drventryca;
 
 import android.animation.ValueAnimator;
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -26,8 +29,10 @@ import com.google.firebase.database.ValueEventListener;
 
 public class ProfileFragment extends Fragment {
 
-    private ImageView image_user;
-    TextView massa, tinggi, gender, goldar, age, namdep, nambel;
+    private ImageView image_user, imgLogout;
+    TextView massa, tinggi, gender, goldar, age, namdep, nambel, textLogout;
+    private Button noLogout, yesLogout;
+
 
     DatabaseReference reference;
     FirebaseUser user;
@@ -48,8 +53,72 @@ public class ProfileFragment extends Fragment {
         age = view.findViewById(R.id.age);
         namdep = view.findViewById(R.id.nama_depan);
         nambel = view.findViewById(R.id.nama_belakang);
+        imgLogout = view.findViewById(R.id.imgLogout);
+        textLogout =view.findViewById(R.id.textLogout);
 
 
+        imgLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Dialog dialog = new Dialog(getContext());
+                dialog.setContentView(R.layout.logout_dialog);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+
+                noLogout = dialog.findViewById(R.id.noLogout);
+                yesLogout = dialog.findViewById(R.id.yesLogout);
+
+                yesLogout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getActivity(), GetStarted.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+                        getActivity().finish();
+                    }
+                });
+
+                noLogout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+
+
+            }
+        });
+
+        textLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Dialog dialog = new Dialog(getContext());
+                dialog.setContentView(R.layout.logout_dialog);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+
+                noLogout = dialog.findViewById(R.id.noLogout);
+                yesLogout = dialog.findViewById(R.id.yesLogout);
+
+                yesLogout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getActivity(), GetStarted.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+                        getActivity().finish();
+                    }
+                });
+
+                noLogout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+
+            }
+        });
 
 
         auth = FirebaseAuth.getInstance();
@@ -109,6 +178,7 @@ public class ProfileFragment extends Fragment {
 
             }
         });
+
 
 
         /*image_user.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.translate_y_show2));*/

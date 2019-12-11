@@ -84,9 +84,10 @@
 
         <Button
             android:id="@+id/bt_login"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/edt_password"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="88dp"
             android:background="@drawable/round_style2"
             android:fontFamily="@font/monts_regular"

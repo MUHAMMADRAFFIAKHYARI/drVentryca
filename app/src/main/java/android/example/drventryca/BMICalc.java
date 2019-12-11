@@ -95,21 +95,30 @@ public class BMICalc extends AppCompatActivity {
 
             result_ = mass / (height*height);
             String yHasil = String.format("%.2f",result_);
-            float xHasil = Float.parseFloat(yHasil);
+            final float xHasil = Float.parseFloat(yHasil);
 
             String status_;
 
             if(result_ < 18.5){
                 status_ = "Wah sepertinya kamu kekurangan massa tubuh";
-                circleResult.getResources().getDrawable(circle_yellow);
+                circleResult.setBackgroundResource(circle_yellow);
+                circleResult.setTransitionAlpha(xHasil);
             } else if(result_>= 18.5 && result_ <= 24.9){
                 status_ = "Selamat massa tubuhmu sudah ideal :D";
+                circleResult.setBackgroundResource(R.drawable.circle_green);
+                circleResult.setTransitionAlpha(xHasil);
             } else if(result_ > 24.9 && result_ <= 29.9){
                 status_ = "Waduh kamu kelebihan berat badan, harus \n diet nih";
+                circleResult.setBackgroundResource(R.drawable.circle_red);
+                circleResult.setTransitionAlpha(xHasil);
             } else if (result_ > 29.9){
                 status_ = "Oh tidak!! kamu terkena obesitas, diperbaiki pola makannya ya";
+                circleResult.setBackgroundResource(R.drawable.circle_red);
+                circleResult.setTransitionAlpha(xHasil);
             } else{
                 status_ = "Oh tidak!! kamu terkena obesitas, diperbaiki pola makannya ya";
+                circleResult.setBackgroundResource(R.drawable.circle_red);
+                circleResult.setTransitionAlpha(xHasil);
             }status.setText(status_);
 
 
@@ -126,13 +135,9 @@ public class BMICalc extends AppCompatActivity {
             animate_result.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                 public void onAnimationUpdate(ValueAnimator animation) {
                     result.setText(animation.getAnimatedValue().toString());
-                    circleResult.setBackgroundResource(R.drawable.circle_green);
-                    circleResult.setTransitionAlpha(1);
+
                 }
             });animate_result.start();
-
-
-
         }
 
     }
