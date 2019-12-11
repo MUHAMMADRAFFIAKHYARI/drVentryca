@@ -15,5 +15,9 @@
     <color name="abu1">#ededed</color>
     <color name="abu2">#dbdbdb</color>
     <color name="indico">#814ED5</color>
+    <color name="red_circle">#e74c3c</color>
+    <color name="green_circle">#2ecc71</color>
+    <color name="yellow_circle">#f1c40f</color>
+
 </resources>
 

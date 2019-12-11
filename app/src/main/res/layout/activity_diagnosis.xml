@@ -17,7 +17,7 @@
         android:layout_marginTop="70dp"
         android:fontFamily="@font/mosnt_bold"
         android:gravity="center_horizontal"
-        android:text="Terjawab 1 dari 20"
+        android:text="Pertanyaan 1 "
         android:textColor="@android:color/white"
         android:textSize="18sp" />
 
@@ -60,7 +60,7 @@
         android:background="@drawable/button3_style"
         android:fontFamily="@font/monts_regular"
         android:foregroundGravity="center|center_horizontal"
-        android:text="DONE"
+        android:text="next"
         android:textColor="@color/rajah"
         android:textStyle="bold" />
 

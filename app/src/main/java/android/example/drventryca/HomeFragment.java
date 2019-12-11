@@ -28,7 +28,7 @@ import com.google.firebase.database.ValueEventListener;
 public class HomeFragment extends Fragment {
 
     private CardView klikDiag, klikData, klikFakta, berita1, berita2, berita3;
-    private ImageView news;
+    private ImageView news, goImt;
     private PropertyValuesHolder scaleX, scaleY, aplha;
     TextView appTitle, halo, etNama, kabar, bawah1, bawah2;
 
@@ -59,6 +59,8 @@ public class HomeFragment extends Fragment {
          berita2 = view.findViewById(R.id.berita2);
          /*berita3 = view.findViewById(R.id.ber)*/
 
+        goImt = view.findViewById(R.id.goIMT);
+
 
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
@@ -70,8 +72,8 @@ public class HomeFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String namaDepan = dataSnapshot.child("namaDepan").getValue().toString();
-                etNama.setText(namaDepan);
-                Toast.makeText(getContext(), namaDepan, Toast.LENGTH_LONG).show();
+                etNama.setText(namaDepan.toUpperCase() +"!");
+                Toast.makeText(getContext(), "Selamat datang "+namaDepan.toUpperCase() +"!", Toast.LENGTH_LONG).show();
             }
 
             @Override
@@ -79,10 +81,6 @@ public class HomeFragment extends Fragment {
 
             }
         });
-
-
-
-
 
          /*kabar.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.left_slide_in2));*/
          halo.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.left_slide_in_smooth));
@@ -136,6 +134,13 @@ public class HomeFragment extends Fragment {
              @Override
              public void onClick(View v) {
                  startActivity(new Intent(getActivity(), HealthNews.class));
+             }
+         });
+
+         goImt.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 startActivity(new Intent(getActivity(),BMICalc.class));
              }
          });
 

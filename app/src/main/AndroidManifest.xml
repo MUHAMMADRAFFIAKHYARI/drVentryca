@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".BMICalc"
-            android:theme="@style/AppTheme4"></activity>
+            android:theme="@style/slideToRight"></activity>
         <activity android:name=".Login"
 
             android:theme="@style/AppTheme4"/>
@@ -22,7 +22,7 @@
             android:noHistory="true" />
         <activity
             android:name=".HealthNews"
-            android:theme="@style/customAnimation" />
+            android:theme="@style/slideToLeft" />
         <activity android:name=".DetailDisease" />
         <activity android:name=".FaktaTips" />
         <activity android:name=".ReadyDiag" />

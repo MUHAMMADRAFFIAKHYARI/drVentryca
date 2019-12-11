@@ -25,10 +25,27 @@ public class HealthNews extends AppCompatActivity {
         window.setStatusBarColor(Color.TRANSPARENT);
     }
 
-  /*
-    @Override
-    public void finish() {
-        super.finish();
-        overridePendingTransition(R.anim.left_slide_out, R.anim.right_slide_in);
-    }*/
+    float x1,x2,y1,y2;
+    public boolean onTouchEvent(MotionEvent motionEvent){
+        switch (motionEvent.getAction()){
+            case MotionEvent.ACTION_DOWN:
+                x1 = motionEvent.getX();
+                y1 = motionEvent.getY();
+                break;
+
+            case MotionEvent.ACTION_UP:
+                x2 = motionEvent.getX();
+                y2 = motionEvent.getY();
+
+                if (x1<x2){
+                    finish();
+                } else if (x2<x1){
+                    finish();
+                }
+                break;
+        }
+
+        return false;
+    }
+
 }

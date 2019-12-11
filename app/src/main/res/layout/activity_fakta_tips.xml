@@ -29,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="352dp"
         android:layout_marginTop="-30dp"
-        android:background="@drawable/round_style7" />
+        android:background="@drawable/round_style6" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/slideFaktaTips"

@@ -38,16 +38,28 @@
         <item name="colorPrimaryDark">@color/rajah</item>
     </style>
 
-    <style name="ForAnimationAct" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowAnimationStyle">@style/customAnimation</item>
+    <style name="toRight" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@style/slideToRight</item>
     </style>
 
-    <style name="customAnimation" parent="ForAnimationAct">
+    <style name="slideToRight" parent="toRight">
+        <item name="colorPrimaryDark">@color/dark_cerulian</item>
+        <item name="android:activityOpenEnterAnimation">@anim/right_slide_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/left_slide_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/left_slide_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/right_slide_out</item>
+    </style>
+
+    <style name="ForAnimationAct" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@style/slideToLeft</item>
+    </style>
+
+    <style name="slideToLeft" parent="ForAnimationAct">
         <item name="colorPrimaryDark">@color/dark_cerulian</item>
         <item name="android:activityOpenEnterAnimation">@anim/left_slide_in</item>
         <item name="android:activityOpenExitAnimation">@anim/right_slide_out</item>
         <item name="android:activityCloseEnterAnimation">@anim/right_slide_in</item>
-        <item name="android:activityCloseExitAnimation">@anim/left_slide_out_paralax</item>
+        <item name="android:activityCloseExitAnimation">@anim/left_slide_out</item>
     </style>
 
 </resources>

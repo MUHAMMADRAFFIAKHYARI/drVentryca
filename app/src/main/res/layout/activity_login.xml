@@ -10,7 +10,9 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp">
 
 
         <TextView
@@ -18,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/bt_login"
-            android:layout_marginLeft="70dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="210dp"
             android:fontFamily="@font/monts_regular"
             android:text="Belum punya akun?"
@@ -43,7 +45,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/imageView"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="200dp"
             android:fontFamily="@font/monts_black"
             android:text="MASUK AKUN"
@@ -51,32 +52,11 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <RadioGroup
-            android:id="@+id/rg_kelamin"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/edt_password"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="15dp"
-            android:requiresFadingEdge="horizontal">
-
-            <RadioButton
-                android:id="@+id/rb_perempuan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="160dp"
-                android:layout_marginTop="-32dp"
-                android:fontFamily="@font/monts_regular"
-                android:text="Perempuan"
-                android:textSize="16sp" />
-        </RadioGroup>
-
         <EditText
             android:id="@+id/edt_password"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/edt_email"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
             android:background="@drawable/fill_text"
             android:ems="10"
@@ -89,10 +69,9 @@
 
         <EditText
             android:id="@+id/edt_email"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/bigText2"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="70dp"
             android:background="@drawable/fill_text"
             android:ems="10"
@@ -107,9 +86,8 @@
             android:id="@+id/bt_login"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/rg_kelamin"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="63dp"
+            android:layout_below="@+id/edt_password"
+            android:layout_marginTop="88dp"
             android:background="@drawable/round_style2"
             android:fontFamily="@font/monts_regular"
             android:text="Login"

@@ -63,9 +63,8 @@ public class ReadyDiag extends AppCompatActivity {
 
                 if (x1<x2){
                     finish();
-                    startActivity(new Intent(this, Landing.class));
                 } else if (x2<x1){
-
+                    finish();
                 }
                 break;
         }

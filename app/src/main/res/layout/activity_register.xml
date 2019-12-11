@@ -8,8 +8,11 @@
     android:orientation="vertical"
     tools:context=".Register">
 
-    <RelativeLayout android:layout_height="match_parent"
-        android:layout_width="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp">
 
 
         <TextView
@@ -17,8 +20,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/imageView"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="50dp"
             android:layout_marginTop="80dp"
             android:fontFamily="@font/monts_black"
             android:text="MASUKKAN\nDATA DIRI ANDA"
@@ -44,8 +45,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/toHome"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="273dp"
+            android:layout_marginEnd="60dp"
+            android:layout_toStartOf="@+id/toHome"
             android:fontFamily="@font/monts_regular"
             android:onClick="toLogin"
             android:text="Login"
@@ -57,10 +58,9 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/edt_password"
-            android:layout_marginLeft="50dp"
+            android:layout_alignStart="@+id/edt_password"
             android:layout_marginTop="15dp"
-            android:requiresFadingEdge="horizontal"
-            >
+            android:requiresFadingEdge="horizontal">
 
             <RadioButton
                 android:id="@+id/rb_laki"
@@ -83,10 +83,9 @@
 
         <EditText
             android:id="@+id/edt_password"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/edt_email"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
             android:background="@drawable/fill_text"
             android:ems="10"
@@ -95,15 +94,13 @@
             android:inputType="textPersonName"
             android:paddingLeft="20dp"
             android:textColorHint="#5C5C5C"
-            android:textSize="16sp"
-            />
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/edt_userName"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/et_usia"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
             android:background="@drawable/fill_text"
             android:fontFamily="@font/monts_regular"
@@ -115,10 +112,9 @@
 
         <EditText
             android:id="@+id/password_"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/edt_userName"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
             android:background="@drawable/fill_text"
             android:fontFamily="@font/monts_regular"
@@ -130,10 +126,9 @@
 
         <EditText
             android:id="@+id/et_usia"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/et_massaBadan"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
             android:background="@drawable/fill_text"
             android:fontFamily="@font/monts_regular"
@@ -150,7 +145,6 @@
             android:layout_alignTop="@+id/et_massaBadan"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="0dp"
-            android:layout_marginEnd="50dp"
             android:background="@drawable/fill_text"
             android:ems="10"
             android:fontFamily="@font/monts_regular"
@@ -166,8 +160,6 @@
             android:layout_width="140dp"
             android:layout_height="50dp"
             android:layout_below="@+id/spin_goldar"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="50dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/fill_text"
             android:ems="10"
@@ -181,10 +173,9 @@
 
         <EditText
             android:id="@+id/edt_email"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/bigText2"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             android:background="@drawable/fill_text"
             android:ems="10"
@@ -201,8 +192,6 @@
             android:layout_width="300dp"
             android:layout_height="40dp"
             android:layout_below="@id/rg_kelamin"
-            android:layout_alignParentStart="false"
-            android:layout_marginStart="50dp"
             android:layout_marginTop="15dp"
             android:clipToPadding="true"
             android:paddingLeft="20dp"
@@ -213,7 +202,6 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/password_"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
             android:background="@drawable/round_style5"
             android:fontFamily="@font/monts_regular"

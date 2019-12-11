@@ -28,7 +28,7 @@ public class ProfileFragment extends Fragment {
 
     private ImageView image_user;
     TextView massa, tinggi, gender, goldar, age, namdep, nambel;
-    private Button cek_imt;
+
     DatabaseReference reference;
     FirebaseUser user;
     FirebaseAuth auth;
@@ -49,8 +49,7 @@ public class ProfileFragment extends Fragment {
         namdep = view.findViewById(R.id.nama_depan);
         nambel = view.findViewById(R.id.nama_belakang);
 
-        /*imt = view.findViewById(R.id.imt);*/
-        cek_imt = view.findViewById(R.id.goIMT);
+
 
 
         auth = FirebaseAuth.getInstance();
@@ -63,9 +62,9 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String namaDepan = dataSnapshot.child("namaDepan").getValue().toString();
-                namdep.setText(namaDepan);
+                namdep.setText(namaDepan.toUpperCase());
                 String namaBelakang = dataSnapshot.child("namaBelakang").getValue().toString();
-                nambel.setText(namaBelakang);
+                nambel.setText(namaBelakang.toUpperCase());
                 String beratBadan = dataSnapshot.child("massaBadan").getValue().toString();
                 massa.setText(beratBadan);
                 String tinggiBadan = dataSnapshot.child("tinggiBadan").getValue().toString();
@@ -111,30 +110,6 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-        /*cek_imt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) throws NumberFormatException {
-                double tinggiper = 170.0/100.0;
-
-                double hasil =  70.0 / (1.7*1.7);
-                System.out.println(hasil);
-                imt.setText(String.valueOf(hasil));
-
-                *//*String hasil_ = String.format("%.2f",hasil);
-                String apa = valueOf(100.0);
-                imt.setText(apa);
-                int hasil__ = Integer.valueOf(hasil_);
-                imt.setText(hasil_);*//*
-
-            }
-        });*/
-
-        cek_imt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getActivity(), BMICalc.class));
-            }
-        });
 
         /*image_user.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.translate_y_show2));*/
         gender.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.fade_right_show));

@@ -17,12 +17,12 @@
         android:background="@drawable/round_style9" />
 
     <View
-        android:id="@+id/view3"
-        android:layout_width="350dp"
+        android:id="@+id/circleResult"
+        android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="90dp"
-        android:background="@drawable/round_style1" />
+        android:layout_marginTop="140dp"
+        android:background="@drawable/circle" />
 
     <!-- <View
         android:id="@+id/view4"
@@ -40,20 +40,24 @@
         android:id="@+id/imtResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/view3"
+        android:layout_alignTop="@+id/circleResult"
+        android:layout_alignBottom="@+id/circleResult"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:gravity="center"
         android:text="0.0"
+        android:textColor="@color/colorWhite"
         android:textSize="70sp" />
 
     <TextView
         android:id="@+id/status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/view3"
+        android:layout_below="@+id/circleResult"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="165dp"
+        android:layout_marginTop="70dp"
         android:fontFamily="@font/monts_regular"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         android:text="Status"
         android:textAlignment="center"
         android:textSize="16sp"
@@ -97,11 +101,26 @@
         android:layout_below="@+id/massaInput"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="58dp"
-        android:background="@drawable/button3_style"
+        android:background="@drawable/round_style5"
         android:fontFamily="@font/monts_regular"
         android:onClick="imtCalculate"
         android:text="Calculate"
         android:textColor="@color/rajah"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/calculate"
+        android:layout_alignBottom="@+id/view5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="58dp"
+        android:layout_marginBottom="26dp"
+        android:fontFamily="@font/monts_regular"
+        android:text="Lihat Tabel"
+        android:textColor="@color/dark_cerulian"
+        android:textSize="16sp"
         android:textStyle="bold" />
 
 </RelativeLayout>
