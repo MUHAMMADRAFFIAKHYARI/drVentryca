@@ -2,7 +2,9 @@ package android.example.drventryca;
 
 import android.animation.ValueAnimator;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -31,7 +33,7 @@ public class ProfileFragment extends Fragment {
 
     private ImageView image_user, imgLogout;
     TextView massa, tinggi, gender, goldar, age, namdep, nambel, textLogout;
-    private Button noLogout, yesLogout;
+    Button btn_yes, btn_no;
 
 
     DatabaseReference reference;
@@ -57,37 +59,37 @@ public class ProfileFragment extends Fragment {
         textLogout =view.findViewById(R.id.textLogout);
 
 
-        imgLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final Dialog dialog = new Dialog(getContext());
-                dialog.setContentView(R.layout.logout_dialog);
-                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                dialog.show();
-
-                noLogout = dialog.findViewById(R.id.noLogout);
-                yesLogout = dialog.findViewById(R.id.yesLogout);
-
-                yesLogout.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(getActivity(), GetStarted.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        startActivity(intent);
-                        getActivity().finish();
-                    }
-                });
-
-                noLogout.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        dialog.dismiss();
-                    }
-                });
-
-
-            }
-        });
+//        imgLogout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                final Dialog dialog = new Dialog(getContext());
+//                dialog.setContentView(R.layout.logout_dialog);
+//                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+//                dialog.show();
+//
+//                btn_no = dialog.findViewById(R.id.bt_no);
+//                btn_yes = dialog.findViewById(R.id.bt_yes);
+//
+//                btn_yes.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        Intent intent = new Intent(getActivity(), GetStarted.class);
+//                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                        startActivity(intent);
+//                        getActivity().finish();
+//                    }
+//                });
+//
+//                btn_no.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        dialog.dismiss();
+//                    }
+//                });
+//
+//
+//            }
+//        });
 
         textLogout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,23 +99,19 @@ public class ProfileFragment extends Fragment {
                 dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 dialog.show();
 
-                noLogout = dialog.findViewById(R.id.noLogout);
-                yesLogout = dialog.findViewById(R.id.yesLogout);
+                btn_no = dialog.findViewById(R.id.bt_no);
+                btn_yes = dialog.findViewById(R.id.bt_yes);
 
-                yesLogout.setOnClickListener(new View.OnClickListener() {
+                btn_yes.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(getActivity(), GetStarted.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        startActivity(intent);
-                        getActivity().finish();
-                    }
-                });
-
-                noLogout.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        dialog.dismiss();
+                    public void onClick(View view) {
+                        auth.signOut();
+                        Intent i = new Intent(getActivity().getApplicationContext(), Login.class);
+                        SharedPreferences pref = getActivity().getApplication().getSharedPreferences("myyPrefs", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = pref.edit();
+                        editor.putBoolean("isIntro0pened", false);
+                        editor.commit();
+                        startActivity(i);
                     }
                 });
 

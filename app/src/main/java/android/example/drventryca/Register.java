@@ -100,6 +100,7 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
                                                 @Override
                                                 public void onComplete(@NonNull Task<Void> task) {
                                                     Toast.makeText(getApplicationContext(), "Data Berhasil Ditambah ke Realtime Database", Toast.LENGTH_LONG).show();
+                                                    startActivity(new Intent(getApplicationContext(), Login.class));
                                                 }
                                             });
                                 }
