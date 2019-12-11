@@ -35,6 +35,9 @@ public class FaktaTips extends AppCompatActivity {
         mFaktaTipsPager.setAdapter(ftSliderAdapter);
 
 
+        TextView counter = findViewById(R.id.counter);
+        counter.setText("1 / "+ftSliderAdapter.getCount());
+
         mFaktaTipsPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -44,8 +47,6 @@ public class FaktaTips extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 int a = ftSliderAdapter.getCount();
-                /*String[] faktatips = getResources().getStringArray(R.array.fakta_tips);
-                int banyak_ft = faktatips.length;*/
                 TextView counter = findViewById(R.id.counter);
 
                 for (int i  = 1; i< a; i++){

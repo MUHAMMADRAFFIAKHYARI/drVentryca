@@ -19,7 +19,7 @@
             android:paddingBottom="10dp">
 
             <ImageView
-                android:id="@+id/imageView13"
+                android:id="@+id/berita3"
                 android:layout_width="365dp"
                 android:layout_height="195dp"
                 app:layout_constraintEnd_toEndOf="@+id/goFakta"
@@ -37,7 +37,7 @@
                 android:textColor="@color/colorWhite"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="@+id/textView3"
-                app:layout_constraintTop_toTopOf="@+id/imageView13" />
+                app:layout_constraintTop_toTopOf="@+id/berita3" />
 
             <TextView
                 android:id="@+id/textView26"
@@ -216,9 +216,9 @@
                 android:text="Lihat info lainnya"
                 android:textColor="@color/dark_cerulian"
                 android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="@+id/imageView13"
-                app:layout_constraintStart_toStartOf="@+id/imageView13"
-                app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+                app:layout_constraintEnd_toEndOf="@+id/berita3"
+                app:layout_constraintStart_toStartOf="@+id/berita3"
+                app:layout_constraintTop_toBottomOf="@+id/berita3" />
             <!--
 
         <TextView

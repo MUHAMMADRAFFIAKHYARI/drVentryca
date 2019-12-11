@@ -8,7 +8,9 @@ import android.example.drventryca.Activity.FaktaTips;
 import android.example.drventryca.Activity.HealthNews;
 import android.example.drventryca.R;
 import android.example.drventryca.Activity.ReadyDiag;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -63,7 +65,7 @@ public class HomeFragment extends Fragment {
          /*bawah2 = view.findViewById(R.id.text_bawah2);*/
          berita1 = view.findViewById(R.id.berita1);
          berita2 = view.findViewById(R.id.berita2);
-         /*berita3 = view.findViewById(R.id.ber)*/
+         berita3 = view.findViewById(R.id.berita3);
 
         goImt = view.findViewById(R.id.goIMT);
 
@@ -79,7 +81,7 @@ public class HomeFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String namaDepan = dataSnapshot.child("namaDepan").getValue().toString();
                 etNama.setText(namaDepan.toUpperCase() +"!");
-                Toast.makeText(getContext(), "Selamat datang "+namaDepan.toUpperCase() +"!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), "Selamat datang "+ namaDepan +"!", Toast.LENGTH_LONG).show();
             }
 
             @Override
@@ -151,6 +153,60 @@ public class HomeFragment extends Fragment {
              }
          });
 
+        berita1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://www.kompas.com/tren/read/2019/11/10/130000865/meski-kekinian-ada-bahaya-mengintai-dari-minuman-boba-bagi-tubuh-kita";
+
+                // Parse the URI and create the intent.
+                Uri webpage = Uri.parse(url);
+                Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+
+                // Find an activity to hand the intent and start that activity.
+                if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
+                    startActivity(intent);
+                } else {
+                    Log.d("ImplicitIntents", "Can't handle this intent!");
+                }
+            }
+        });
+
+        berita2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://lifestyle.kompas.com/read/2019/07/01/193007520/konsumsi-7-makanan-ini-demi-usus-sehat?_ga=2.142810289.587969730.1576057969-445157469.1560355677";
+
+                // Parse the URI and create the intent.
+                Uri webpage = Uri.parse(url);
+                Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+
+                // Find an activity to hand the intent and start that activity.
+                if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
+                    startActivity(intent);
+                } else {
+                    Log.d("ImplicitIntents", "Can't handle this intent!");
+                }
+            }
+        });
+
+
+        berita2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://lifestyle.kompas.com/read/2019/10/22/161654120/langsung-tidur-setelah-makan-pencernaan-bisa-bermasalah-lho";
+
+                // Parse the URI and create the intent.
+                Uri webpage = Uri.parse(url);
+                Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+
+                // Find an activity to hand the intent and start that activity.
+                if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
+                    startActivity(intent);
+                } else {
+                    Log.d("ImplicitIntents", "Can't handle this intent!");
+                }
+            }
+        });
 
          return view;
     }
