@@ -38,7 +38,7 @@
 -->
     <TextView
         android:id="@+id/imtResult"
-        android:layout_width="wrap_content"
+        android:layout_width="115dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/circleResult"
         android:layout_alignBottom="@+id/circleResult"

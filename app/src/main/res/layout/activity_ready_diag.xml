@@ -16,7 +16,7 @@
         android:layout_marginStart="67dp"
         android:layout_marginEnd="68dp"
         android:layout_marginBottom="68dp"
-        android:background="@drawable/button3_style"
+        android:background="@drawable/round_style5"
         android:fontFamily="@font/monts_regular"
         android:onClick="goTest"
         android:text="start"

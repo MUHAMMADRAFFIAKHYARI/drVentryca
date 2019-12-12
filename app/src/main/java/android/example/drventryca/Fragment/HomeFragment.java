@@ -190,7 +190,7 @@ public class HomeFragment extends Fragment {
         });
 
 
-        berita2.setOnClickListener(new View.OnClickListener() {
+        berita3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String url = "https://lifestyle.kompas.com/read/2019/10/22/161654120/langsung-tidur-setelah-makan-pencernaan-bisa-bermasalah-lho";

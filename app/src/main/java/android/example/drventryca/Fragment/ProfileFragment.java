@@ -61,37 +61,38 @@ public class ProfileFragment extends Fragment {
         textLogout =view.findViewById(R.id.textLogout);
 
 
-//        imgLogout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                final Dialog dialog = new Dialog(getContext());
-//                dialog.setContentView(R.layout.logout_dialog);
-//                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-//                dialog.show();
-//
-//                btn_no = dialog.findViewById(R.id.bt_no);
-//                btn_yes = dialog.findViewById(R.id.bt_yes);
-//
-//                btn_yes.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        Intent intent = new Intent(getActivity(), GetStarted.class);
-//                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//                        startActivity(intent);
-//                        getActivity().finish();
-//                    }
-//                });
-//
-//                btn_no.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        dialog.dismiss();
-//                    }
-//                });
-//
-//
-//            }
-//        });
+        if (gender.getText().toString() == "Laki-Laki"){
+            image_user.setImageResource(R.drawable.casual_boy);
+        }else if (gender.getText().toString() == "Perempuan"){
+            image_user.setImageResource(R.drawable.casual_girl);
+        }
+
+        imgLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Dialog dialog = new Dialog(getContext());
+                dialog.setContentView(R.layout.logout_dialog);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+
+                btn_no = dialog.findViewById(R.id.bt_no);
+                btn_yes = dialog.findViewById(R.id.bt_yes);
+
+                btn_yes.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        auth.signOut();
+                        Intent i = new Intent(getActivity().getApplicationContext(), Login.class);
+                        SharedPreferences pref = getActivity().getApplication().getSharedPreferences("myyPrefs", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = pref.edit();
+                        editor.putBoolean("isIntro0pened", false);
+                        editor.commit();
+                        startActivity(i);
+                    }
+                });
+
+            }
+        });
 
         textLogout.setOnClickListener(new View.OnClickListener() {
             @Override

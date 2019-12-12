@@ -1,4 +1,4 @@
-package android.example.drventryca;
+package android.example.drventryca.Model;
 
 import java.io.Serializable;
 

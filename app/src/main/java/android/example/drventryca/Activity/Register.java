@@ -2,7 +2,7 @@ package android.example.drventryca.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.example.drventryca.Data;
+import android.example.drventryca.Model.Data;
 import android.example.drventryca.R;
 import android.graphics.Color;
 import android.os.Bundle;

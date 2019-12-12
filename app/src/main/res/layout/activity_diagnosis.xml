@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/bleu_de_france"
     android:orientation="vertical"
-    tools:context=".Diagnosis">
+    tools:context=".Activity.Diagnosis_Unused">
 
 
     <TextView
@@ -22,7 +22,7 @@
         android:textSize="18sp" />
 
     <ProgressBar
-        android:id="@+id/progressBar2"
+        android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="330dp"
         android:layout_height="wrap_content"

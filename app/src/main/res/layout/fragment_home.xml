@@ -101,7 +101,7 @@
                 <ImageView
                     android:id="@+id/goDiag1"
                     android:layout_width="109dp"
-                    android:layout_height="74dp"
+                    android:layout_height="80dp"
                     android:layout_marginTop="8dp"
                     app:srcCompat="@drawable/diagnosis_home" />
 
@@ -136,7 +136,7 @@
                 <ImageView
                     android:id="@+id/goData1"
                     android:layout_width="109dp"
-                    android:layout_height="85dp"
+                    android:layout_height="75dp"
                     android:layout_marginTop="8dp"
                     app:srcCompat="@drawable/disease_data" />
 
@@ -169,7 +169,7 @@
                 <ImageView
                     android:id="@+id/goFakta1"
                     android:layout_width="109dp"
-                    android:layout_height="74dp"
+                    android:layout_height="75dp"
                     android:layout_marginTop="8dp"
                     app:srcCompat="@drawable/ft_icon" />
 
