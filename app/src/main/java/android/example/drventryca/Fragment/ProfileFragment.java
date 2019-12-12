@@ -138,6 +138,9 @@ public class ProfileFragment extends Fragment {
                 massa.setText(beratBadan);
                 String tinggiBadan = dataSnapshot.child("tinggiBadan").getValue().toString();
                 tinggi.setText(tinggiBadan);
+                String umur = dataSnapshot.child("usia").getValue().toString();
+                age.setText(umur + " Tahun");
+
 
                 Log.d("Check", beratBadan);
                 Log.d("Check", tinggiBadan);
