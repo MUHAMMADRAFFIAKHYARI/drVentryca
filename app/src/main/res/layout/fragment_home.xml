@@ -103,7 +103,7 @@
                     android:layout_width="109dp"
                     android:layout_height="74dp"
                     android:layout_marginTop="8dp"
-                    app:srcCompat="@drawable/diagnosis_slide" />
+                    app:srcCompat="@drawable/diagnosis_home" />
 
 
                 <TextView
@@ -136,9 +136,9 @@
                 <ImageView
                     android:id="@+id/goData1"
                     android:layout_width="109dp"
-                    android:layout_height="74dp"
+                    android:layout_height="85dp"
                     android:layout_marginTop="8dp"
-                    app:srcCompat="@drawable/kuuga" />
+                    app:srcCompat="@drawable/disease_data" />
 
                 <TextView
                     android:id="@+id/goData2"
@@ -171,7 +171,7 @@
                     android:layout_width="109dp"
                     android:layout_height="74dp"
                     android:layout_marginTop="8dp"
-                    app:srcCompat="@drawable/zeroone" />
+                    app:srcCompat="@drawable/ft_icon" />
 
                 <TextView
                     android:id="@+id/goFakta2"

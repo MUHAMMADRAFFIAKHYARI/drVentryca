@@ -20,7 +20,7 @@ public class SliderAdapter extends PagerAdapter {
         this.context = context;
     }
 
-    public int [] slide_images = {R.drawable.ichigo, R.drawable.diagnosis_home, R.drawable.zeroone};
+    public int [] slide_images = {R.drawable.disease_data, R.drawable.diagnosis_home, R.drawable.ft_icon};
     public String [] slide_headings = { "DATA PENYAKIT", "DIAGNOSIS", "FAKTA & TIPS KESEHATAN" };
     public String [] slide_decs = {
             "Tersedia data - data penyakit yang berhubungan dengan pencernaan",
