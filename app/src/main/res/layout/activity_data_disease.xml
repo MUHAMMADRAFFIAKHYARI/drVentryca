@@ -8,7 +8,7 @@
 
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarnya"
+        android:id="@+id/appBarnyaHN"
         android:layout_width="match_parent"
         android:layout_height="330dp"
         android:background="@android:color/transparent"

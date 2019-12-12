@@ -1,4 +1,4 @@
-package android.example.drventryca;
+package android.example.drventryca.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.example.drventryca.Activity.Result;
 import android.example.drventryca.Adapter.DiagnosisAdapter;
 import android.example.drventryca.Model.QuestionModel;
+import android.example.drventryca.R;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -19,7 +20,7 @@ import android.widget.Button;
 
 import java.util.ArrayList;
 
-public class Diagnosis extends AppCompatActivity {
+public class Diagnosis_Unused extends AppCompatActivity {
 
     private RecyclerView questionRecycler;
     private DiagnosisAdapter diagnosisAdapter;

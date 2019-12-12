@@ -123,6 +123,7 @@ public class BMICalc extends AppCompatActivity {
             }status.setText(status_);
 
 
+
             AlphaAnimation animation1 = new AlphaAnimation(0f, 1.0f);
             animation1.setDuration((long) (result_*100));
             animation1.setStartOffset(1000);
