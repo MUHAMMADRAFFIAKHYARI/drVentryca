@@ -45,7 +45,7 @@
             android:foregroundGravity="center_vertical|center|center_horizontal"
             android:gravity="center|center_horizontal|center_vertical"
             android:lineSpacingExtra="4sp"
-            android:text="PADA BAGIAN APA ANDA MENGALAMI NYERI : "
+            android:text="ANDA KESULITAN PADA SAAT MENELAN MAKANAN : "
             android:textAlignment="center"
             android:textSize="18sp"
             android:textStyle="bold" />
