@@ -1,35 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bleu_de_france"
+    android:background="@color/medium_torquise"
     tools:context=".Activity.HealthNews">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarnyaHN"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="@android:color/transparent"
-        android:fitsSystemWindows="true"
-        android:theme="@style/AppTheme5">
+        android:fitsSystemWindows="false"
+        android:theme="@style/toLeft">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fitsSystemWindows="true"
-            app:contentScrim="@android:color/white"
+            android:fitsSystemWindows="false"
+            app:contentScrim="@android:color/transparent"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-            <View
-                android:id="@+id/view9"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="35dp"
-                android:layout_marginBottom="-20dp"
-                android:background="@drawable/round_style9"
-                android:fitsSystemWindows="true" />
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="120dp"
+                android:fontFamily="@font/monts_regular"
+                android:text="(Okezone Update)"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -39,7 +41,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="80dp"
                 android:fontFamily="@font/monts_black"
-                android:text="Health News"
+                android:text="Info Kesehatan"
                 android:textColor="@color/dark_cerulian"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -52,9 +54,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="top"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginRight="24dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="-650dp"
+        android:layout_marginRight="15dp"
         android:clipChildren="true"
         android:clipToPadding="true"
         android:foregroundGravity="top"
@@ -66,4 +68,5 @@
             android:layout_height="match_parent" />
 
     </androidx.core.widget.NestedScrollView>
-</RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
