@@ -7,6 +7,7 @@ import android.example.drventryca.R;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -28,11 +29,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class Register extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -51,7 +49,7 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
     RadioGroup gender;
     RadioButton jenisKelamin;
 
-    String gen;
+    String gen, spn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,7 +75,10 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
         etUserName = findViewById(R.id.edt_userName);
         etPassword = findViewById(R.id.password_);
         gender = findViewById(R.id.rg_kelamin);
+        goldar = findViewById(R.id.spin_goldar);
 
+
+        // Radio Group dan Radio Button
         gender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
@@ -96,6 +97,36 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
                 }
             }
         });
+
+        Spinner spinner = findViewById(R.id.spin_goldar);
+
+
+        if (spinner != null) {
+            spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                    spn = adapterView.getItemAtPosition(i).toString();
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> adapterView) {
+
+                }
+            });
+
+        }
+
+        ArrayAdapter<CharSequence> adapter =
+                ArrayAdapter.createFromResource(this, R.array.goldar, android.R.layout.simple_spinner_item);
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        if (spinner != null) {
+            spinner.setAdapter(adapter);
+        }
+
+
+
 
         // Ranah Firebase
         auth = FirebaseAuth.getInstance();
@@ -123,13 +154,15 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     user = auth.getCurrentUser(); // dia mengambil user yang terbaru;
-                                    Data data = new Data(namaDepan, namaBelakang, String.valueOf(massaBadan), String.valueOf(tinggiBadan), String.valueOf(usia), String.valueOf(gender), String.valueOf(goldar));
+                                    Data data = new Data(namaDepan, namaBelakang, String.valueOf(massaBadan), String.valueOf(tinggiBadan), String.valueOf(usia), String.valueOf(gen), String.valueOf(spn));
+                                    Log.d("Laki laki", data.getGender() + data.getGolonganDarah());
                                     root.child("User:").child(user.getUid()).setValue(data)
                                             .addOnCompleteListener(new OnCompleteListener<Void>() {
                                                 @Override
                                                 public void onComplete(@NonNull Task<Void> task) {
                                                     Toast.makeText(getApplicationContext(), "Anda sudah terdaftar, silahkan lakukan login", Toast.LENGTH_LONG).show();
                                                     startActivity(new Intent(getApplicationContext(), Login.class));
+
                                                 }
                                             });
                                 }
@@ -138,43 +171,9 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
             }
 
         });
-        authListener = new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull final FirebaseAuth firebaseAuth) {
-                user = auth.getCurrentUser();
-
-                if (user != null) {
-
-                    String userID = auth.getCurrentUser().getUid();
-                    root.addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                        }
-                    });
-                }
-            }
-        }
 
 
-        Spinner spinner = findViewById(R.id.spin_goldar);
-        if (spinner != null) {
-            spinner.setOnItemSelectedListener(this);
-        }
 
-        ArrayAdapter<CharSequence> adapter =
-                ArrayAdapter.createFromResource(this, R.array.goldar, android.R.layout.simple_spinner_item);
-
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        if (spinner != null) {
-            spinner.setAdapter(adapter);
-        }
 
 
     }

@@ -141,6 +141,10 @@ public class ProfileFragment extends Fragment {
                 tinggi.setText(tinggiBadan);
                 String umur = dataSnapshot.child("usia").getValue().toString();
                 age.setText(umur + " Tahun");
+                String golonganDarah = dataSnapshot.child("golonganDarah").getValue().toString();
+                goldar.setText(golonganDarah);
+                String jenisKelamin = dataSnapshot.child("gender").getValue().toString();
+                gender.setText(jenisKelamin);
 
 
                 Log.d("Check", beratBadan);
