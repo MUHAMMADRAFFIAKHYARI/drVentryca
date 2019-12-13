@@ -56,7 +56,7 @@ public class HealthNews extends AppCompatActivity {
     void initialHealthNews(){
         mQueue = MySingleton.getInstance(this).getRequestQueue();
 
-        String url ="http://rss.detik.com/index.php/health.xml";
+        String url ="https://www.mysitemapgenerator.com/shareapi/rss/1312171085";
         StringRequest mRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -65,12 +65,13 @@ public class HealthNews extends AppCompatActivity {
 
                 for (int i=0;i<itemElements.size(); i++){
                     Element item = itemElements.get(i);
-                    String title = item.child(0).text();
-                   /* String desc = item.child(4).text();
-                    String imgLink = item.child(5).attr("url");
-                    String pubD = item.child(3).text();*/
+                    String title = item.child(1).text();
+                    String desc = item.child(2).text();
+                    String imgLink = item.child(7).attr("url");
+                    String pubD = item.child(6).text();
 
-                    HealthNewsModel healthNewsModel = new HealthNewsModel(title,"","","");
+                    /*HealthNewsModel healthNewsModel = new HealthNewsModel(title,desc,imgLink,pubD);*/
+                    HealthNewsModel healthNewsModel = new HealthNewsModel(title,desc,imgLink,pubD);
                     healthNewsList.add(healthNewsModel);
                 }
                 healthNewsAdapter.notifyDataSetChanged();
@@ -85,18 +86,6 @@ public class HealthNews extends AppCompatActivity {
         MySingleton.getInstance(this).addToRequestQueue(mRequest);
     }
 
-
-    void initialNews(){
-        String[] penyakit = getResources().getStringArray(R.array.disease_list);
-        String[] penjelasan = getResources().getStringArray(R.array.disease_explan);
-
-        healthNewsList.clear();
-
-        for (int i=0; i <penyakit.length;i++){
-            healthNewsList.add(new HealthNewsModel(penyakit[i], penjelasan[i],"",""));
-        }
-        healthNewsAdapter.notifyDataSetChanged();
-    }
 
 
     void fullScreenHN(){

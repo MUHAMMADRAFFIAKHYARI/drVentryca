@@ -23,14 +23,16 @@
             android:noHistory="true"
             android:theme="@style/AppTheme4" />
         <activity
-            android:name=".Activity.Result"
+            android:name=".Activity.ResultDiag"
             android:noHistory="true" />
         <activity
             android:name=".Activity.Diagnosis_Unused"
             android:noHistory="true" />
         <activity
             android:name=".Activity.HealthNews"
-            android:theme="@style/slideToLeft" />
+            android:noHistory="true"
+            android:theme="@style/toLeft"
+            />
         <activity android:name=".Activity.DetailDisease" />
         <activity android:name=".Activity.FaktaTips" />
         <activity android:name=".Activity.ReadyDiag" />

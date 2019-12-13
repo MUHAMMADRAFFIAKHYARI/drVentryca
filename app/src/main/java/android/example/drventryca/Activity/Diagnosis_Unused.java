@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.PagerSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.example.drventryca.Activity.Result;
 import android.example.drventryca.Adapter.DiagnosisAdapter;
 import android.example.drventryca.Model.QuestionModel;
 import android.example.drventryca.R;
@@ -48,7 +47,7 @@ public class Diagnosis_Unused extends AppCompatActivity {
         done_diag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getBaseContext(), Result.class));
+                startActivity(new Intent(getBaseContext(), ResultDiag.class));
             }
         });
     }

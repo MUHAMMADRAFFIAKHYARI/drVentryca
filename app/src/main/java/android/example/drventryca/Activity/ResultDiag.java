@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-public class Result extends AppCompatActivity {
+public class ResultDiag extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

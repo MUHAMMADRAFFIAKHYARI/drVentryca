@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.example.drventryca.Adapter.DiagTengAdapter;
-import android.example.drventryca.HasilActivity;
 import android.example.drventryca.Model.DiagTengModel;
 import android.example.drventryca.Model.InterpretasiDiagTeng;
 
@@ -23,7 +22,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 public class DiagStepTengPart extends AppCompatActivity {
@@ -109,7 +107,7 @@ public class DiagStepTengPart extends AppCompatActivity {
                 if (progres == diagTengModels.size()){
                     InterpretasiDiagTeng interpretasiDiagTeng = new InterpretasiDiagTeng(diagTengModels);
 
-                    Intent intent = new Intent(DiagStepTengPart.this, HasilActivity.class);
+                    Intent intent = new Intent(DiagStepTengPart.this, ResultDiag.class);
                     String indikasi = interpretasiDiagTeng.getHasil();
                     startActivity(intent);
                     finish();
