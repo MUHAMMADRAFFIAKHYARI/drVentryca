@@ -11,12 +11,30 @@ public class Data implements Serializable {
     String gender;
     String usia;
 
-    public Data(String namaDepan, String namaBelakang, String massaBadan, String tinggiBadan, String usia) {
+    public Data(String namaDepan, String namaBelakang, String massaBadan, String tinggiBadan, String usia, String gender, String golonganDarah) {
         this.namaDepan = namaDepan;
         this.namaBelakang = namaBelakang;
         this.massaBadan = massaBadan;
         this.tinggiBadan = tinggiBadan;
+        this.gender = gender;
         this.usia = usia;
+        this.golonganDarah = golonganDarah;
+    }
+
+    public String getGolonganDarah() {
+        return golonganDarah;
+    }
+
+    public void setGolonganDarah(String golonganDarah) {
+        this.golonganDarah = golonganDarah;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public String getNamaDepan() {

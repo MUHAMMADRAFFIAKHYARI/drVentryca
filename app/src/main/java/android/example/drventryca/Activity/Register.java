@@ -28,14 +28,18 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Register extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     // Variable yang akan merefers Firebase Realtime Database.
     DatabaseReference root; // untuk mengambil rootnya
     FirebaseAuth auth;
+    FirebaseAuth.AuthStateListener authListener;
     FirebaseUser user; // untuk mengambil user
 
     private TextView toHome, goLogin;
@@ -46,6 +50,8 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
     Spinner goldar;
     RadioGroup gender;
     RadioButton jenisKelamin;
+
+    String gen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +76,26 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
         toHome = findViewById(R.id.toHome);
         etUserName = findViewById(R.id.edt_userName);
         etPassword = findViewById(R.id.password_);
+        gender = findViewById(R.id.rg_kelamin);
+
+        gender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                jenisKelamin = gender.findViewById(i);
+
+                switch (i) {
+                    case R.id.rb_laki:
+                        gen = jenisKelamin.getText().toString().trim();
+                        break;
+
+                    case R.id.rb_perempuan:
+                        gen = jenisKelamin.getText().toString().trim();
+                        break;
+
+                    default:
+                }
+            }
+        });
 
         // Ranah Firebase
         auth = FirebaseAuth.getInstance();
@@ -86,6 +112,7 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
                 username = etUserName.getText().toString().trim();
                 password = etPassword.getText().toString().trim();
 
+
                 massaBadan = Integer.parseInt(etBeratBadan.getText().toString().trim());
                 tinggiBadan = Integer.parseInt(etTinggiBadan.getText().toString().trim());
                 usia = Integer.parseInt(etUsia.getText().toString().trim());
@@ -96,7 +123,7 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     user = auth.getCurrentUser(); // dia mengambil user yang terbaru;
-                                    Data data = new Data(namaDepan, namaBelakang, String.valueOf(massaBadan), String.valueOf(tinggiBadan), String.valueOf(usia));
+                                    Data data = new Data(namaDepan, namaBelakang, String.valueOf(massaBadan), String.valueOf(tinggiBadan), String.valueOf(usia), String.valueOf(gender), String.valueOf(goldar));
                                     root.child("User:").child(user.getUid()).setValue(data)
                                             .addOnCompleteListener(new OnCompleteListener<Void>() {
                                                 @Override
@@ -108,9 +135,31 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
                                 }
                             }
                         });
-
             }
+
         });
+        authListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull final FirebaseAuth firebaseAuth) {
+                user = auth.getCurrentUser();
+
+                if (user != null) {
+
+                    String userID = auth.getCurrentUser().getUid();
+                    root.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+                    });
+                }
+            }
+        }
 
 
         Spinner spinner = findViewById(R.id.spin_goldar);
@@ -135,21 +184,6 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
 
     }
 
-
-//    private void submitData(Data data) {
-//        database.child("Data User : ").push().setValue(data).addOnSuccessListener(this, new OnSuccessListener<Void>() {
-//            @Override
-//            public void onSuccess(Void aVoid) {
-//                etNamaDepan.setText("");
-//                etNamaBelakang.setText("");
-//                etBeratBadan.setText("");
-//                etTinggiBadan.setText("");
-//                etUsia.setText("");
-//                Snackbar.make(findViewById(R.id.bt_submit), "Data Berhasil Ditambahkan", Snackbar.LENGTH_LONG).show();
-//                startActivity(Register.getActIntent(Register.this));
-//            }
-//        });
-//    }
 
     public static Intent getActIntent(Activity activity) {
         return new Intent(activity, Landing.class);
