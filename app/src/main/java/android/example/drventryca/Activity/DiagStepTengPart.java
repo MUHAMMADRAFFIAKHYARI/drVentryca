@@ -14,6 +14,7 @@ import android.example.drventryca.R;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -34,6 +35,7 @@ public class DiagStepTengPart extends AppCompatActivity {
     private TextView questionTengCounter;
     private int progres;
     private Button submit;
+    private String diagnosis;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,18 +81,21 @@ public class DiagStepTengPart extends AppCompatActivity {
                         }
 
                         diagTengModels.get(position).setAnswer(answer);
+                        Log.d("answer", position + String.valueOf(answer));
+
+
                         progres = Collections.frequency(mJumlah, 1);
                         mProgressBar.setProgress(progres);
                         questionTengCounter.setText("Terjawab " + progres + "dari " + diagTengModels.size());
 
                         if (position < mJumlah.size() - 1 ){
-                            if (mJumlah.get(position + 1) == 0 ){
-                                mRecyclerView.smoothScrollToPosition(position + 1);
+                                if (mJumlah.get(position + 1) == 0 ){
+                                    mRecyclerView.smoothScrollToPosition(position + 1);
+                                }
                             }
-                        }
 
-                        if (progres == mJumlah.size()){
-                            submit.setText("Selesai");
+                            if (progres == mJumlah.size()){
+                                submit.setText("Selesai");
                         }
 
                     }
@@ -105,11 +110,24 @@ public class DiagStepTengPart extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 if (progres == diagTengModels.size()){
-                    InterpretasiDiagTeng interpretasiDiagTeng = new InterpretasiDiagTeng(diagTengModels);
 
+
+                    InterpretasiDiagTeng interpretasiDiagTeng = new InterpretasiDiagTeng(diagTengModels);
+                    interpretasiDiagTeng.spk();
                     Intent intent = new Intent(DiagStepTengPart.this, ResultDiag.class);
-                    String indikasi = interpretasiDiagTeng.getHasil();
+                    intent.putExtra("key", interpretasiDiagTeng.getDiagnosis());
+
+
                     startActivity(intent);
+
+                    int postion = diagTengModels.size();
+
+                    for (int i = 0; i < postion; i++){
+
+                        Log.d("answer 1", i + String.valueOf(diagTengModels.get(i).isAnswer()));
+                    }
+
+
                     finish();
                 }else {
                     for (int i = 0; i< mJumlah.size(); i++){
@@ -127,8 +145,9 @@ public class DiagStepTengPart extends AppCompatActivity {
 
     public void initializeDiagTengPart(){
         String[] question = getResources().getStringArray(R.array.question_tenggorokan);
-        diagTengModels.clear();
+        String[] jawaban = {};
 
+        diagTengModels.clear();
         for (int i =0; i <question.length;i++){
             diagTengModels.add(new DiagTengModel(question[i]));
         }

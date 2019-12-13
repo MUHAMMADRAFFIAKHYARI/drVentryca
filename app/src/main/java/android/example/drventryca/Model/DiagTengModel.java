@@ -7,13 +7,25 @@ public class DiagTengModel {
     public boolean answer;
     private String Question_teng;
 
+    private String Jawaban_teng;
+
+
     public DiagTengModel(String question_teng) {
         Question_teng = question_teng;
+        /*Jawaban_teng = jawaban_teng;*/
     }
 
     public String getQuestion_teng() {
         return Question_teng;
     }
+
+    /*public String getJawaban_teng() {
+        return Jawaban_teng;
+    }
+
+    public void setJawaban_teng(String jawaban_teng) {
+        Jawaban_teng = jawaban_teng;
+    }*/
 
     public void setQuestion_teng(String question_teng){
         Question_teng = question_teng;

@@ -72,6 +72,7 @@ public class DiagTengAdapter extends RecyclerView.Adapter<DiagTengAdapter.ViewHo
                 @Override
                 public void onCheckedChanged(RadioGroup group, int id) {
                     if ((id == R.id.radioYa)) {
+
                         Log.d("__DebugRadio", "Ya Checked");
                         if (listener != null){
                             int position = getAdapterPosition();
@@ -94,7 +95,6 @@ public class DiagTengAdapter extends RecyclerView.Adapter<DiagTengAdapter.ViewHo
 
         void bindTo(DiagTengModel currentDiagTeng){
             question_Teng.setText(currentDiagTeng.getQuestion_teng());
-
         }
 
     }
