@@ -44,8 +44,6 @@ public class HomeFragment extends Fragment {
     FirebaseUser user;
     FirebaseAuth auth;
 
-
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -80,8 +78,9 @@ public class HomeFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String namaDepan = dataSnapshot.child("namaDepan").getValue().toString();
+                String namaBelakang = dataSnapshot.child("namaBelakang").getValue().toString();
                 etNama.setText(namaDepan.toUpperCase() +"!");
-                Toast.makeText(getContext(), "Selamat datang "+ namaDepan +"!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), "Selamat datang "+ namaDepan +" "+namaBelakang+"!", Toast.LENGTH_LONG).show();
             }
 
             @Override
@@ -115,7 +114,7 @@ public class HomeFragment extends Fragment {
          klikDiag.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-                 if (v.getId() == R.id.goDiag || v.getId() == R.id.goDiag1 || v.getId() == R.id.goDiag2){
+                 if (v.getId() == R.id.goDiag){
                      startActivity(new Intent(getActivity(), ReadyDiag.class));
                  }
              }

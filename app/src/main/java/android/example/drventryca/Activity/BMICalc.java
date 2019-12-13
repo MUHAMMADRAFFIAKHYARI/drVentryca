@@ -100,6 +100,8 @@ public class BMICalc extends AppCompatActivity {
 
             String status_;
 
+
+
             if(result_ < 18.5){
                 status_ = "Wah sepertinya kamu kekurangan massa tubuh";
                 circleResult.setBackgroundResource(circle_yellow);
