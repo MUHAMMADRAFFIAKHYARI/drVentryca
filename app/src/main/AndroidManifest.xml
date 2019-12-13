@@ -32,18 +32,27 @@
             android:name=".Activity.HealthNews"
             android:noHistory="true"
             android:theme="@style/toLeft"
-            />
+            >
+
+        </activity>
         <activity android:name=".Activity.DetailDisease" />
         <activity android:name=".Activity.FaktaTips" />
         <activity android:name=".Activity.ReadyDiag" />
         <activity android:name=".Activity.DataDisease" />
         <activity
             android:name=".Activity.Landing"
-            android:theme="@style/AppTheme3" />
+            android:theme="@style/AppTheme3" >
+
+        </activity>
         <activity
             android:name=".Activity.SplashScreen"
             android:noHistory="true"
-            android:theme="@style/AppTheme4" />
+            android:theme="@style/AppTheme4" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Activity.Register"
             android:noHistory="true"
@@ -54,10 +63,7 @@
         <activity
             android:name=".Activity.GetStarted"
             android:noHistory="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
     </application>
 

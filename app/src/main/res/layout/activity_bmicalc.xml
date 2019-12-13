@@ -38,12 +38,14 @@
 -->
     <TextView
         android:id="@+id/imtResult"
-        android:layout_width="115dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/circleResult"
         android:layout_alignBottom="@+id/circleResult"
         android:layout_centerHorizontal="true"
         android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:text="0.0"
         android:textColor="@color/colorWhite"
         android:textSize="70sp" />
