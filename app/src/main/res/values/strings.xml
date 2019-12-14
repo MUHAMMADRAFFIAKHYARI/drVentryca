@@ -41,6 +41,7 @@
         <b>Pengobatan</b>\n
         Untuk pengobatan awal, makanlah dengan jumlah sedikit tetapi sering dan tidak makan lagi 2-3 jam sebelum tidur. Saat tidur, posisi kepala ditinggikan sekitar 60 cm agar tekanan dalam lambung tidak meningkat. Kurangi pekerjaan yang perlu mengangkat beban yang berat untuk mengurangi tekanaan dalam lambung. Segeralah berobat ke dokter untuk penanganan lebih lanjut, karena mencegah lebih baik daripada mengobati.
     </string>
+    <string name="kurus"><![CDATA[<18.5]]></string>
     <string-array name="goldar">
         <item>Golongan Darah</item>
         <item>A</item>
@@ -385,50 +386,50 @@
     </string-array>
 
     <string-array name="disease_list">
-        <item>1. Esofagitis</item>
-        <item>2. Striktur Esofagus</item>
-        <item>3. Karsinoma Esofagus</item>
-        <item>4. Hernia Hiatus Esofagus</item>
-        <item>5. Gastroesofageal Refluks Disorder</item>
-        <item>6. Akalasia</item>
-        <item>7. Kolesistitis</item>
-        <item>8. Grastitis Kronik</item>
-        <item>9. Grastitis Akut Kronik</item>
-        <item>10. Leiomiasarkoma Gaster</item>
-        <item>11. Ulkus Peptikum</item>
-        <item>12. Refluk Empedu</item>
-        <item>13. Ulkus Duodenum</item>
-        <item>14. Ulkus Gastrikum</item>
-        <item>15. Gastroentitis</item>
-        <item>16. Ileus</item>
-        <item>17. Penyakit Crohn</item>
-        <item>18. Bulimia Nervosa</item>
-        <item>19. Disentri Basilar</item>
-        <item>20. Divertikulitis</item>
-        <item>21. Apendisitis</item>
-        <item>22. Peritonitis</item>
-        <item>23. Demam Tifoid (Tifus)</item>
-        <item>24. Entritis</item>
-        <item>25. Stenosis Pilorus</item>
-        <item>26. Duodenitis</item>
-        <item>27. Karsinoma Lambung</item>
-        <item>28. Kolitis Crohn</item>
-        <item>29. Pencernaan Lemah</item>
-        <item>30. Kolitis Hemoragika</item>
-        <item>31. Penyakit Whipple</item>
-        <item>32. Travellers Diarrhea</item>
-        <item>33. Diare Akut</item>
-        <item>34. Diare Kronik</item>
-        <item>35. Divertikulosis</item>
-        <item>36. Kolitis Ulsaretiva</item>
-        <item>37. Amubiasis</item>
-        <item>38. Penyakit Seliak</item>
-        <item>39. Irritable Bowel Syndrom</item>
-        <item>40. Gatal Anus</item>
-        <item>41. Fissura Anus</item>
-        <item>42. Hemoroid</item>
-        <item>43. Penyakit Pilonidal</item>
-        <item>44. Abses Anorektal</item>
+        <item>Esofagitis</item>
+        <item>Striktur Esofagus</item>
+        <item>Karsinoma Esofagus</item>
+        <item>Hernia Hiatus Esofagus</item>
+        <item>Gastroesofageal Refluks Disorder</item>
+        <item>Akalasia</item>
+        <item>Kolesistitis</item>
+        <item>Grastitis Kronik</item>
+        <item>Grastitis Akut Kronik</item>
+        <item>Leiomiasarkoma Gaster</item>
+        <item>Ulkus Peptikum</item>
+        <item>Refluk Empedu</item>
+        <item>Ulkus Duodenum</item>
+        <item>Ulkus Gastrikum</item>
+        <item>Gastroentitis</item>
+        <item>Ileus</item>
+        <item>Penyakit Crohn</item>
+        <item>Bulimia Nervosa</item>
+        <item>Disentri Basilar</item>
+        <item>Divertikulitis</item>
+        <item>Apendisitis</item>
+        <item>Peritonitis</item>
+        <item>Demam Tifoid (Tifus)</item>
+        <item>Entritis</item>
+        <item>Stenosis Pilorus</item>
+        <item>Duodenitis</item>
+        <item>Karsinoma Lambung</item>
+        <item>Kolitis Crohn</item>
+        <item>Pencernaan Lemah</item>
+        <item>Kolitis Hemoragika</item>
+        <item>Penyakit Whipple</item>
+        <item>Travellers Diarrhea</item>
+        <item>Diare Akut</item>
+        <item>Diare Kronik</item>
+        <item>Divertikulosis</item>
+        <item>Kolitis Ulsaretiva</item>
+        <item>Amubiasis</item>
+        <item>Penyakit Seliak</item>
+        <item>Irritable Bowel Syndrom</item>
+        <item>Gatal Anus</item>
+        <item>Fissura Anus</item>
+        <item>Hemoroid</item>
+        <item>Penyakit Pilonidal</item>
+        <item>Abses Anorektal</item>
     </string-array>
 
     <string-array name="question">

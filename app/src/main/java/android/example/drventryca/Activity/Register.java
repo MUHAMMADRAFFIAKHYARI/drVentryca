@@ -160,9 +160,8 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
                                             .addOnCompleteListener(new OnCompleteListener<Void>() {
                                                 @Override
                                                 public void onComplete(@NonNull Task<Void> task) {
-                                                    Toast.makeText(getApplicationContext(), "Anda sudah terdaftar, silahkan lakukan login", Toast.LENGTH_LONG).show();
+                                                    Toast.makeText(getApplicationContext(), "Sekarang anda sudah terdaftar, silahkan lakukan login", Toast.LENGTH_LONG).show();
                                                     startActivity(new Intent(getApplicationContext(), Login.class));
-
                                                 }
                                             });
                                 }

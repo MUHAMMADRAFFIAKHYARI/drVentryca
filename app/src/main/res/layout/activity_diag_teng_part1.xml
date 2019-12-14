@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/bleu_de_france"
     android:orientation="vertical"
-    tools:context=".Activity.DiagStepTengPart">
+    tools:context=".Activity.DiagTengPart1">
 
 
     <TextView
@@ -62,7 +62,7 @@
         android:background="@drawable/round_style5"
         android:fontFamily="@font/monts_regular"
         android:foregroundGravity="center|center_horizontal"
-        android:text="Submit"
+        android:text="check"
         android:textColor="@color/rajah"
         android:textStyle="bold" />
 

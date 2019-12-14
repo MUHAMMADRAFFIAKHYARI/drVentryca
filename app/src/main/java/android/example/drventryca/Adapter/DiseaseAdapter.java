@@ -57,7 +57,7 @@ public class DiseaseAdapter extends RecyclerView.Adapter<DiseaseAdapter.ViewHold
         }
         void bindTo(DiseaseModel currentDisease){
             /*disease_expl.setText(currentDisease.getExplan());*/
-            disease_name.setText(currentDisease.getTitle());
+            disease_name.setText(getAdapterPosition()+1 +". "+currentDisease.getTitle());
 
             disease_name.setAnimation(AnimationUtils.loadAnimation(mContext,R.anim.fade_right_show));
         }

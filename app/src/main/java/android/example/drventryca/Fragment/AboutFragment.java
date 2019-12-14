@@ -21,7 +21,7 @@ public class AboutFragment extends Fragment {
 
         logo = view.findViewById(R.id.logo);
 
-        logo.setAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.translate_y_show));
+        logo.setAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.fade_scale));
 
 
         return view;

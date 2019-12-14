@@ -1,26 +1,22 @@
 package android.example.drventryca.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
-import android.content.Intent;
+import android.app.Dialog;
 import android.example.drventryca.R;
 import android.graphics.Color;
-import android.graphics.Path;
-import android.os.Build;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.AlphaAnimation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -28,9 +24,9 @@ import static android.example.drventryca.R.drawable.circle_yellow;
 
 public class BMICalc extends AppCompatActivity {
 
-    private TextView result, status;
+    private TextView result, status, showtable;
     private EditText massa, tinggi;
-    private Button calculate;
+    private Button calculate, okImt;
     private View circleResult;
 
     @Override
@@ -44,14 +40,33 @@ public class BMICalc extends AppCompatActivity {
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(Color.TRANSPARENT);
 
-
         result = findViewById(R.id.imtResult);
         status = findViewById(R.id.status);
         massa = findViewById(R.id.massaInput);
         tinggi = findViewById(R.id.tinggiInput);
         calculate = findViewById(R.id.calculate);
         circleResult = findViewById(R.id.circleResult);
+        showtable = findViewById(R.id.showImt);
 
+        showtable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Dialog dialog = new Dialog(getApplication());
+                dialog.setContentView(R.layout.imt_table);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+
+              /*  okImt = findViewById(R.id.exitImt);
+                okImt.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Dialog dialog = new Dialog(getBaseContext());
+                        dialog.dismiss();
+                    }
+                });*/
+
+            }
+        });
     }
 
     float x1,x2,y1,y2;
@@ -76,6 +91,8 @@ public class BMICalc extends AppCompatActivity {
 
         return false;
     }
+
+
 
     @SuppressLint("ResourceAsColor")
     public void imtCalculate(View view){

@@ -14,9 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import android.example.drventryca.Model.DiagTengModel;
 
-public class DiagTengAdapter extends RecyclerView.Adapter<DiagTengAdapter.ViewHolder>{
+public class DiagTeng1Adapter extends RecyclerView.Adapter<DiagTeng1Adapter.ViewHolder>{
     private Context context;
     private ArrayList<DiagTengModel> diagTengModels;
     private OnItemClickListener mListener;
@@ -28,21 +27,21 @@ public class DiagTengAdapter extends RecyclerView.Adapter<DiagTengAdapter.ViewHo
         mListener = listener;
     }
 
-    public DiagTengAdapter(ArrayList<DiagTengModel> diagTengModels, Context context) {
+    public DiagTeng1Adapter(ArrayList<DiagTengModel> diagTengModels, Context context) {
         this.context = context;
         this.diagTengModels = diagTengModels;
     }
 
     @NonNull
     @Override
-    public DiagTengAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public DiagTeng1Adapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.diagnosis_teng_item,parent,false);
-        DiagTengAdapter.ViewHolder v = new DiagTengAdapter.ViewHolder(view, mListener);
+        DiagTeng1Adapter.ViewHolder v = new DiagTeng1Adapter.ViewHolder(view, mListener);
         return v;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull DiagTengAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull DiagTeng1Adapter.ViewHolder holder, int position) {
         DiagTengModel currentDiagTeng = diagTengModels.get(position);
         holder.bindTo(currentDiagTeng);
     }

@@ -11,21 +11,21 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.RadioGroup;
 
-public class DiagStepGeneral extends AppCompatActivity {
+public class DiagGeneral extends AppCompatActivity {
 
     RadioGroup radioGroup_general;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_diag_step_general);
+        setContentView(R.layout.activity_diag_general);
         radioGroup_general = (RadioGroup) findViewById(R.id.radiogroup_general);
 
         radioGroup_general.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (checkedId==R.id.radioButton){
-                    Intent intent = new Intent(DiagStepGeneral.this, DiagStepTeng.class);
+                    Intent intent = new Intent(DiagGeneral.this, DiagTeng.class);
                     String g2 = "tenggorokan";
                     intent.putExtra("data", g2);
                     startActivity(intent);

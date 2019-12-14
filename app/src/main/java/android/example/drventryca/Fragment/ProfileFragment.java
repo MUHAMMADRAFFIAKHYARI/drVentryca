@@ -37,7 +37,6 @@ public class ProfileFragment extends Fragment {
     TextView massa, tinggi, gender, goldar, age, namdep, nambel, textLogout;
     Button btn_yes, btn_no;
 
-
     DatabaseReference reference;
     FirebaseUser user;
     FirebaseAuth auth;
@@ -61,12 +60,6 @@ public class ProfileFragment extends Fragment {
         textLogout =view.findViewById(R.id.textLogout);
 
 
-        if (gender.getText().toString() == "Laki-Laki"){
-            image_user.setImageResource(R.drawable.casual_boy);
-        }else if (gender.getText().toString() == "Perempuan"){
-            image_user.setImageResource(R.drawable.casual_girl);
-        }
-
         imgLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,6 +81,13 @@ public class ProfileFragment extends Fragment {
                         editor.putBoolean("isIntro0pened", false);
                         editor.commit();
                         startActivity(i);
+                    }
+                });
+
+                btn_no.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
                     }
                 });
 
@@ -115,6 +115,13 @@ public class ProfileFragment extends Fragment {
                         editor.putBoolean("isIntro0pened", false);
                         editor.commit();
                         startActivity(i);
+                    }
+                });
+
+                btn_no.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
                     }
                 });
 
@@ -147,6 +154,12 @@ public class ProfileFragment extends Fragment {
                 gender.setText(jenisKelamin);
 
 
+                if (jenisKelamin == "Laki-Laki"){
+                    image_user.setImageResource(R.drawable.casual_boy);
+                }else if (jenisKelamin == "Perempuan"){
+                    image_user.setImageResource(R.drawable.casual_girl);
+                }
+
                 Log.d("Check", beratBadan);
                 Log.d("Check", tinggiBadan);
 
@@ -175,7 +188,6 @@ public class ProfileFragment extends Fragment {
                         tinggi.setText(animation.getAnimatedValue().toString());
                     }
                 });
-
 
                 animate_massa.start();
                 animate_tinggi.start();

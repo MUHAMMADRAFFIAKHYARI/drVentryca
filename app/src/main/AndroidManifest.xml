@@ -11,10 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HasilActivity"></activity>
-        <activity android:name=".Activity.DiagStepTengPart" />
-        <activity android:name=".Activity.DiagStepTeng" />
-        <activity android:name=".Activity.DiagStepGeneral" />
+        <activity android:name=".Activity.DiagPerPart3"></activity>
+        <activity android:name=".Activity.DiagPerPart2" />
+        <activity android:name=".Activity.DiagAnus" />
+        <activity android:name=".Activity.DiagPerPart1" />
+        <activity android:name=".Activity.DiagPer" />
+        <activity android:name=".Activity.DiagTengPart2" />
+        <activity android:name=".Activity.DiagTengPart1"
+            android:noHistory="true"/>
+        <activity android:name=".Activity.DiagTeng"
+            />
+        <activity android:name=".Activity.DiagGeneral"
+            />
         <activity
             android:name=".Activity.BMICalc"
             android:theme="@style/slideToRight" />
@@ -24,32 +32,27 @@
             android:theme="@style/AppTheme4" />
         <activity
             android:name=".Activity.ResultDiag"
-            android:noHistory="true" />
-        <activity
-            android:name=".Activity.Diagnosis_Unused"
-            android:noHistory="true" />
+            android:noHistory="true"
+            />
+
         <activity
             android:name=".Activity.HealthNews"
             android:noHistory="true"
-            android:theme="@style/toLeft"
-            >
-
-        </activity>
+            android:theme="@style/toLeft" />
         <activity android:name=".Activity.DetailDisease" />
         <activity android:name=".Activity.FaktaTips" />
         <activity android:name=".Activity.ReadyDiag" />
         <activity android:name=".Activity.DataDisease" />
         <activity
             android:name=".Activity.Landing"
-            android:theme="@style/AppTheme3" >
-
-        </activity>
+            android:theme="@style/AppTheme3" />
         <activity
             android:name=".Activity.SplashScreen"
             android:noHistory="true"
-            android:theme="@style/AppTheme4" >
+            android:theme="@style/AppTheme4">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -62,9 +65,7 @@
             android:noHistory="true" />
         <activity
             android:name=".Activity.GetStarted"
-            android:noHistory="true">
-
-        </activity>
+            android:noHistory="true" />
     </application>
 
 </manifest>

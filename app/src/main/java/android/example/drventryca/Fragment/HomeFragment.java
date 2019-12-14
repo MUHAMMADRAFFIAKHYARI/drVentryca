@@ -35,8 +35,7 @@ import com.google.firebase.database.ValueEventListener;
 public class HomeFragment extends Fragment {
 
     private CardView klikDiag, klikData, klikFakta;
-    private ImageView berita1, berita2, berita3;
-    private ImageView news, goImt;
+    private ImageView berita1, berita2, berita3,news, goImt;
     private PropertyValuesHolder scaleX, scaleY, aplha;
     TextView appTitle, halo, etNama, kabar, bawah1, bawah2;
 

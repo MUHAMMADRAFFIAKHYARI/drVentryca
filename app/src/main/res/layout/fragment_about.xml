@@ -22,7 +22,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="68dp"
                 android:layout_marginTop="50dp"
-                app:srcCompat="@drawable/pencernaan" />
+                app:srcCompat="@drawable/logo_app" />
 
             <TextView
                 android:id="@+id/textView14"
@@ -39,8 +39,7 @@
                 android:foregroundGravity="center|center_horizontal"
                 android:text="dr Ventryca"
                 android:textColor="@color/dark_cerulian"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textView15"

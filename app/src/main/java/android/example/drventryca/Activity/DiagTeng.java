@@ -10,16 +10,15 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 
-public class DiagStepTeng extends AppCompatActivity {
+public class DiagTeng extends AppCompatActivity {
 
     RadioGroup radioGroup_teng;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_diag_step_teng);
+        setContentView(R.layout.activity_diag_teng);
         radioGroup_teng = (RadioGroup) findViewById(R.id.radiogroup_teng);
 
         //Intent
@@ -33,7 +32,7 @@ public class DiagStepTeng extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (checkedId==R.id.radioButton_teng){
-                    Intent intent = new Intent(DiagStepTeng.this, DiagStepTengPart.class);
+                    Intent intent = new Intent(DiagTeng.this, DiagTengPart1.class);
                     String g2 = "tenggorokan"+"padat";
                     intent.putExtra("data", g2);
                     startActivity(intent);

@@ -1,7 +1,5 @@
 package android.example.drventryca.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.example.drventryca.R;
 import android.graphics.Color;
@@ -9,13 +7,24 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashScreen extends AppCompatActivity {
+
+    private ImageView logoSplash;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+
+        logoSplash = findViewById(R.id.logo_insplash);
+
+        logoSplash.setAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_scale));
+
 
         Window window = getWindow();
 

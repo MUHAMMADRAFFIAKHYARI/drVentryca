@@ -39,7 +39,7 @@ public class ReadyDiag extends AppCompatActivity {
     }
 
     public void goTest(View view){
-        startActivity(new Intent(this, DiagStepGeneral.class));
+        startActivity(new Intent(this, DiagGeneral.class));
     }
 
     float x1,x2,y1,y2;

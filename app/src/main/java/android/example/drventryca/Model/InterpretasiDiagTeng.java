@@ -5,18 +5,15 @@ import android.util.Log;
 import java.util.ArrayList;
 
 public class InterpretasiDiagTeng {
-    private ArrayList<DiagTengModel>diagTengModels;
+    private ArrayList<DiagTengModel> diagTengModels;
     private String diagnosis;
-
-
     private int position;
+    private DiseaseModel diseaseModel;
 
 
-
-    public InterpretasiDiagTeng(ArrayList<DiagTengModel>diagTengModels){
+    public InterpretasiDiagTeng(ArrayList<DiagTengModel> diagTengModels){
         this.diagTengModels = diagTengModels;
     }
-
 
     public ArrayList<DiagTengModel>getDiagTengModels(){
         return diagTengModels;
@@ -34,6 +31,7 @@ public class InterpretasiDiagTeng {
     {
         position = diagTengModels.size();
 
+
         for (int i = 0; i < position; i++) {
             if (diagTengModels.get(0).isAnswer() == true &&
                     diagTengModels.get(1).isAnswer() == true &&
@@ -43,7 +41,7 @@ public class InterpretasiDiagTeng {
                     diagTengModels.get(5).isAnswer() == false)
             {
                 Log.d("diagnosis", "Penyakit Esofagitis");
-                setDiagnosis("Penyakit Esofagitis");
+                setDiagnosis("Esofagitis");
             }
 
             else if (diagTengModels.get(0).isAnswer() == false &&
@@ -58,7 +56,7 @@ public class InterpretasiDiagTeng {
             }
 
             else{
-                setDiagnosis("Belum Terdiagnosis");
+                setDiagnosis("Belum Dapat diDiagnosis");
             }
         }
     };

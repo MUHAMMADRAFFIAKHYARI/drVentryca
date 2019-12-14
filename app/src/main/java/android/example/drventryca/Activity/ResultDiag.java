@@ -1,7 +1,5 @@
 package android.example.drventryca.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.example.drventryca.R;
 import android.graphics.Color;
@@ -10,12 +8,18 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 
 public class ResultDiag extends AppCompatActivity {
 
-    private TextView hasil;
+    private TextView hasil, goDisease, endDiag;
+    private ImageView docDiag;
+    public ReadyDiag readyDiag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,14 +27,33 @@ public class ResultDiag extends AppCompatActivity {
         setContentView(R.layout.activity_result);
 
         hasil = findViewById(R.id.textView6);
+        goDisease = findViewById(R.id.goDisease);
+        endDiag = findViewById(R.id.endDiag);
+        docDiag = findViewById(R.id.docDiag);
+
+        hasil.setAnimation(AnimationUtils.loadAnimation(this,R.anim.fade_scale));
+        docDiag.setAnimation(AnimationUtils.loadAnimation(this, R.anim.left_slide_in_smooth));
+
+        endDiag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        goDisease.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), DataDisease.class));
+                finish();
+            }
+        });
 
         Intent i = getIntent();
         String a = i.getStringExtra("key");
         Log.d("tes", " "+a);
 
         hasil.setText(a);
-
-
 
         Window window = getWindow();
 
