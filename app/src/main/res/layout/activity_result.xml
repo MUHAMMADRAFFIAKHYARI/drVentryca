@@ -98,12 +98,12 @@
                 android:layout_alignStart="@+id/circleResult2"
                 android:layout_alignTop="@+id/circleResult2"
                 android:layout_alignEnd="@+id/circleResult2"
-                android:layout_marginStart="23dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="66dp"
-                android:layout_marginEnd="13dp"
+                android:layout_marginEnd="10dp"
                 android:fontFamily="@font/monts_black"
                 android:gravity="center|center_vertical"
-                android:text="Esofagitis"
+                android:text="Gastroesofageal\nRefluks Disorder"
                 android:textAlignment="center"
                 android:textSize="18sp" />
 
