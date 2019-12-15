@@ -22,10 +22,10 @@
             <Button
                 android:id="@+id/reDiag"
                 android:layout_width="200dp"
-                android:layout_height="40dp"
-                android:layout_below="@+id/goDisease"
+                android:layout_height="50dp"
+                android:layout_above="@+id/endDiag"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="120dp"
+                android:layout_marginBottom="11dp"
                 android:background="@drawable/round_style5"
                 android:fontFamily="@font/monts_regular"
                 android:text="Re-Diagnosis"
@@ -35,23 +35,25 @@
             <Button
                 android:id="@+id/endDiag"
                 android:layout_width="200dp"
-                android:layout_height="40dp"
-                android:layout_below="@+id/reDiag"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
                 android:background="@drawable/round_style5"
                 android:fontFamily="@font/monts_regular"
                 android:text="end"
                 android:textColor="@color/rajah"
                 android:textStyle="bold" />
 
-           <!-- <View
+            <View
                 android:id="@+id/circleResult2"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="200dp"
-                android:background="@drawable/circle" />-->
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="220dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/circle" />
 
             <TextView
                 android:id="@+id/textdiag"
@@ -81,38 +83,44 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <!--<ImageView
+            <ImageView
                 android:id="@+id/docDiag"
                 android:layout_width="200dp"
                 android:layout_height="350dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="200dp"
-                app:srcCompat="@drawable/result_doc" />-->
+                app:srcCompat="@drawable/result_doc" />
 
             <TextView
                 android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textdiag"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="60dp"
+                android:layout_width="164dp"
+                android:layout_height="74dp"
+                android:layout_alignStart="@+id/circleResult2"
+                android:layout_alignTop="@+id/circleResult2"
+                android:layout_alignEnd="@+id/circleResult2"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="66dp"
+                android:layout_marginEnd="13dp"
                 android:fontFamily="@font/monts_black"
-                android:text="Gastroesofageal\nRefluks\nDisorder"
+                android:gravity="center|center_vertical"
+                android:text="Esofagitis"
                 android:textAlignment="center"
-                android:textSize="24sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/goDisease"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView6"
-                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/reDiag"
+                android:layout_alignEnd="@+id/textdiag"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="82dp"
+                android:layout_marginEnd="-11dp"
+                android:layout_marginBottom="64dp"
                 android:fontFamily="@font/monts_regular"
                 android:text="Lihat di Data Penyakit"
                 android:textColor="@color/dark_cerulian"
-                android:textSize="16dp" />
+                android:textSize="16dp"
+                android:textStyle="bold" />
 
 
         </RelativeLayout>

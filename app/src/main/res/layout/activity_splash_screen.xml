@@ -18,9 +18,9 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/logo_insplash"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="320dp"
+        android:layout_marginBottom="10dp"
         android:fontFamily="@font/monts_regular"
         android:text="ShiNa" />
 </RelativeLayout>

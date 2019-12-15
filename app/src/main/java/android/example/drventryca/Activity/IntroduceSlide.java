@@ -52,7 +52,7 @@ public class IntroduceSlide extends AppCompatActivity {
 
         addDotsIndicator(0);
 
-        relativeLayout.setBackgroundColor(getColor(R.color.coral_reef));
+        relativeLayout.setBackgroundColor(getColor(R.color.rajah));
 
         mSlideViewPager.addOnPageChangeListener(viewListener);
     }
@@ -93,7 +93,7 @@ public class IntroduceSlide extends AppCompatActivity {
                 skipButton.setEnabled(true);
 
                 nextButton.setText("Next");
-                relativeLayout.setBackgroundColor(getColor(R.color.coral_reef));
+                relativeLayout.setBackgroundColor(getColor(R.color.rajah));
 
             } else if(i == mDots.length-1){
                 nextButton.setEnabled(true);
