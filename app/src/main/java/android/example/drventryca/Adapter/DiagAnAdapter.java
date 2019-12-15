@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class DiagTeng1Adapter extends RecyclerView.Adapter<DiagTeng1Adapter.ViewHolder>{
+public class DiagAnAdapter extends RecyclerView.Adapter<DiagAnAdapter.ViewHolder>{
     private Context context;
     private ArrayList<QuestionModel> questionModels;
     private OnItemClickListener mListener;
@@ -27,23 +27,23 @@ public class DiagTeng1Adapter extends RecyclerView.Adapter<DiagTeng1Adapter.View
         mListener = listener;
     }
 
-    public DiagTeng1Adapter(ArrayList<QuestionModel> questionModels, Context context) {
+    public DiagAnAdapter(ArrayList<QuestionModel> questionModels, Context context) {
         this.context = context;
         this.questionModels = questionModels;
     }
 
     @NonNull
     @Override
-    public DiagTeng1Adapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.diagnosis_teng_item,parent,false);
-        DiagTeng1Adapter.ViewHolder v = new DiagTeng1Adapter.ViewHolder(view, mListener);
+    public DiagAnAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.diagnosis_an_item,parent,false);
+        DiagAnAdapter.ViewHolder v = new DiagAnAdapter.ViewHolder(view, mListener);
         return v;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull DiagTeng1Adapter.ViewHolder holder, int position) {
-        QuestionModel currentDiagTeng = questionModels.get(position);
-        holder.bindTo(currentDiagTeng);
+    public void onBindViewHolder(@NonNull DiagAnAdapter.ViewHolder holder, int position) {
+        QuestionModel currentDiagAn = questionModels.get(position);
+        holder.bindTo(currentDiagAn);
     }
 
     @Override
@@ -92,8 +92,8 @@ public class DiagTeng1Adapter extends RecyclerView.Adapter<DiagTeng1Adapter.View
             });
         }
 
-        void bindTo(QuestionModel currentDiagTeng){
-            question_Teng.setText(currentDiagTeng.getQuestion_teng());
+        void bindTo(QuestionModel currentDiagAn){
+            question_Teng.setText(currentDiagAn.getQuestion_teng());
         }
 
     }
