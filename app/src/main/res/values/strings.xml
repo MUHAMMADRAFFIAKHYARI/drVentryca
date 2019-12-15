@@ -477,18 +477,19 @@
         <item>Apakah anda mengalami sakit dan gatal pada tenggorokan ?</item>
     </string-array>
 
-    <string-array name="question_an">
-        <item>Apakah anda mengalami gatal-gatal pada anus ?</item>
-        <item>Apakah anda mengidap penyakit kencing manis atau alergi kulit ?</item>
-        <item>Apakah anda kesulitan untuk duduk ?</item>
-        <item>Apakah ada luka di sekitar anus anda ?</item>
-        <item>Apakah terdapat benjolan lunak pada anus anda ?</item>
-        <item>Apakah ada penggumpalan nanah dan pembengkakan di anus anda ?</item>
-        <item>Apakah terdapat luka kering yang menahun disekitar anus anda ?</item>
-        <item>Apakah perut bagian bawah anda terasa nyeri ?</item>
-        <item>Apakah terasa nyeri saat buang air besar ?</item>
-        <item>Apakah anda sulit buang air besar ?</item>
-        <item>Apakah feses anda keras dan berdarah ?</item>
+    <string-array name="question_per1_1">
+        <item>Apakah perut anda nyeri pada saat ditekan ?</item>
+        <item>Apakah nyeri yang anda rasakan terasa menjalar sampai ke pundak ?</item>
+        <item>Apakah nyeri yang anda rasakan seperti ditusuk-tusuk ?</item>
+        <item>Apakah anda mengalami muntah darah ?</item>
+        <item>Apakah anda mengalami muntah berwarna kehijauan?</item>
+        <item>Apakah perut terasa perih dan panas ?</item>
+        <item>Apakah perut terasa kosong dan lapar ?</item>
+        <item>Apakah makan dapat menimbulkan nyeri ?</item>
+        <item>Apakah anda mengalami demam ?</item>
+        <item>Apakah tekanan darah anda rendah ?</item>
+        <item>Apakah nafsu makan anda menurun ?</item>
+        <item>Apakah feses anda berwarna kehitaman ?</item>
     </string-array>
 
     <string-array name="question_per2_1">
@@ -540,6 +541,20 @@
         <item>Apakah feses anda berlendir ?</item>
         <item>Apakah feses anda berbuih ?</item>
         <item>Apakah feses anda berbau busuk ?</item>
+    </string-array>
+
+    <string-array name="question_an">
+        <item>Apakah anda mengalami gatal-gatal pada anus ?</item>
+        <item>Apakah anda mengidap penyakit kencing manis atau alergi kulit ?</item>
+        <item>Apakah anda kesulitan untuk duduk ?</item>
+        <item>Apakah ada luka di sekitar anus anda ?</item>
+        <item>Apakah terdapat benjolan lunak pada anus anda ?</item>
+        <item>Apakah ada penggumpalan nanah dan pembengkakan di anus anda ?</item>
+        <item>Apakah terdapat luka kering yang menahun disekitar anus anda ?</item>
+        <item>Apakah perut bagian bawah anda terasa nyeri ?</item>
+        <item>Apakah terasa nyeri saat buang air besar ?</item>
+        <item>Apakah anda sulit buang air besar ?</item>
+        <item>Apakah feses anda keras dan berdarah ?</item>
     </string-array>
 
 </resources>
