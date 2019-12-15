@@ -21,6 +21,7 @@ public class DiseaseAdapter extends RecyclerView.Adapter<DiseaseAdapter.ViewHold
     private Context mContext;
     private ArrayList<DiseaseModel> diseaseModel;
 
+
     public DiseaseAdapter(Context context, ArrayList<DiseaseModel> disease_list){
         this.mContext = context;
         this.diseaseModel = disease_list;

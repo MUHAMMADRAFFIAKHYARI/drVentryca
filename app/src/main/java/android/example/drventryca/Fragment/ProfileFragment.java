@@ -154,9 +154,9 @@ public class ProfileFragment extends Fragment {
                 gender.setText(jenisKelamin);
 
 
-                if (jenisKelamin == "Laki-Laki"){
+                if (gender.getText() == "Laki-Laki"){
                     image_user.setImageResource(R.drawable.casual_boy);
-                }else if (jenisKelamin == "Perempuan"){
+                }else if (gender.getText() == "Perempuan"){
                     image_user.setImageResource(R.drawable.casual_girl);
                 }
 

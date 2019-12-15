@@ -12,8 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="330dp"
         android:background="@android:color/transparent"
-
-
         >
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
@@ -46,6 +44,7 @@
                 android:textColor="@color/dark_cerulian"
                 android:textSize="24sp"
                 android:textStyle="bold" />
+
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
     </com.google.android.material.appbar.AppBarLayout>

@@ -1,7 +1,6 @@
 package android.example.drventryca.Activity;
 
 import android.animation.ValueAnimator;
-import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.example.drventryca.R;
 import android.graphics.Color;
@@ -20,11 +19,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.snackbar.Snackbar;
 
-import static android.example.drventryca.R.drawable.circle_yellow;
 
 public class BMICalc extends AppCompatActivity {
 
-    private TextView result, status, showtable;
+    TextView result, status, showtable;
     private EditText massa, tinggi;
     private Button calculate, okImt;
     private View circleResult;
@@ -33,12 +31,7 @@ public class BMICalc extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bmicalc);
-
-        Window window = getWindow();
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE |
-                View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.AUTOFILL_FLAG_INCLUDE_NOT_IMPORTANT_VIEWS);
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.setStatusBarColor(Color.TRANSPARENT);
+        hideNotif();
 
         result = findViewById(R.id.imtResult);
         status = findViewById(R.id.status);
@@ -46,25 +39,13 @@ public class BMICalc extends AppCompatActivity {
         tinggi = findViewById(R.id.tinggiInput);
         calculate = findViewById(R.id.calculate);
         circleResult = findViewById(R.id.circleResult);
-        showtable = findViewById(R.id.showImt);
+        showtable = (TextView) findViewById(R.id.showImt);
+
 
         showtable.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Dialog dialog = new Dialog(getApplication());
-                dialog.setContentView(R.layout.imt_table);
-                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                dialog.show();
-
-              /*  okImt = findViewById(R.id.exitImt);
-                okImt.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Dialog dialog = new Dialog(getBaseContext());
-                        dialog.dismiss();
-                    }
-                });*/
-
+                toTable();
             }
         });
     }
@@ -94,7 +75,6 @@ public class BMICalc extends AppCompatActivity {
 
 
 
-    @SuppressLint("ResourceAsColor")
     public void imtCalculate(View view){
 
         String massa_ = massa.getText().toString();
@@ -117,11 +97,9 @@ public class BMICalc extends AppCompatActivity {
 
             String status_;
 
-
-
             if(result_ < 18.5){
                 status_ = "Wah sepertinya kamu kekurangan massa tubuh";
-                circleResult.setBackgroundResource(circle_yellow);
+                circleResult.setBackgroundResource(R.drawable.circle_yellow);
                 circleResult.setTransitionAlpha(xHasil);
             } else if(result_>= 18.5 && result_ <= 24.9){
                 status_ = "Selamat massa tubuhmu sudah ideal :D";
@@ -141,14 +119,11 @@ public class BMICalc extends AppCompatActivity {
                 circleResult.setTransitionAlpha(xHasil);
             }status.setText(status_);
 
-
-
             AlphaAnimation animation1 = new AlphaAnimation(0f, 1.0f);
             animation1.setDuration((long) (result_*100));
             animation1.setStartOffset(1000);
             animation1.setFillAfter(true);
             status.startAnimation(animation1);
-
 
             ValueAnimator animate_result;
             animate_result = ValueAnimator.ofFloat(0, xHasil);
@@ -161,5 +136,28 @@ public class BMICalc extends AppCompatActivity {
             });animate_result.start();
         }
 
+    }
+
+    void hideNotif(){
+        Window window = getWindow();
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE |
+                View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.AUTOFILL_FLAG_INCLUDE_NOT_IMPORTANT_VIEWS);
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.setStatusBarColor(Color.TRANSPARENT);
+    }
+
+    public void toTable() {
+        final Dialog dialog = new Dialog(BMICalc.this);
+        dialog.setContentView(R.layout.imt_table);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.show();
+
+        /*okImt = findViewById(R.id.okImt);
+        okImt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });*/
     }
 }
