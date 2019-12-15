@@ -491,6 +491,26 @@
         <item>Apakah feses anda keras dan berdarah ?</item>
     </string-array>
 
+    <string-array name="question_per2_1">
+        <item>Apakah pada saat perut ditekan terasa nyeri ?</item>
+        <item>Apakah anda mengalami nyeri tulang ?</item>
+        <item>Apakah perut bagian tengah anda terasa nyeri ?</item>
+        <item>Apakah anda mengalami kembung ?</item>
+        <item>Apakah perut anda terasa tebal dan kaku ?</item>
+        <item>Apakah anda demam ?</item>
+        <item>Apakah anda mengalami mencret - mencret ?</item>
+        <item>Apakah feses anda berwarna kehitaman ?</item>
+    </string-array>
+
+    <string-array name="question_per2_2">
+        <item>Apakah nyeri yang anda rasakan nyeri seperti teriris ?</item>
+        <item>Apakah perut anda terasa panas ?</item>
+        <item>Apakah anda sering buang air besar ?</item>
+        <item>Apakah feses anda cair ?</item>
+        <item>Apakah feses anda berlendir ?</item>
+        <item>Apakah feses anda awalnya cair lalu berdarah selama 1-8 hari ?</item>
+    </string-array>
+
     <string-array name="question_per3_1">
         <item>Apakah perut anda terasa mulas ?</item>
         <item>Apakah anda mengalami kembung ?</item>

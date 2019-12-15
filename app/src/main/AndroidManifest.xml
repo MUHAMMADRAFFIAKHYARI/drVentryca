@@ -17,6 +17,10 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ActivityDiagnosis.DiagPerPart3"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ActivityDiagnosis.DiagPerPart2_2"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ActivityDiagnosis.DiagPerPart2_1"
+            android:screenOrientation="portrait"/>
         <activity android:name=".ActivityDiagnosis.DiagPerPart2"
             android:screenOrientation="portrait"/>
         <activity android:name=".ActivityDiagnosis.DiagAn"
