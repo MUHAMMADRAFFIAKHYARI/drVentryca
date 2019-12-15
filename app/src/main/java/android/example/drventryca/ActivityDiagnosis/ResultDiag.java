@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,7 +19,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ResultDiag extends AppCompatActivity {
 
     private TextView hasil, goDisease, endDiag, reDiag;
-    private ImageView docDiag;
     public ReadyDiag readyDiag;
 
     @Override
@@ -35,7 +33,6 @@ public class ResultDiag extends AppCompatActivity {
         reDiag = findViewById(R.id.reDiag);
 
         hasil.setAnimation(AnimationUtils.loadAnimation(this,R.anim.fade_scale));
-        docDiag.setAnimation(AnimationUtils.loadAnimation(this, R.anim.left_slide_in_smooth));
 
         endDiag.setOnClickListener(new View.OnClickListener() {
             @Override

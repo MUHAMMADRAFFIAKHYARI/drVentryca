@@ -40,7 +40,7 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
     FirebaseAuth.AuthStateListener authListener;
     FirebaseUser user; // untuk mengambil user
 
-    private TextView toHome, goLogin;
+     TextView toHome, goLogin;
 
     // Variable fields EditText dan Button
     private Button btSubmitDB;
