@@ -59,7 +59,6 @@ public class DiagTengPart2 extends AppCompatActivity {
         questionTengCounter = findViewById(R.id.questionTengCounter);
         submit = findViewById(R.id.submit);
 
-
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false));
         PagerSnapHelper helper = new PagerSnapHelper() ;
         helper.attachToRecyclerView(mRecyclerView);

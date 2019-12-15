@@ -1,7 +1,6 @@
 package android.example.drventryca.Interpretasi;
 
 import android.example.drventryca.Model.QuestionModel;
-import android.example.drventryca.Model.DiseaseModel;
 import android.util.Log;
 
 import java.util.ArrayList;
@@ -10,8 +9,6 @@ public class InterpretasiDiagTeng2 {
     private ArrayList<QuestionModel> questionModels;
     private String diagnosis;
     private int position;
-    private DiseaseModel diseaseModel;
-
 
     public InterpretasiDiagTeng2(ArrayList<QuestionModel> questionModels){
         this.questionModels = questionModels;
@@ -96,8 +93,8 @@ public class InterpretasiDiagTeng2 {
                     questionModels.get(9).isAnswer() == false
             )
             {
-                Log.d("diagnosis", "GERD (Gastroesofageal Refluks Disorder)");
-                setDiagnosis("GERD (Gastroesofageal Refluks Disorder)");
+                Log.d("diagnosis", "GERD (Gastroesofageal\nRefluks\nDisorder)");
+                setDiagnosis("Gastroesofageal Refluks Disorder");
             }
 
             else if (questionModels.get(0).isAnswer() == false &&
