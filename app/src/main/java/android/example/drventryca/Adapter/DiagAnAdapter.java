@@ -52,12 +52,12 @@ public class DiagAnAdapter extends RecyclerView.Adapter<DiagAnAdapter.ViewHolder
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView question_Teng;
+        private TextView question_An;
         private RadioGroup mRadioGroup;
 
         public ViewHolder(View itemView, final OnItemClickListener listener) {
             super(itemView);
-            question_Teng = itemView.findViewById(R.id.questionTeng);
+            question_An = itemView.findViewById(R.id.questionAn);
             mRadioGroup = itemView.findViewById(R.id.radioPilihan);
 
             itemView.setOnClickListener(new View.OnClickListener(){
@@ -93,7 +93,7 @@ public class DiagAnAdapter extends RecyclerView.Adapter<DiagAnAdapter.ViewHolder
         }
 
         void bindTo(QuestionModel currentDiagAn){
-            question_Teng.setText(currentDiagAn.getQuestion_teng());
+            question_An.setText(currentDiagAn.getQuestion());
         }
 
     }

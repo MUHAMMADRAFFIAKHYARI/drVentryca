@@ -1,9 +1,9 @@
 package android.example.drventryca.ActivityDiagnosis;
 
 import android.content.Intent;
-import android.example.drventryca.Adapter.DiagTengAdapter;
+import android.example.drventryca.Adapter.DiagPerAdapter;
 import android.example.drventryca.Model.QuestionModel;
-import android.example.drventryca.Interpretasi.InterpretasiDiagTeng2;
+import android.example.drventryca.Interpretasi.InterpretasiDiagPer3_1;
 import android.example.drventryca.R;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -24,14 +24,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class DiagTengPart2 extends AppCompatActivity {
+public class DiagPerPart3_1 extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
-    private DiagTengAdapter mDiagTengAdapter;
+    private DiagPerAdapter mDiagPerAdapter;
     private ArrayList<QuestionModel> questionModels;
     private ArrayList<Integer> mJumlah;
     private ProgressBar mProgressBar;
-    private TextView questionTengCounter;
+    private TextView questionPerCounter;
     private int progres;
     private Button submit;
     private String diagnosis;
@@ -39,7 +39,7 @@ public class DiagTengPart2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_diag_teng_recycler);
+        setContentView(R.layout.activity_diag_per_recycler);
 
         /*//Intent
         Bundle bundle = getIntent().getExtras();
@@ -56,18 +56,19 @@ public class DiagTengPart2 extends AppCompatActivity {
 
         mRecyclerView = findViewById(R.id.quest_per_recycler);
         mProgressBar = findViewById(R.id.progressBar);
-        questionTengCounter = findViewById(R.id.questionTengCounter);
+        questionPerCounter = findViewById(R.id.questionPerCounter);
         submit = findViewById(R.id.submit);
+
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false));
         PagerSnapHelper helper = new PagerSnapHelper() ;
         helper.attachToRecyclerView(mRecyclerView);
 
         questionModels = new ArrayList<>();
-        mDiagTengAdapter = new DiagTengAdapter(questionModels, this);
-        mRecyclerView.setAdapter(mDiagTengAdapter);
+        mDiagPerAdapter = new DiagPerAdapter(questionModels, this);
+        mRecyclerView.setAdapter(mDiagPerAdapter);
 
-        mDiagTengAdapter.setOnItemClickListener(new DiagTengAdapter.OnItemClickListener() {
+        mDiagPerAdapter.setOnItemClickListener(new DiagPerAdapter.OnItemClickListener() {
             @Override
             public void onChoiceClick(final int position, final boolean answer) {
                 Handler handler = new Handler();
@@ -84,7 +85,7 @@ public class DiagTengPart2 extends AppCompatActivity {
 
                         progres = Collections.frequency(mJumlah, 1);
                         mProgressBar.setProgress(progres);
-                        questionTengCounter.setText("Terisi " + progres + " dari " + questionModels.size());
+                        questionPerCounter.setText("Terisi " + progres + " dari " + questionModels.size());
 
                         if (position < mJumlah.size() - 1 ){
                             if (mJumlah.get(position + 1) == 0 ){
@@ -103,17 +104,19 @@ public class DiagTengPart2 extends AppCompatActivity {
 
 
 
-        initializeDiagTengPart();
+        initializeDiagPerPart3_1();
         submit.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 if (progres == questionModels.size()){
 
 
-                    InterpretasiDiagTeng2 interpretasiDiagTeng2 = new InterpretasiDiagTeng2(questionModels);
-                    interpretasiDiagTeng2.spk();
-                    Intent intent = new Intent(DiagTengPart2.this, ResultDiag.class);
-                    intent.putExtra("key", interpretasiDiagTeng2.getDiagnosis());
+                    InterpretasiDiagPer3_1 interpretasiDiagPer3_1 = new InterpretasiDiagPer3_1(questionModels);
+                    interpretasiDiagPer3_1.spk();
+                    Intent intent = new Intent(DiagPerPart3_1.this, ResultDiag.class);
+                    intent.putExtra("key", interpretasiDiagPer3_1.getDiagnosis());
+
+
                     startActivity(intent);
 
                     int postion = questionModels.size();
@@ -139,18 +142,18 @@ public class DiagTengPart2 extends AppCompatActivity {
         mRecyclerView.setItemViewCacheSize(questionModels.size());
     }
 
-    public void initializeDiagTengPart(){
-        String[] question = getResources().getStringArray(R.array.question_tenggorokan_part2);
+    public void initializeDiagPerPart3_1(){
+        String[] question = getResources().getStringArray(R.array.question_per3_1);
 
         questionModels.clear();
         for (int i =0; i <question.length;i++){
             questionModels.add(new QuestionModel(question[i]));
         }
         mProgressBar.setMax(questionModels.size());
-        questionTengCounter.setText("Terisi " + 0 + " dari " + questionModels.size());
+        questionPerCounter.setText("Terisi " + 0 + " dari " + questionModels.size());
 
         mJumlah = new ArrayList<>(Collections.nCopies(questionModels.size(), 0));
-        mDiagTengAdapter.notifyDataSetChanged();
+        mDiagPerAdapter.notifyDataSetChanged();
 
     }
 }

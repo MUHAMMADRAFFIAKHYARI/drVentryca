@@ -29,7 +29,8 @@ public class DiagGeneral extends AppCompatActivity {
                     startActivity(intent);
                 }
                 if (checkedId==R.id.radioButton2){
-
+                    Intent intent = new Intent(DiagGeneral.this, DiagPer.class);
+                    startActivity(intent);
                 }
                 if (checkedId==R.id.radioButton3){
                     Intent intent = new Intent(DiagGeneral.this, DiagAn.class);

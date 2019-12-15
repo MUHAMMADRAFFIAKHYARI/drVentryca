@@ -39,7 +39,7 @@ public class DiagTengPart1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_diag_teng_part);
+        setContentView(R.layout.activity_diag_teng_recycler);
 
         /*//Intent
         Bundle bundle = getIntent().getExtras();
@@ -54,7 +54,7 @@ public class DiagTengPart1 extends AppCompatActivity {
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(Color.TRANSPARENT);
 
-        mRecyclerView = findViewById(R.id.quest_teng_recycler);
+        mRecyclerView = findViewById(R.id.quest_per_recycler);
         mProgressBar = findViewById(R.id.progressBar);
         questionTengCounter = findViewById(R.id.questionTengCounter);
         submit = findViewById(R.id.submit);

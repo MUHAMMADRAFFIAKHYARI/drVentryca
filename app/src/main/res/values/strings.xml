@@ -491,4 +491,35 @@
         <item>Apakah feses anda keras dan berdarah ?</item>
     </string-array>
 
+    <string-array name="question_per3_1">
+        <item>Apakah perut anda terasa mulas ?</item>
+        <item>Apakah anda mengalami kembung ?</item>
+        <item>Apakah perut anda terasa panas ?</item>
+        <item>Apakah perut anda kaku ?</item>
+        <item>Apakah anda batuk-batuk ?</item>
+        <item>Apakah nyeri saat bernafas ?</item>
+        <item>Apakah warna kulit anda menjadi lebih gelap dari biasanya ?</item>
+        <item>Apakah feses anda cair ?</item>
+        <item>Apakah feses anda banyak ?</item>
+        <item>Apakah feses anda berlendir ?</item>
+        <item>Apakah feses anda berbuih ?</item>
+        <item>Apakah anda sedang bepergian ?</item>
+    </string-array>
+
+    <string-array name="question_per3_2">
+        <item>Apakah anda mengalami kembung ?</item>
+        <item>Apakah perut anda terasa panas ?</item>
+        <item>Apakah anda saat ini demam ?</item>
+        <item>Apakah anda Anemia ?</item>
+        <item>Apakah badan anda menggigil ?</item>
+        <item>Apakah dada bagian tengah anda terasa nyeri ?</item>
+        <item>Apakah perut bagian bawah anda terasa nyeri ?</item>
+        <item>Apakah anda mengalami nyeri tulang ?</item>
+        <item>Apakah perut anda buncit ?</item>
+        <item>Apakah feses anda banyak ?</item>
+        <item>Apakah feses anda berlendir ?</item>
+        <item>Apakah feses anda berbuih ?</item>
+        <item>Apakah feses anda berbau busuk ?</item>
+    </string-array>
+
 </resources>

@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class DiagTengAdapter extends RecyclerView.Adapter<DiagTengAdapter.ViewHolder>{
+public class DiagPerAdapter extends RecyclerView.Adapter<DiagPerAdapter.ViewHolder>{
     private Context context;
     private ArrayList<QuestionModel> questionModels;
     private OnItemClickListener mListener;
@@ -27,23 +27,23 @@ public class DiagTengAdapter extends RecyclerView.Adapter<DiagTengAdapter.ViewHo
         mListener = listener;
     }
 
-    public DiagTengAdapter(ArrayList<QuestionModel> questionModels, Context context) {
+    public DiagPerAdapter(ArrayList<QuestionModel> questionModels, Context context) {
         this.context = context;
         this.questionModels = questionModels;
     }
 
     @NonNull
     @Override
-    public DiagTengAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.diagnosis_teng_item,parent,false);
-        DiagTengAdapter.ViewHolder v = new DiagTengAdapter.ViewHolder(view, mListener);
+    public DiagPerAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.diagnosis_per_item,parent,false);
+        DiagPerAdapter.ViewHolder v = new DiagPerAdapter.ViewHolder(view, mListener);
         return v;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull DiagTengAdapter.ViewHolder holder, int position) {
-        QuestionModel currentDiagTeng = questionModels.get(position);
-        holder.bindTo(currentDiagTeng);
+    public void onBindViewHolder(@NonNull DiagPerAdapter.ViewHolder holder, int position) {
+        QuestionModel currentDiagPer = questionModels.get(position);
+        holder.bindTo(currentDiagPer);
     }
 
     @Override
@@ -52,12 +52,12 @@ public class DiagTengAdapter extends RecyclerView.Adapter<DiagTengAdapter.ViewHo
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView question_Teng;
+        private TextView question_Per;
         private RadioGroup mRadioGroup;
 
         public ViewHolder(View itemView, final OnItemClickListener listener) {
             super(itemView);
-            question_Teng = itemView.findViewById(R.id.questionTeng);
+            question_Per = itemView.findViewById(R.id.questionPer);
             mRadioGroup = itemView.findViewById(R.id.radioPilihan);
 
             itemView.setOnClickListener(new View.OnClickListener(){
@@ -92,8 +92,8 @@ public class DiagTengAdapter extends RecyclerView.Adapter<DiagTengAdapter.ViewHo
             });
         }
 
-        void bindTo(QuestionModel currentDiagTeng){
-            question_Teng.setText(currentDiagTeng.getQuestion());
+        void bindTo(QuestionModel currentDiagPer){
+            question_Per.setText(currentDiagPer.getQuestion());
         }
 
     }
