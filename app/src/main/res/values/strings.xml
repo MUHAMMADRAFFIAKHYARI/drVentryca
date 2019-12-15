@@ -390,7 +390,7 @@
         <item>Striktur Esofagus</item>
         <item>Karsinoma Esofagus</item>
         <item>Hernia Hiatus Esofagus</item>
-        <item>Gastroesofageal Refluks Disorder</item>
+        <item>(GERD) Gastroesofageal Refluks Disorder</item>
         <item>Akalasia</item>
         <item>Kolesistitis</item>
         <item>Grastitis Kronik</item>
@@ -455,13 +455,26 @@
         <item>pertanyaan20</item>
     </string-array>
 
-    <string-array name="question_tenggorokan">
+    <string-array name="question_tenggorokan_part1">
         <item>Apakah anda mengalami pemuntahan kembali isi kerongkongan ?</item>
         <item>Apakah nyeri yang anda alami bertambah pada saat membungkuk ?</item>
         <item>Apakah nyeri tersebut hilang saat berdiri ?</item>
         <item>Terasa penuh di tenggorokan ?</item>
         <item>Apakah nafsu makan anda menurun ?</item>
         <item>Apakah anda tampak seperti kurang gizi ?</item>
+    </string-array>
+
+    <string-array name="question_tenggorokan_part2">
+        <item>Apakah tenggorokan anda terasa panas ?</item>
+        <item>Apakah anda mengalami pemuntahan kembali isi kerongkongan ?</item>
+        <item>Apakah dada bagian depan anda terasa nyeri ?</item>
+        <item>Apakah dada anda terasa nyeri pada saat menelan ?</item>
+        <item>Apakah suara anda menjadi serak ?</item>
+        <item>Mengalami muntah-muntah ?</item>
+        <item>Apakah berat badan anda menurun ?</item>
+        <item>Apakah anda batuk-batuk pada malam hari ?</item>
+        <item>Apakah anda mulut anda terasa asam ?</item>
+        <item>Apakah anda mengalami sakit dan gatal pada tenggorokan ?</item>
     </string-array>
 
 </resources>

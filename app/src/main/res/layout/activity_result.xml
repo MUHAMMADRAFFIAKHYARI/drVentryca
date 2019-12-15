@@ -20,12 +20,25 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/endDiag"
+                android:id="@+id/reDiag"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/docDiag"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="30dp"
+                android:background="@drawable/round_style5"
+                android:fontFamily="@font/monts_regular"
+                android:text="Re-Diagnosis"
+                android:textColor="@color/rajah"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/endDiag"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reDiag"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/round_style5"
                 android:fontFamily="@font/monts_regular"
                 android:text="end"

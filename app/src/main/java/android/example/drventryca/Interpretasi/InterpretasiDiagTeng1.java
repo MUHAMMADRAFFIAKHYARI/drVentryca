@@ -35,7 +35,19 @@ public class InterpretasiDiagTeng1 {
 
 
         for (int i = 0; i < position; i++) {
+
             if (questionModels.get(0).isAnswer() == true &&
+                    questionModels.get(1).isAnswer() == true &&
+                    questionModels.get(2).isAnswer() == true &&
+                    questionModels.get(3).isAnswer() == true &&
+                    questionModels.get(4).isAnswer() == true &&
+                    questionModels.get(5).isAnswer() == true)
+            {
+                Log.d("diagnosis", "Segera periksakan diri anda ke dokter");
+                setDiagnosis("Segera periksakan diri anda ke dokter");
+            }
+
+            else if (questionModels.get(0).isAnswer() == true &&
                     questionModels.get(1).isAnswer() == true &&
                     questionModels.get(2).isAnswer() == true &&
                     questionModels.get(3).isAnswer() == false &&
@@ -58,7 +70,7 @@ public class InterpretasiDiagTeng1 {
             }
 
             else{
-                setDiagnosis("Belum Dapat diDiagnosis");
+                setDiagnosis("Belum Dapat di Diagnosa, silahkan periksakan diri anda ke dokter");
             }
         }
     };

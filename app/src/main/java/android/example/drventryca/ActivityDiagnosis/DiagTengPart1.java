@@ -143,7 +143,7 @@ public class DiagTengPart1 extends AppCompatActivity {
     }
 
     public void initializeDiagTengPart(){
-        String[] question = getResources().getStringArray(R.array.question_tenggorokan);
+        String[] question = getResources().getStringArray(R.array.question_tenggorokan_part1);
 
         questionModels.clear();
         for (int i =0; i <question.length;i++){

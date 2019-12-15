@@ -21,24 +21,16 @@ public class DiagTeng extends AppCompatActivity {
         setContentView(R.layout.activity_diag_teng);
         radioGroup_teng = (RadioGroup) findViewById(R.id.radiogroup_teng);
 
-        //Intent
-        Bundle bundle = getIntent().getExtras();
-
-        if(bundle != null){
-            String data = bundle.getString("data");
-        }
-
         radioGroup_teng.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (checkedId==R.id.radioButton_teng){
                     Intent intent = new Intent(DiagTeng.this, DiagTengPart1.class);
-                    String g2 = "tenggorokan"+"padat";
-                    intent.putExtra("data", g2);
                     startActivity(intent);
                 }
                 if (checkedId==R.id.radioButton_teng2){
-
+                    Intent intent = new Intent(DiagTeng.this, DiagTengPart2.class);
+                    startActivity(intent);
                 }
             }
         });
