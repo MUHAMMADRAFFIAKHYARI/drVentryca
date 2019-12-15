@@ -207,6 +207,7 @@
             android:background="@drawable/round_style5"
             android:fontFamily="@font/monts_regular"
             android:text="Register"
+            android:inputType="textEmailAddress"
             android:textColor="@color/rajah"
             android:textStyle="bold" />
 

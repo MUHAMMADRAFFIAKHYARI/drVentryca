@@ -31,7 +31,7 @@ public class ResultDiag extends AppCompatActivity {
         hasil = findViewById(R.id.textView6);
         goDisease = findViewById(R.id.goDisease);
         endDiag = findViewById(R.id.endDiag);
-        docDiag = findViewById(R.id.docDiag);
+        /*docDiag = findViewById(R.id.docDiag);*/
         reDiag = findViewById(R.id.reDiag);
 
         hasil.setAnimation(AnimationUtils.loadAnimation(this,R.anim.fade_scale));

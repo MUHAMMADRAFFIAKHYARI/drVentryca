@@ -100,7 +100,7 @@ public class DiseaseAdapter extends RecyclerView.Adapter<DiseaseAdapter.ViewHold
         }
         @Override
         public void onClick(View view){
-            DiseaseModel currentExpl = diseaseModel.get(getAdapterPosition());
+            DiseaseModel currentExpl = diseaseModelsFilt.get(getAdapterPosition());
 
             Intent explDisease = new Intent(mContext, DetailDisease.class);
             explDisease.putExtra("penjelasan", currentExpl.getExplan());
