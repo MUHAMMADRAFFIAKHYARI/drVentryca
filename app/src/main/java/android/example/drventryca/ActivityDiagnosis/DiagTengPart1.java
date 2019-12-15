@@ -1,7 +1,7 @@
 package android.example.drventryca.ActivityDiagnosis;
 
 import android.content.Intent;
-import android.example.drventryca.Adapter.DiagTeng1Adapter;
+import android.example.drventryca.Adapter.DiagTengAdapter;
 import android.example.drventryca.Model.QuestionModel;
 import android.example.drventryca.Interpretasi.InterpretasiDiagTeng1;
 import android.example.drventryca.R;
@@ -27,7 +27,7 @@ import java.util.Collections;
 public class DiagTengPart1 extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
-    private DiagTeng1Adapter mDiagTeng1Adapter;
+    private DiagTengAdapter mDiagTengAdapter;
     private ArrayList<QuestionModel> questionModels;
     private ArrayList<Integer> mJumlah;
     private ProgressBar mProgressBar;
@@ -39,7 +39,7 @@ public class DiagTengPart1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_diag_teng_part1);
+        setContentView(R.layout.activity_diag_teng_part);
 
         /*//Intent
         Bundle bundle = getIntent().getExtras();
@@ -65,10 +65,10 @@ public class DiagTengPart1 extends AppCompatActivity {
         helper.attachToRecyclerView(mRecyclerView);
 
         questionModels = new ArrayList<>();
-        mDiagTeng1Adapter = new DiagTeng1Adapter(questionModels, this);
-        mRecyclerView.setAdapter(mDiagTeng1Adapter);
+        mDiagTengAdapter = new DiagTengAdapter(questionModels, this);
+        mRecyclerView.setAdapter(mDiagTengAdapter);
 
-        mDiagTeng1Adapter.setOnItemClickListener(new DiagTeng1Adapter.OnItemClickListener() {
+        mDiagTengAdapter.setOnItemClickListener(new DiagTengAdapter.OnItemClickListener() {
             @Override
             public void onChoiceClick(final int position, final boolean answer) {
                 Handler handler = new Handler();
@@ -153,7 +153,7 @@ public class DiagTengPart1 extends AppCompatActivity {
         questionTengCounter.setText("Terisi " + 0 + " dari " + questionModels.size());
 
         mJumlah = new ArrayList<>(Collections.nCopies(questionModels.size(), 0));
-        mDiagTeng1Adapter.notifyDataSetChanged();
+        mDiagTengAdapter.notifyDataSetChanged();
 
     }
 }

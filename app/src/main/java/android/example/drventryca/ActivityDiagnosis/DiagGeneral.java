@@ -26,15 +26,14 @@ public class DiagGeneral extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (checkedId==R.id.radioButton){
                     Intent intent = new Intent(DiagGeneral.this, DiagTeng.class);
-                    String g2 = "tenggorokan";
-                    intent.putExtra("data", g2);
                     startActivity(intent);
                 }
                 if (checkedId==R.id.radioButton2){
 
                 }
                 if (checkedId==R.id.radioButton3){
-
+                    Intent intent = new Intent(DiagGeneral.this, DiagAn.class);
+                    startActivity(intent);
                 }
             }
         });
