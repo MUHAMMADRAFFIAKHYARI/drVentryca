@@ -1,6 +1,8 @@
-package android.example.drventryca.Activity;
+package android.example.drventryca.ActivityDiagnosis;
 
 import android.content.Intent;
+import android.example.drventryca.Activity.DataDisease;
+import android.example.drventryca.Activity.Landing;
 import android.example.drventryca.R;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -37,6 +39,7 @@ public class ResultDiag extends AppCompatActivity {
         endDiag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), Landing.class));
                 finish();
             }
         });

@@ -7,7 +7,7 @@ import android.example.drventryca.Activity.DataDisease;
 import android.example.drventryca.Activity.FaktaTips;
 import android.example.drventryca.Activity.HealthNews;
 import android.example.drventryca.R;
-import android.example.drventryca.Activity.ReadyDiag;
+import android.example.drventryca.ActivityDiagnosis.ReadyDiag;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;

@@ -1,7 +1,7 @@
 package android.example.drventryca.Adapter;
 
 import android.content.Context;
-import android.example.drventryca.Model.DiagTengModel;
+import android.example.drventryca.Model.QuestionModel;
 import android.example.drventryca.R;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class DiagTeng1Adapter extends RecyclerView.Adapter<DiagTeng1Adapter.ViewHolder>{
     private Context context;
-    private ArrayList<DiagTengModel> diagTengModels;
+    private ArrayList<QuestionModel> questionModels;
     private OnItemClickListener mListener;
 
     public interface OnItemClickListener {
@@ -27,9 +27,9 @@ public class DiagTeng1Adapter extends RecyclerView.Adapter<DiagTeng1Adapter.View
         mListener = listener;
     }
 
-    public DiagTeng1Adapter(ArrayList<DiagTengModel> diagTengModels, Context context) {
+    public DiagTeng1Adapter(ArrayList<QuestionModel> questionModels, Context context) {
         this.context = context;
-        this.diagTengModels = diagTengModels;
+        this.questionModels = questionModels;
     }
 
     @NonNull
@@ -42,13 +42,13 @@ public class DiagTeng1Adapter extends RecyclerView.Adapter<DiagTeng1Adapter.View
 
     @Override
     public void onBindViewHolder(@NonNull DiagTeng1Adapter.ViewHolder holder, int position) {
-        DiagTengModel currentDiagTeng = diagTengModels.get(position);
+        QuestionModel currentDiagTeng = questionModels.get(position);
         holder.bindTo(currentDiagTeng);
     }
 
     @Override
     public int getItemCount() {
-        return diagTengModels.size();
+        return questionModels.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -92,7 +92,7 @@ public class DiagTeng1Adapter extends RecyclerView.Adapter<DiagTeng1Adapter.View
             });
         }
 
-        void bindTo(DiagTengModel currentDiagTeng){
+        void bindTo(QuestionModel currentDiagTeng){
             question_Teng.setText(currentDiagTeng.getQuestion_teng());
         }
 

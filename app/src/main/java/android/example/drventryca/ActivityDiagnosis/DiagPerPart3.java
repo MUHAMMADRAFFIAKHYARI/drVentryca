@@ -1,4 +1,4 @@
-package android.example.drventryca.Activity;
+package android.example.drventryca.ActivityDiagnosis;
 
 import android.example.drventryca.R;
 import android.os.Bundle;

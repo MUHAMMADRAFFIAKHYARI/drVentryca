@@ -11,24 +11,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.DiagPerPart3"
+        <activity android:name=".ActivityDiagnosis.DiagPerPart3"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Activity.DiagPerPart2"
+        <activity android:name=".ActivityDiagnosis.DiagPerPart2"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Activity.DiagAnus"
+        <activity android:name=".ActivityDiagnosis.DiagAnus"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Activity.DiagPerPart1"
+        <activity android:name=".ActivityDiagnosis.DiagPerPart1"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Activity.DiagPer"
+        <activity android:name=".ActivityDiagnosis.DiagPer"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Activity.DiagTengPart2"
+        <activity android:name=".ActivityDiagnosis.DiagTengPart2"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Activity.DiagTengPart1"
+        <activity android:name=".ActivityDiagnosis.DiagTengPart1"
             android:noHistory="true"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Activity.DiagTeng"
+        <activity android:name=".ActivityDiagnosis.DiagTeng"
             android:screenOrientation="portrait" />
-        <activity android:name=".Activity.DiagGeneral"
+        <activity android:name=".ActivityDiagnosis.DiagGeneral"
             android:screenOrientation="portrait"/>
         <activity
             android:name=".Activity.BMICalc"
@@ -40,7 +40,7 @@
             android:theme="@style/AppTheme4"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Activity.ResultDiag"
+            android:name=".ActivityDiagnosis.ResultDiag"
             android:noHistory="true" android:screenOrientation="portrait"/>
         <activity
             android:name=".Activity.HealthNews"
@@ -51,7 +51,7 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".Activity.FaktaTips"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Activity.ReadyDiag" android:screenOrientation="portrait"/>
+        <activity android:name=".ActivityDiagnosis.ReadyDiag" android:screenOrientation="portrait"/>
         <activity android:name=".Activity.DataDisease" android:screenOrientation="portrait"/>
         <activity
             android:name=".Activity.Landing"

@@ -1,15 +1,15 @@
-package android.example.drventryca.Activity;
+package android.example.drventryca.ActivityDiagnosis;
 
 import android.example.drventryca.R;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class DiagTengPart2 extends AppCompatActivity {
+public class DiagPer extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_diag_teng_part2);
+        setContentView(R.layout.activity_diag_per);
     }
 }

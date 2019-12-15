@@ -1,9 +1,9 @@
-package android.example.drventryca.Activity;
+package android.example.drventryca.ActivityDiagnosis;
 
 import android.content.Intent;
 import android.example.drventryca.Adapter.DiagTeng1Adapter;
-import android.example.drventryca.Model.DiagTengModel;
-import android.example.drventryca.Model.InterpretasiDiagTeng;
+import android.example.drventryca.Model.QuestionModel;
+import android.example.drventryca.Interpretasi.InterpretasiDiagTeng1;
 import android.example.drventryca.R;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -28,7 +28,7 @@ public class DiagTengPart1 extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private DiagTeng1Adapter mDiagTeng1Adapter;
-    private ArrayList<DiagTengModel> diagTengModels;
+    private ArrayList<QuestionModel> questionModels;
     private ArrayList<Integer> mJumlah;
     private ProgressBar mProgressBar;
     private TextView questionTengCounter;
@@ -64,8 +64,8 @@ public class DiagTengPart1 extends AppCompatActivity {
         PagerSnapHelper helper = new PagerSnapHelper() ;
         helper.attachToRecyclerView(mRecyclerView);
 
-        diagTengModels = new ArrayList<>();
-        mDiagTeng1Adapter = new DiagTeng1Adapter(diagTengModels, this);
+        questionModels = new ArrayList<>();
+        mDiagTeng1Adapter = new DiagTeng1Adapter(questionModels, this);
         mRecyclerView.setAdapter(mDiagTeng1Adapter);
 
         mDiagTeng1Adapter.setOnItemClickListener(new DiagTeng1Adapter.OnItemClickListener() {
@@ -79,13 +79,13 @@ public class DiagTengPart1 extends AppCompatActivity {
                             mJumlah.set(position, 1);
                         }
 
-                        diagTengModels.get(position).setAnswer(answer);
+                        questionModels.get(position).setAnswer(answer);
                         Log.d("answer", position + String.valueOf(answer));
 
 
                         progres = Collections.frequency(mJumlah, 1);
                         mProgressBar.setProgress(progres);
-                        questionTengCounter.setText("Terisi " + progres + " dari " + diagTengModels.size());
+                        questionTengCounter.setText("Terisi " + progres + " dari " + questionModels.size());
 
                         if (position < mJumlah.size() - 1 ){
                                 if (mJumlah.get(position + 1) == 0 ){
@@ -108,22 +108,22 @@ public class DiagTengPart1 extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                if (progres == diagTengModels.size()){
+                if (progres == questionModels.size()){
 
 
-                    InterpretasiDiagTeng interpretasiDiagTeng = new InterpretasiDiagTeng(diagTengModels);
-                    interpretasiDiagTeng.spk();
+                    InterpretasiDiagTeng1 interpretasiDiagTeng1 = new InterpretasiDiagTeng1(questionModels);
+                    interpretasiDiagTeng1.spk();
                     Intent intent = new Intent(DiagTengPart1.this, ResultDiag.class);
-                    intent.putExtra("key", interpretasiDiagTeng.getDiagnosis());
+                    intent.putExtra("key", interpretasiDiagTeng1.getDiagnosis());
 
 
                     startActivity(intent);
 
-                    int postion = diagTengModels.size();
+                    int postion = questionModels.size();
 
                     for (int i = 0; i < postion; i++){
 
-                        Log.d("answer 1", i + String.valueOf(diagTengModels.get(i).isAnswer()));
+                        Log.d("answer 1", i + String.valueOf(questionModels.get(i).isAnswer()));
                     }
 
 
@@ -139,21 +139,20 @@ public class DiagTengPart1 extends AppCompatActivity {
             }
         });
 
-        mRecyclerView.setItemViewCacheSize(diagTengModels.size());
+        mRecyclerView.setItemViewCacheSize(questionModels.size());
     }
 
     public void initializeDiagTengPart(){
         String[] question = getResources().getStringArray(R.array.question_tenggorokan);
-        String[] jawaban = {};
 
-        diagTengModels.clear();
+        questionModels.clear();
         for (int i =0; i <question.length;i++){
-            diagTengModels.add(new DiagTengModel(question[i]));
+            questionModels.add(new QuestionModel(question[i]));
         }
-        mProgressBar.setMax(diagTengModels.size());
-        questionTengCounter.setText("Terisi " + 0 + " dari " + diagTengModels.size());
+        mProgressBar.setMax(questionModels.size());
+        questionTengCounter.setText("Terisi " + 0 + " dari " + questionModels.size());
 
-        mJumlah = new ArrayList<>(Collections.nCopies(diagTengModels.size(), 0));
+        mJumlah = new ArrayList<>(Collections.nCopies(questionModels.size(), 0));
         mDiagTeng1Adapter.notifyDataSetChanged();
 
     }

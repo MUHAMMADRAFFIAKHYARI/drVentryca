@@ -1,4 +1,4 @@
-package android.example.drventryca.Activity;
+package android.example.drventryca.ActivityDiagnosis;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,33 +11,29 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.RadioGroup;
 
-public class DiagTeng extends AppCompatActivity {
+public class DiagGeneral extends AppCompatActivity {
 
-    RadioGroup radioGroup_teng;
+    RadioGroup radioGroup_general;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_diag_teng);
-        radioGroup_teng = (RadioGroup) findViewById(R.id.radiogroup_teng);
+        setContentView(R.layout.activity_diag_general);
+        radioGroup_general = (RadioGroup) findViewById(R.id.radiogroup_general);
 
-        //Intent
-        Bundle bundle = getIntent().getExtras();
-
-        if(bundle != null){
-            String data = bundle.getString("data");
-        }
-
-        radioGroup_teng.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        radioGroup_general.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId==R.id.radioButton_teng){
-                    Intent intent = new Intent(DiagTeng.this, DiagTengPart1.class);
-                    String g2 = "tenggorokan"+"padat";
+                if (checkedId==R.id.radioButton){
+                    Intent intent = new Intent(DiagGeneral.this, DiagTeng.class);
+                    String g2 = "tenggorokan";
                     intent.putExtra("data", g2);
                     startActivity(intent);
                 }
-                if (checkedId==R.id.radioButton_teng2){
+                if (checkedId==R.id.radioButton2){
+
+                }
+                if (checkedId==R.id.radioButton3){
 
                 }
             }
