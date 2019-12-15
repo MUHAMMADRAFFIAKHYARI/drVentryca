@@ -11,45 +11,57 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.DiagPerPart3"></activity>
-        <activity android:name=".Activity.DiagPerPart2" />
-        <activity android:name=".Activity.DiagAnus" />
-        <activity android:name=".Activity.DiagPerPart1" />
-        <activity android:name=".Activity.DiagPer" />
-        <activity android:name=".Activity.DiagTengPart2" />
+        <activity android:name=".Activity.DiagPerPart3"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.DiagPerPart2"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.DiagAnus"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.DiagPerPart1"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.DiagPer"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.DiagTengPart2"
+            android:screenOrientation="portrait"/>
         <activity android:name=".Activity.DiagTengPart1"
-            android:noHistory="true"/>
+            android:noHistory="true"
+            android:screenOrientation="portrait"/>
         <activity android:name=".Activity.DiagTeng"
-            />
+            android:screenOrientation="portrait" />
         <activity android:name=".Activity.DiagGeneral"
-            />
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Activity.BMICalc"
-            android:theme="@style/slideToRight" />
+            android:theme="@style/slideToRight"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Activity.Login"
             android:noHistory="true"
-            android:theme="@style/AppTheme4" />
+            android:theme="@style/AppTheme4"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Activity.ResultDiag"
-            android:noHistory="true"
-            />
-
+            android:noHistory="true" android:screenOrientation="portrait"/>
         <activity
             android:name=".Activity.HealthNews"
             android:noHistory="true"
-            android:theme="@style/toLeft" />
-        <activity android:name=".Activity.DetailDisease" />
-        <activity android:name=".Activity.FaktaTips" />
-        <activity android:name=".Activity.ReadyDiag" />
-        <activity android:name=".Activity.DataDisease" />
+            android:theme="@style/toLeft"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.DetailDisease"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.FaktaTips"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.ReadyDiag" android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.DataDisease" android:screenOrientation="portrait"/>
         <activity
             android:name=".Activity.Landing"
-            android:theme="@style/AppTheme3" />
+            android:theme="@style/AppTheme3"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Activity.SplashScreen"
             android:noHistory="true"
-            android:theme="@style/AppTheme4">
+            android:theme="@style/AppTheme4"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -59,13 +71,13 @@
         <activity
             android:name=".Activity.Register"
             android:noHistory="true"
-            android:theme="@style/AppTheme4" />
+            android:theme="@style/AppTheme4" android:screenOrientation="portrait"/>
         <activity
             android:name=".Activity.IntroduceSlide"
-            android:noHistory="true" />
+            android:noHistory="true" android:screenOrientation="portrait"/>
         <activity
             android:name=".Activity.GetStarted"
-            android:noHistory="true" />
+            android:noHistory="true" android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

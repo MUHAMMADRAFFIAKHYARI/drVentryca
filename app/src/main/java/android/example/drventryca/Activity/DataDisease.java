@@ -1,19 +1,22 @@
 package android.example.drventryca.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.example.drventryca.Adapter.DiseaseAdapter;
 import android.example.drventryca.Model.DiseaseModel;
 import android.example.drventryca.R;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.AnimationUtils;
+import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
@@ -23,11 +26,15 @@ public class DataDisease extends AppCompatActivity {
     private ArrayList<DiseaseModel> diseaseList;
     private DiseaseAdapter diseaseAdapter;
     private TextView title_fitur;
+    private EditText seacrhD;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_disease);
+
+        seacrhD =findViewById(R.id.searchDisease);
+
 
         title_fitur =findViewById(R.id.title_fitur);
         title_fitur.setAnimation(AnimationUtils.loadAnimation(this,R.anim.translate_y_show));
@@ -39,6 +46,24 @@ public class DataDisease extends AppCompatActivity {
         diseaseAdapter = new DiseaseAdapter(this, diseaseList);
         diseaseRecycler_.setAdapter(diseaseAdapter);
         initializeDiseaseList();
+
+        seacrhD.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                diseaseAdapter.getFilter().filter(s);
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
 
         removeNotifBar();
     }

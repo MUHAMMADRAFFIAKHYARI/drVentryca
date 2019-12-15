@@ -1,8 +1,5 @@
 package android.example.drventryca.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
-
 import android.content.Intent;
 import android.example.drventryca.Adapter.SliderAdapter;
 import android.example.drventryca.R;
@@ -16,6 +13,9 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 public class IntroduceSlide extends AppCompatActivity {
 
@@ -52,7 +52,7 @@ public class IntroduceSlide extends AppCompatActivity {
 
         addDotsIndicator(0);
 
-        relativeLayout.setBackgroundColor(getColor(R.color.rajah));
+        relativeLayout.setBackgroundColor(getColor(R.color.coral_reef));
 
         mSlideViewPager.addOnPageChangeListener(viewListener);
     }
@@ -93,7 +93,7 @@ public class IntroduceSlide extends AppCompatActivity {
                 skipButton.setEnabled(true);
 
                 nextButton.setText("Next");
-                relativeLayout.setBackgroundColor(getColor(R.color.rajah));
+                relativeLayout.setBackgroundColor(getColor(R.color.coral_reef));
 
             } else if(i == mDots.length-1){
                 nextButton.setEnabled(true);
@@ -102,7 +102,7 @@ public class IntroduceSlide extends AppCompatActivity {
                 nextButton.setText("Got It");
                 skipButton.setText("");
 
-                relativeLayout.setBackgroundColor(getColor(R.color.coral_reef));
+                relativeLayout.setBackgroundColor(getColor(R.color.medium_torquise));
             }else{
                 nextButton.setEnabled(true);
                 skipButton.setEnabled(true);
