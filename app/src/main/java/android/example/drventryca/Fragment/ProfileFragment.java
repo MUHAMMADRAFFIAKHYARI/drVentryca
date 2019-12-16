@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.example.drventryca.Activity.Login;
-import android.example.drventryca.Activity.Setting;
 import android.example.drventryca.R;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -68,42 +67,10 @@ public class ProfileFragment extends Fragment {
         goSett.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), Setting.class));
-            }
-        });
-
-
-        imgLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
                 final Dialog dialog = new Dialog(getContext());
-                dialog.setContentView(R.layout.logout_dialog);
+                dialog.setContentView(R.layout.akun_opsi);
                 dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 dialog.show();
-
-                btn_no = dialog.findViewById(R.id.bt_no);
-                btn_yes = dialog.findViewById(R.id.bt_yes);
-
-                btn_yes.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        auth.signOut();
-                        Intent i = new Intent(getActivity().getApplicationContext(), Login.class);
-                        SharedPreferences pref = getActivity().getApplication().getSharedPreferences("myyPrefs", Context.MODE_PRIVATE);
-                        SharedPreferences.Editor editor = pref.edit();
-                        editor.putBoolean("isIntro0pened", false);
-                        editor.commit();
-                        startActivity(i);
-                    }
-                });
-
-                btn_no.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        dialog.dismiss();
-                    }
-                });
-
             }
         });
 
