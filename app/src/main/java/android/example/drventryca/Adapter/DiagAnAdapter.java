@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
@@ -19,6 +20,7 @@ public class DiagAnAdapter extends RecyclerView.Adapter<DiagAnAdapter.ViewHolder
     private Context context;
     private ArrayList<QuestionModel> questionModels;
     private OnItemClickListener mListener;
+    RadioButton radioYa, radioTidak;
 
     public interface OnItemClickListener {
         void onChoiceClick(int position, boolean answer);
@@ -54,8 +56,9 @@ public class DiagAnAdapter extends RecyclerView.Adapter<DiagAnAdapter.ViewHolder
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView question_An;
         private RadioGroup mRadioGroup;
+        RadioButton radioYa, radioTidak;
 
-        public ViewHolder(View itemView, final OnItemClickListener listener) {
+        public ViewHolder(final View itemView, final OnItemClickListener listener) {
             super(itemView);
             question_An = itemView.findViewById(R.id.questionAn);
             mRadioGroup = itemView.findViewById(R.id.radioPilihan);
@@ -70,6 +73,8 @@ public class DiagAnAdapter extends RecyclerView.Adapter<DiagAnAdapter.ViewHolder
             mRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(RadioGroup group, int id) {
+                    radioYa = itemView.findViewById(R.id.radioYa);
+                    radioTidak = itemView.findViewById(R.id.radioTidak);
                     if ((id == R.id.radioYa)) {
 
                         Log.d("__DebugRadio", "Ya Checked");
@@ -77,6 +82,8 @@ public class DiagAnAdapter extends RecyclerView.Adapter<DiagAnAdapter.ViewHolder
                             int position = getAdapterPosition();
                             if (position != RecyclerView.NO_POSITION) {
                                 listener.onChoiceClick(position, true);
+                                radioYa.setBackgroundResource(R.drawable.button1_2_style);
+                                radioTidak.setBackgroundResource(R.drawable.round_style8);
                             }
                         }
                     }else if (id == R.id.radioTidak){
@@ -85,6 +92,8 @@ public class DiagAnAdapter extends RecyclerView.Adapter<DiagAnAdapter.ViewHolder
                             int position = getAdapterPosition();
                             if (position != RecyclerView.NO_POSITION){
                                 listener.onChoiceClick(position, false);
+                                radioTidak.setBackgroundResource(R.drawable.round_style8_2);
+                                radioYa.setBackgroundResource(R.drawable.button1_style);
                             }
                         }
                     }

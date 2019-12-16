@@ -105,8 +105,7 @@ public class InterpretasiDiagPer1_1 {
             )
             {
                 Log.d("diagnosis", "Gastritis Akut Erosif");
-                setDiagnosis("Gastritis Akut Erosif (Jika anda seorang pecandu alkohol, " +
-                        "kemungkinan terkena penyakit ini semakin tinggi");
+                setDiagnosis("Gastritis Akut Erosif");
             }
 
             else if (questionModels.get(0).isAnswer() == false &&
@@ -168,5 +167,5 @@ public class InterpretasiDiagPer1_1 {
                 setDiagnosis("Belum Dapat di Diagnosa, silahkan periksakan diri anda ke dokter");
             }
         }
-    };
+    }
 }

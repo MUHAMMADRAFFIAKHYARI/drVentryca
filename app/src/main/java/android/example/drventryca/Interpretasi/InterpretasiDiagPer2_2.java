@@ -65,7 +65,6 @@ public class InterpretasiDiagPer2_2 {
                     questionModels.get(3).isAnswer() == false &&
                     questionModels.get(4).isAnswer() == false &&
                     questionModels.get(5).isAnswer() == true
-
             )
             {
                 Log.d("diagnosis", "Kolitis Hemoragika");
@@ -77,5 +76,5 @@ public class InterpretasiDiagPer2_2 {
                 setDiagnosis("Belum Dapat di Diagnosa, silahkan periksakan diri anda ke dokter");
             }
         }
-    };
+    }
 }

@@ -94,7 +94,7 @@ public class InterpretasiDiagTeng2 {
             )
             {
                 Log.d("diagnosis", "GERD (Gastroesofageal\nRefluks\nDisorder)");
-                setDiagnosis("Gastroesofageal Refluks Disorder");
+                setDiagnosis("Gastroesofageal\nRefluks Disorder");
             }
 
             else if (questionModels.get(0).isAnswer() == false &&
@@ -117,5 +117,5 @@ public class InterpretasiDiagTeng2 {
                 setDiagnosis("Belum Dapat di Diagnosa, silahkan periksakan diri anda ke dokter");
             }
         }
-    };
+    }
 }
