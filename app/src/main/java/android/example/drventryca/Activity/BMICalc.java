@@ -44,7 +44,6 @@ public class BMICalc extends AppCompatActivity {
         circleResult = findViewById(R.id.circleResult);
         showtable = findViewById(R.id.showImt);
 
-
         showtable.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -155,6 +154,7 @@ public class BMICalc extends AppCompatActivity {
         }
 
     }
+    //hilih
 
     void hideNotif(){
         Window window = getWindow();
@@ -165,7 +165,7 @@ public class BMICalc extends AppCompatActivity {
     }
 
     public void toTable() {
-        final Dialog dialog = new Dialog(BMICalc.this);
+        final Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.imt_table);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.show();
