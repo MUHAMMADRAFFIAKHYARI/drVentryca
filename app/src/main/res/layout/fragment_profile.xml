@@ -48,7 +48,7 @@
         android:layout_height="30dp"
         android:layout_alignStart="@+id/nama_depan"
         android:layout_marginLeft="-30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         app:srcCompat="@drawable/settings_flat" />
 
     <RelativeLayout
@@ -201,23 +201,23 @@
                 android:layout_marginTop="40dp"
                 app:srcCompat="@drawable/icon_gender" />
 
-                <ImageView
-                    android:id="@+id/imageView11"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_below="@+id/imageView4"
-                    android:layout_alignStart="@+id/imageView4"
-                    android:layout_marginTop="10dp"
-                    app:srcCompat="@drawable/icon_blood" />
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/imageView4"
+            android:layout_alignStart="@+id/imageView4"
+            android:layout_marginTop="15dp"
+            app:srcCompat="@drawable/icon_blood" />
 
-                <ImageView
-                    android:id="@+id/imageView12"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_below="@+id/imageView11"
-                    android:layout_alignStart="@+id/imageView11"
-                    android:layout_marginTop="10dp"
-                    app:srcCompat="@drawable/icon_age" />
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/imageView11"
+            android:layout_alignStart="@+id/imageView11"
+            android:layout_marginTop="15dp"
+            app:srcCompat="@drawable/icon_age" />
 
         <ImageView
                 android:id="@+id/imageView6"
@@ -256,14 +256,14 @@
                 android:layout_marginTop="170dp"
                 app:srcCompat="@drawable/round" />
 
-            <ImageView
-                android:id="@+id/round4"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_alignTop="@+id/mb"
-                android:layout_marginLeft="45dp"
-                android:layout_marginTop="215dp"
-                app:srcCompat="@drawable/round" />
+        <ImageView
+            android:id="@+id/round4"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@+id/mb"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="225dp"
+            app:srcCompat="@drawable/round" />
 
         </RelativeLayout>
     <!--</ScrollView>-->

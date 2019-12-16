@@ -26,8 +26,9 @@ public class BMICalc extends AppCompatActivity {
 
     TextView result, status, showtable;
     private EditText massa, tinggi;
-    private Button calculate, okImt;
+    private Button calculate;
     private View circleResult;
+    Button okimt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +42,7 @@ public class BMICalc extends AppCompatActivity {
         tinggi = findViewById(R.id.tinggiInput);
         calculate = findViewById(R.id.calculate);
         circleResult = findViewById(R.id.circleResult);
-        showtable = (TextView) findViewById(R.id.showImt);
+        showtable = findViewById(R.id.showImt);
 
 
         showtable.setOnClickListener(new View.OnClickListener() {
@@ -169,12 +170,12 @@ public class BMICalc extends AppCompatActivity {
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.show();
 
-        /*okImt = findViewById(R.id.okImt);
-        okImt.setOnClickListener(new View.OnClickListener() {
+        okimt = findViewById(R.id.okimt);
+        okimt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog.dismiss();
             }
-        });*/
+        });
     }
 }
