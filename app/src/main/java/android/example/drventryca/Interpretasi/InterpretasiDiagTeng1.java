@@ -123,7 +123,8 @@ public class InterpretasiDiagTeng1 {
         } else if (hitungP2 > hitungP1) {
             setDiagnosis("Strikus Esofagus\n\n Anda memenuhi " + hitungP2 + " dari 5 gejala yang ada");
         } else if (hitungP2 == hitungP1 && hitungP2!=2) {
-            setDiagnosis("Kami kekurangan data untuk mendiognosa keluhan anda, silahkan masukkan gejala dengan benar ^-^");
+            setDiagnosis("Esofagitis, Anda memenuhi " + hitungP1 + " dari 5 gejala yang ada \n" + "Strikus Esofagus, anda memenuhi " +
+                    hitungP2 + " dari 5 gejala yang ada");
         }
         else {
             setDiagnosis("Kami kekurangan data untuk mendiognosa keluhan anda, silahkan masukkan gejala dengan benar ^-^");
