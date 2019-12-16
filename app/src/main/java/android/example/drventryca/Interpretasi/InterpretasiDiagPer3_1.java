@@ -335,6 +335,11 @@ public class InterpretasiDiagPer3_1 {
                     "Diarre Kronik, anda memenuhi " + hitungP4 + " dari 8 gejala yang ada");
         }
 
+        else if (hitungP3 == hitungP5 && hitungP3!=3) {
+            setDiagnosis("Diarre Akut, anda memenuhi " + hitungP3 + " dari 7 gejala yang ada \n" +
+                    "Divertikulosis, anda memenuhi " + hitungP5 + " dari 5 gejala yang ada");
+        }
+
         else if (hitungP4 == hitungP5 && hitungP4!=3) {
             setDiagnosis("Diarre Kronik, anda memenuhi " + hitungP4 + " dari 8 gejala yang ada \n" +
                     "Divertikulosis, anda memenuhi " + hitungP5 + " dari 5 gejala yang ada");
