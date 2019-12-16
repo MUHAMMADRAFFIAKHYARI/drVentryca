@@ -13,11 +13,11 @@ public class InterpretasiDiagTeng1 {
     private DiseaseModel diseaseModel;
 
 
-    public InterpretasiDiagTeng1(ArrayList<QuestionModel> questionModels){
+    public InterpretasiDiagTeng1(ArrayList<QuestionModel> questionModels) {
         this.questionModels = questionModels;
     }
 
-    public ArrayList<QuestionModel> getQuestionModels(){
+    public ArrayList<QuestionModel> getQuestionModels() {
         return questionModels;
     }
 
@@ -29,14 +29,17 @@ public class InterpretasiDiagTeng1 {
         return diagnosis;
     }
 
-    public void spk()
-    {
+
+    private int hitungP1 = 2;
+    private int hitungP2 = 2;
+
+
+    public void spk() {
         position = questionModels.size();
 
 
-        for (int i = 0; i < position; i++) {
 
-            if (questionModels.get(0).isAnswer() == true &&
+            /*if (questionModels.get(0).isAnswer() == true &&
                     questionModels.get(1).isAnswer() == true &&
                     questionModels.get(2).isAnswer() == true &&
                     questionModels.get(3).isAnswer() == true &&
@@ -45,9 +48,9 @@ public class InterpretasiDiagTeng1 {
             {
                 Log.d("diagnosis", "Segera periksakan diri anda ke dokter");
                 setDiagnosis("Segera periksakan diri anda ke dokter");
-            }
+            }*/
 
-            else if (questionModels.get(0).isAnswer() == true &&
+            /*else if (questionModels.get(0).isAnswer() == true &&
                     questionModels.get(1).isAnswer() == true &&
                     questionModels.get(2).isAnswer() == true &&
                     questionModels.get(3).isAnswer() == false &&
@@ -67,11 +70,64 @@ public class InterpretasiDiagTeng1 {
             {
                 Log.d("diagnosis", "Strikus Esofagus");
                 setDiagnosis("Strikus Esofagus");
-            }
+            }*/
 
-            else{
-                setDiagnosis("Belum Dapat di Diagnosa, silahkan periksakan diri anda ke dokter");
-            }
+        if (questionModels.get(0).isAnswer() == true) {
+            hitungP1 += 1;
+            Log.d("hitung p1", String.valueOf(hitungP1));
+            Log.d("hitung p2", String.valueOf(hitungP2));
         }
-    };
+
+        if (questionModels.get(1).isAnswer() == true) {
+            hitungP1 += 1;
+            Log.d("hitung p1", String.valueOf(hitungP1));
+            Log.d("hitung p2", String.valueOf(hitungP2));
+        }
+
+        if (questionModels.get(2).isAnswer() == true) {
+            hitungP1 += 1;
+            Log.d("hitung p1", String.valueOf(hitungP1));
+            Log.d("hitung p2", String.valueOf(hitungP2));
+
+        }
+
+        if (questionModels.get(3).isAnswer() == true) {
+            hitungP2 += 1;
+            Log.d("hitung p1", String.valueOf(hitungP1));
+            Log.d("hitung p2", String.valueOf(hitungP2));
+
+        }
+
+        if (questionModels.get(4).isAnswer() == true) {
+            hitungP2 += 1;
+            Log.d("hitung p1", String.valueOf(hitungP1));
+            Log.d("hitung p2", String.valueOf(hitungP2));
+
+        }
+
+        if (questionModels.get(5).isAnswer() == true) {
+            hitungP2 += 1;
+            Log.d("hitung p1", String.valueOf(hitungP1));
+            Log.d("hitung p2", String.valueOf(hitungP2));
+
+        } else {
+            setDiagnosis("Belum Dapat di Diagnosa, silahkan periksakan diri anda ke dokter");
+        }
+
+
+        Log.d("hitung p1 akhir", String.valueOf(hitungP1));
+        Log.d("hitung p2 akhir", String.valueOf(hitungP2));
+
+        if (hitungP1 > hitungP2) {
+            setDiagnosis("Esofagitis\n Anda memenuhi " + hitungP1 + " dari 5 gejala yang ada");
+        } else if (hitungP2 > hitungP1) {
+            setDiagnosis("Strikus Esofagus\n Anda memenuhi " + hitungP2 + " dari 5 gejala yang ada");
+        } else if (hitungP2 == hitungP1) {
+            setDiagnosis("Kami kekurangan data untuk mendiognosa keluhan anda, silahkan masukkan gejala dengan benar ^-^");
+        }
+        else {
+            setDiagnosis("Kami kekurangan data untuk mendiognosa keluhan anda, silahkan masukkan gejala dengan benar ^-^");
+        }
+
+    }
 }
