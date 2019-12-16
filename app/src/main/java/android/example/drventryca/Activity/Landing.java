@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.example.drventryca.Fragment.AboutFragment;
 import android.example.drventryca.Fragment.HomeFragment;
 import android.example.drventryca.Fragment.ProfileFragment;
@@ -18,8 +19,13 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Landing extends AppCompatActivity {
+
+    FirebaseUser user;
+    FirebaseAuth auth;
 
     float x1,x2,y1,y2;
 
@@ -33,6 +39,10 @@ public class Landing extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
         changeStatusBarColor();
+
+        auth = FirebaseAuth.getInstance();
+        user = auth.getCurrentUser();
+
     }
 
 

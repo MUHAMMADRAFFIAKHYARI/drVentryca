@@ -6,6 +6,7 @@ import android.example.drventryca.Activity.BMICalc;
 import android.example.drventryca.Activity.DataDisease;
 import android.example.drventryca.Activity.FaktaTips;
 import android.example.drventryca.Activity.HealthNews;
+import android.example.drventryca.Activity.Landing;
 import android.example.drventryca.R;
 import android.example.drventryca.ActivityDiagnosis.ReadyDiag;
 import android.net.Uri;
@@ -70,6 +71,7 @@ public class HomeFragment extends Fragment {
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
 
+       
 
         reference = FirebaseDatabase.getInstance().getReference().child("User:").child(user.getUid());
 
