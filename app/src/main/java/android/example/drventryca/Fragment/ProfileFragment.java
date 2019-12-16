@@ -114,6 +114,7 @@ public class ProfileFragment extends Fragment {
                         SharedPreferences.Editor editor = pref.edit();
                         editor.putBoolean("isIntro0pened", false);
                         editor.commit();
+                        getActivity().onBackPressed();
                         startActivity(i);
                     }
                 });
@@ -154,9 +155,9 @@ public class ProfileFragment extends Fragment {
                 gender.setText(jenisKelamin);
 
 
-                if (gender.getText() == "Laki-Laki"){
+                if (gender.getText().toString().equals("Laki-Laki")){
                     image_user.setImageResource(R.drawable.casual_boy);
-                }else if (gender.getText() == "Perempuan"){
+                }else if (gender.getText().toString().equals("Perempuan")){
                     image_user.setImageResource(R.drawable.casual_girl);
                 }
 
