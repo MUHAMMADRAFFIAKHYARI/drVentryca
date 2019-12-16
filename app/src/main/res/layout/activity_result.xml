@@ -52,8 +52,9 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="220dp"
-                android:layout_marginEnd="25dp"
-                android:background="@drawable/circle" />
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/circle"
+                android:visibility="invisible" />
 
             <TextView
                 android:id="@+id/textdiag"
@@ -94,7 +95,7 @@
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="164dp"
-                android:layout_height="74dp"
+                android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/circleResult2"
                 android:layout_alignTop="@+id/circleResult2"
                 android:layout_alignEnd="@+id/circleResult2"
@@ -111,11 +112,11 @@
                 android:id="@+id/goDisease"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/reDiag"
+                android:layout_below="@+id/circleResult2"
                 android:layout_alignEnd="@+id/textdiag"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="34dp"
                 android:layout_marginEnd="-11dp"
-                android:layout_marginBottom="64dp"
                 android:fontFamily="@font/monts_regular"
                 android:text="Lihat di Data Penyakit"
                 android:textColor="@color/dark_cerulian"
