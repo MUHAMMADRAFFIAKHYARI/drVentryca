@@ -492,6 +492,52 @@
         <item>Apakah feses anda berwarna kehitaman ?</item>
     </string-array>
 
+    <string-array name="question_per1_2_1">
+        <item>Apakah perut anda terasa kembung ?</item>
+        <item>Apakah perut bagian kanan anda terasa nyeri ?</item>
+        <item>Apakah sakit saat buang air besar ?</item>
+        <item>Apakah feses anda cair ?</item>
+        <item>Apakah feses anda keras ?</item>
+        <item>Apakah feses anda berlendir ?</item>
+    </string-array>
+
+    <string-array name="question_per1_2_2_1">
+        <item>Apakah perut bagian kiri bawah anda terasa nyeri ?</item>
+        <item>Apakah perut bagian kanan bawah anda terasa nyeri ?</item>
+        <item>Apakah anda sulit buang air besar ?</item>
+        <item>Apakah feses berlendir ?</item>
+        <item>Apakah feses berdarah ?</item>
+    </string-array>
+
+    <string-array name="question_per1_2_2_2_1">
+        <item>Apakah anda demam tiba - tiba ?</item>
+        <item>Apakah lidah terlihat putih kotor ?</item>
+        <item>Apakah tekanan darah anda rendah ?</item>
+        <item>Apakah anda sering buang air besar ?</item>
+        <item>Apakah feses anda cair ?</item>
+    </string-array>
+
+    <string-array name="question_per1_2_2_2_2_1">
+        <item>Apakah anda merasakan nyeri tumpul pada perut anda  ?</item>
+        <item>Apakah wajah anda menjadi kebiruan ?</item>
+        <item>Apakah anda Anemia ?</item>
+        <item>Apakah feses anda berwarna kemerahan ?</item>
+    </string-array>
+
+    <string-array name="question_per1_2_2_2_2_2">
+        <item>Apakah nyeri terasa menjalar sampai ke punggung ?</item>
+        <item>Apakah terasa nyeri pada perut bagian bawah ?</item>
+        <item>Apakah perut anda terasa panas ?</item>
+        <item>Apakah setelah makan perut menjadi perih ?</item>
+        <item>Apakah perut terasa kosong dan lapar ?</item>
+        <item>Apakah anda mengalami muntah darah ?</item>
+        <item>Apakah anda mengalami muntah seperti disengaja ?</item>
+        <item>Apakah anda mengalami muntah menyembur keluar melalui hidung dan mulut ?</item>
+        <item>Apakah makan dapat mengurangi nyeri ?</item>
+        <item>Apakah anda mengalami sakit kepala ?</item>
+        <item>Apakah berat badan anda menjadi menurun ?</item>
+    </string-array>
+
     <string-array name="question_per2_1">
         <item>Apakah pada saat perut ditekan terasa nyeri ?</item>
         <item>Apakah anda mengalami nyeri tulang ?</item>

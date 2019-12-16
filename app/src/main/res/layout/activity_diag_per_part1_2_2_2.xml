@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bleu_de_france"
+    android:orientation="vertical"
+    tools:context=".ActivityDiagnosis.DiagPerPart1_2_2">
+
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="-50dp"
+        android:fontFamily="@font/mosnt_bold"
+        android:gravity="center_horizontal"
+        android:text="PERUT"
+        android:textColor="@color/dark_cerulian"
+        android:textSize="18sp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="80dp"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="0dp"
+        app:contentPaddingLeft="50dp"
+        app:contentPaddingRight="50dp"
+        app:contentPaddingTop="50dp">
+
+        <TextView
+            android:id="@+id/question2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:layout_marginTop="-200dp"
+            android:fontFamily="@font/monts_regular"
+            android:foregroundGravity="center_vertical|center|center_horizontal"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:lineSpacingExtra="4sp"
+            android:text="Apakah tubuh anda terasa lemah ?"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radiogroup_per1_2_2_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="250dp">
+
+            <RadioButton
+                android:id="@+id/radioButton1_per1_2_2_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/monts_regular"
+                android:text="Ya"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/radioButton2_per1_2_2_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/monts_regular"
+                android:text="Tidak"
+                android:textSize="16sp" />
+
+        </RadioGroup>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

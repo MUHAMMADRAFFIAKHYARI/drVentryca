@@ -11,25 +11,25 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.RadioGroup;
 
-public class DiagPerPart1_2 extends AppCompatActivity {
+public class DiagPerPart1_2_2_2_2 extends AppCompatActivity {
 
-    RadioGroup radioGroup_per1_2;
+    RadioGroup radioGroup_per1_2_2_2_2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_diag_per_part1_2);
-        radioGroup_per1_2 = (RadioGroup) findViewById(R.id.radiogroup_per1_2);
+        setContentView(R.layout.activity_diag_per_part1_2_2_2_2);
+        radioGroup_per1_2_2_2_2 = (RadioGroup) findViewById(R.id.radiogroup_per1_2_2_2_2);
 
-        radioGroup_per1_2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        radioGroup_per1_2_2_2_2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId==R.id.radioButton1_per1_2){
-                    Intent intent = new Intent(DiagPerPart1_2.this, DiagPerPart1_2_1.class);
+                if (checkedId==R.id.radioButton1_per1_2_2_2_2){
+                    Intent intent = new Intent(DiagPerPart1_2_2_2_2.this, DiagPerPart1_2_2_2_2_1.class);
                     startActivity(intent);
                 }
-                if (checkedId==R.id.radioButton2_per1_2){
-                    Intent intent = new Intent(DiagPerPart1_2.this, DiagPerPart1_2_2.class);
+                if (checkedId==R.id.radioButton2_per1_2_2_2_2){
+                    Intent intent = new Intent(DiagPerPart1_2_2_2_2.this, DiagPerPart1_2_2_2_2_2.class);
                     startActivity(intent);
                 }
             }
