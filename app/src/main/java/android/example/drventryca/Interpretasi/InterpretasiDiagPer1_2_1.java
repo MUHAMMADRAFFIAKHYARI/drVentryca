@@ -12,6 +12,10 @@ public class InterpretasiDiagPer1_2_1 {
     private int position;
     private DiseaseModel diseaseModel;
 
+    private int hitungP1 = 3;
+    private int hitungP2 = 3;
+    private int hitungP3 = 3;
+
 
     public InterpretasiDiagPer1_2_1(ArrayList<QuestionModel> questionModels){
         this.questionModels = questionModels;
@@ -34,7 +38,7 @@ public class InterpretasiDiagPer1_2_1 {
         position = questionModels.size();
 
 
-        for (int i = 0; i < position; i++) {
+        /*for (int i = 0; i < position; i++) {
 
             if (questionModels.get(0).isAnswer() == true &&
                     questionModels.get(1).isAnswer() == true &&
@@ -83,6 +87,89 @@ public class InterpretasiDiagPer1_2_1 {
             else{
                 setDiagnosis("Belum Dapat di Diagnosa, silahkan periksakan diri anda ke dokter");
             }
+        }*/
+
+        if (questionModels.get(0).isAnswer() == true) {
+            hitungP1 += 1;
+            hitungP2 += 1;
+            Log.d("hitung p1", String.valueOf(hitungP1));
+            Log.d("hitung p2", String.valueOf(hitungP2));
+            Log.d("hitung p2", String.valueOf(hitungP3));
         }
+
+        if (questionModels.get(1).isAnswer() == true) {
+            hitungP3 += 1;
+            Log.d("hitung p1", String.valueOf(hitungP1));
+            Log.d("hitung p2", String.valueOf(hitungP2));
+            Log.d("hitung p2", String.valueOf(hitungP3));
+        }
+
+        if (questionModels.get(2).isAnswer() == true) {
+            hitungP2 += 1;
+            Log.d("hitung p1", String.valueOf(hitungP1));
+            Log.d("hitung p2", String.valueOf(hitungP2));
+            Log.d("hitung p2", String.valueOf(hitungP3));
+
+        }
+
+        if (questionModels.get(3).isAnswer() == true) {
+            hitungP1 += 1;
+            Log.d("hitung p1", String.valueOf(hitungP1));
+            Log.d("hitung p2", String.valueOf(hitungP2));
+            Log.d("hitung p2", String.valueOf(hitungP3));
+
+        }
+
+        if (questionModels.get(4).isAnswer() == true) {
+            hitungP2 += 1;
+            Log.d("hitung p1", String.valueOf(hitungP1));
+            Log.d("hitung p2", String.valueOf(hitungP2));
+            Log.d("hitung p2", String.valueOf(hitungP3));
+
+        }
+
+        if (questionModels.get(5).isAnswer() == true) {
+            hitungP3 += 1;
+            Log.d("hitung p1", String.valueOf(hitungP1));
+            Log.d("hitung p2", String.valueOf(hitungP2));
+            Log.d("hitung p2", String.valueOf(hitungP3));
+
+        }
+
+        else {
+            setDiagnosis("Belum Dapat di Diagnosa, silahkan periksakan diri anda ke dokter");
+        }
+
+        Log.d("hitung p1 akhir", String.valueOf(hitungP1));
+        Log.d("hitung p2 akhir", String.valueOf(hitungP2));
+        Log.d("hitung p3 akhir", String.valueOf(hitungP3));
+
+        if (hitungP1 > hitungP2 && hitungP1 > hitungP3) {
+            setDiagnosis("Gastroentritis\n\n Anda memenuhi " + hitungP1 + " dari 5 gejala yang ada");
+        }
+        else if (hitungP2 > hitungP1 && hitungP2 > hitungP3) {
+            setDiagnosis("Heus\n\n Anda memenuhi " + hitungP2 + " dari 6 gejala yang ada");
+        }
+        else if (hitungP3 > hitungP1 && hitungP3 > hitungP2) {
+            setDiagnosis("Crohn\n\n Anda memenuhi " + hitungP3 + " dari 5 gejala yang ada");
+        }
+        else if (hitungP1 == hitungP2 && hitungP1!=3) {
+            setDiagnosis("Gastroentritis, anda memenuhi " + hitungP1 + " dari 5 gejala yang ada \n" +
+                    "Heus, anda memenuhi " + hitungP2 + " dari 6 gejala yang ada");
+        }
+
+        else if (hitungP1 == hitungP3 && hitungP1!=3) {
+            setDiagnosis("Gastroentritis, anda memenuhi " + hitungP1 + " dari 5 gejala yang ada \n" +
+                    "Crohn, anda memenuhi " + hitungP3 + " dari 5 gejala yang ada");
+        }
+
+        else if (hitungP2 == hitungP3 && hitungP1!=3) {
+            setDiagnosis("Heus, anda memenuhi " + hitungP2 + " dari 6 gejala yang ada \n" +
+                    "Crohn, anda memenuhi " + hitungP3 + " dari 5 gejala yang ada");
+        }
+        else {
+            setDiagnosis("Kami kekurangan data untuk mendiognosa keluhan anda, silahkan masukkan gejala dengan benar ^-^");
+        }
+
     };
 }

@@ -167,7 +167,7 @@ public class InterpretasiDiagPer2_1 {
 
         Log.d("hitung p1 akhir", String.valueOf(hitungP1));
         Log.d("hitung p2 akhir", String.valueOf(hitungP2));
-        Log.d("hitung p3 akhir", String.valueOf(hitungP2));
+        Log.d("hitung p3 akhir", String.valueOf(hitungP3));
 
         if (hitungP1 > hitungP2 && hitungP1 > hitungP3) {
             setDiagnosis("Duodenitis\n\n Anda memenuhi " + hitungP1 + " dari 6 gejala yang ada");
@@ -176,7 +176,7 @@ public class InterpretasiDiagPer2_1 {
             setDiagnosis("Karsinonia Lambung\n\n Anda memenuhi " + hitungP2 + " dari 5 gejala yang ada");
         }
         else if (hitungP3 > hitungP1 && hitungP3 > hitungP2) {
-            setDiagnosis("Kolitis Crohn\n\n Anda memenuhi " + hitungP2 + " dari 6 gejala yang ada");
+            setDiagnosis("Kolitis Crohn\n\n Anda memenuhi " + hitungP3 + " dari 6 gejala yang ada");
         }
         else if (hitungP1 == hitungP2 && hitungP1!=3) {
             setDiagnosis("Duodenitis, anda memenuhi " + hitungP1 + " dari 6 gejala yang ada \n" +
