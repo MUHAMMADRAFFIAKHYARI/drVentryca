@@ -28,7 +28,6 @@ public class BMICalc extends AppCompatActivity {
     private EditText massa, tinggi;
     private Button calculate;
     private View circleResult;
-    Button okimt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -154,7 +153,6 @@ public class BMICalc extends AppCompatActivity {
         }
 
     }
-    //hilih
 
     void hideNotif(){
         Window window = getWindow();
@@ -170,8 +168,8 @@ public class BMICalc extends AppCompatActivity {
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.show();
 
-        okimt = findViewById(R.id.okimt);
-        okimt.setOnClickListener(new View.OnClickListener() {
+        Button exitimt = dialog.findViewById(R.id.exit_imt);
+        exitimt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog.dismiss();
