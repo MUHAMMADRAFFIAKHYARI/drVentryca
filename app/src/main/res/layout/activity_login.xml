@@ -19,7 +19,7 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/bt_login"
+            android:layout_below="@+id/bt_save"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="210dp"
             android:fontFamily="@font/monts_regular"
@@ -53,10 +53,10 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/edt_password"
+            android:id="@+id/nambel_edit"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_below="@+id/edt_email"
+            android:layout_below="@+id/namdep_edit"
             android:layout_marginTop="15dp"
             android:background="@drawable/fill_text"
             android:ems="10"
@@ -68,7 +68,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/edt_email"
+            android:id="@+id/namdep_edit"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/goHome"
@@ -83,10 +83,10 @@
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/bt_login"
+            android:id="@+id/bt_save"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/edt_password"
+            android:layout_below="@+id/nambel_edit"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="88dp"
             android:background="@drawable/round_style2"

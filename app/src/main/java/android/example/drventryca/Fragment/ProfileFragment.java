@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.example.drventryca.Activity.Login;
+import android.example.drventryca.Activity.Setting;
 import android.example.drventryca.R;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -33,7 +34,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class ProfileFragment extends Fragment {
 
-    private ImageView image_user, imgLogout;
+    private ImageView image_user, imgLogout, round1, round2, round3, round4, goSett;
     TextView massa, tinggi, gender, goldar, age, namdep, nambel, textLogout;
     Button btn_yes, btn_no;
 
@@ -58,6 +59,18 @@ public class ProfileFragment extends Fragment {
         nambel = view.findViewById(R.id.nama_belakang);
         imgLogout = view.findViewById(R.id.imgLogout);
         textLogout =view.findViewById(R.id.textLogout);
+        round1 = view.findViewById(R.id.round1);
+        round2 = view.findViewById(R.id.round2);
+        round3 = view.findViewById(R.id.round3);
+        round4 = view.findViewById(R.id.round4);
+        goSett = view.findViewById(R.id.goSett);
+
+        goSett.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), Setting.class));
+            }
+        });
 
 
         imgLogout.setOnClickListener(new View.OnClickListener() {
@@ -208,8 +221,10 @@ public class ProfileFragment extends Fragment {
         age.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.right_slide_in));
         namdep.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.left_slide_in_smooth));
         nambel.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.right_slide_in_smooth));
-
-
+        round1.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.left_slide_in_smooth_round));
+        round2.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.left_slide_in_smooth_round));
+        round3.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.left_slide_in_smooth_round));
+        round4.setAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.left_slide_in_smooth_round));
 
         return view;
     }

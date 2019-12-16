@@ -11,85 +11,117 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivityDiagnosis.DiagPerPart3_2"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ActivityDiagnosis.DiagPerPart3_1"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ActivityDiagnosis.DiagPerPart3"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ActivityDiagnosis.DiagPerPart2_2"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ActivityDiagnosis.DiagPerPart2_1"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ActivityDiagnosis.DiagPerPart2"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ActivityDiagnosis.DiagAn"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ActivityDiagnosis.DiagPerPart1_2_2_2_2_2"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ActivityDiagnosis.DiagPerPart1_2_2_2_2_1"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ActivityDiagnosis.DiagPerPart1_2_2_2_2"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ActivityDiagnosis.DiagPerPart1_2_2_2_1"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ActivityDiagnosis.DiagPerPart1_2_2_2"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ActivityDiagnosis.DiagPerPart1_2_2_1"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ActivityDiagnosis.DiagPerPart1_2_2"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ActivityDiagnosis.DiagPerPart1_2_1"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ActivityDiagnosis.DiagPerPart1_2"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ActivityDiagnosis.DiagPerPart1_1"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ActivityDiagnosis.DiagPerPart1"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ActivityDiagnosis.DiagPer"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ActivityDiagnosis.DiagTengPart2"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ActivityDiagnosis.DiagTengPart1"
-            android:noHistory="true"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ActivityDiagnosis.DiagTeng"
+        <activity android:name=".Activity.Setting"></activity>
+        <activity android:name=".Activity.EditUser" />
+        <activity
+            android:name=".ActivityDiagnosis.DiagPerPart3_2"
             android:screenOrientation="portrait" />
-        <activity android:name=".ActivityDiagnosis.DiagGeneral"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ActivityDiagnosis.DiagPerPart3_1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityDiagnosis.DiagPerPart3"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityDiagnosis.DiagPerPart2_2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityDiagnosis.DiagPerPart2_1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityDiagnosis.DiagPerPart2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityDiagnosis.DiagAn"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityDiagnosis.DiagPerPart1_2_2_2_2_2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityDiagnosis.DiagPerPart1_2_2_2_2_1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityDiagnosis.DiagPerPart1_2_2_2_2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityDiagnosis.DiagPerPart1_2_2_2_1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityDiagnosis.DiagPerPart1_2_2_2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityDiagnosis.DiagPerPart1_2_2_1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityDiagnosis.DiagPerPart1_2_2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityDiagnosis.DiagPerPart1_2_1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityDiagnosis.DiagPerPart1_2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityDiagnosis.DiagPerPart1_1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityDiagnosis.DiagPerPart1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityDiagnosis.DiagPer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityDiagnosis.DiagTengPart2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityDiagnosis.DiagTengPart1"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityDiagnosis.DiagTeng"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityDiagnosis.DiagGeneral"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.BMICalc"
-            android:theme="@style/slideToRight"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/slideToRight" />
         <activity
             android:name=".Activity.Login"
             android:noHistory="true"
-            android:theme="@style/AppTheme4"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme4" />
         <activity
             android:name=".ActivityDiagnosis.ResultDiag"
-            android:noHistory="true" android:screenOrientation="portrait"/>
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.HealthNews"
             android:noHistory="true"
-            android:theme="@style/toLeft"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Activity.DetailDisease"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Activity.FaktaTips"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ActivityDiagnosis.ReadyDiag" android:screenOrientation="portrait"/>
-        <activity android:name=".Activity.DataDisease" android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/toLeft" />
+        <activity
+            android:name=".Activity.DetailDisease"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.FaktaTips"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityDiagnosis.ReadyDiag"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.DataDisease"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.Landing"
-            android:theme="@style/AppTheme3"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme3" />
         <activity
             android:name=".Activity.SplashScreen"
             android:noHistory="true"
-            android:theme="@style/AppTheme4"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme4">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -99,13 +131,16 @@
         <activity
             android:name=".Activity.Register"
             android:noHistory="true"
-            android:theme="@style/AppTheme4" android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme4" />
         <activity
             android:name=".Activity.IntroduceSlide"
-            android:noHistory="true" android:screenOrientation="portrait"/>
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.GetStarted"
-            android:noHistory="true" android:screenOrientation="portrait"/>
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

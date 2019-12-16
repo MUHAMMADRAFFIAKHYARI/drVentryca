@@ -42,11 +42,20 @@
         android:textSize="24sp"
         android:textStyle="bold" />
 
-        <RelativeLayout
+    <ImageView
+        android:id="@+id/goSett"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/nama_depan"
+        android:layout_marginLeft="-30dp"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/settings_flat" />
+
+    <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
+        <TextView
                 android:id="@+id/mb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -242,20 +251,47 @@
             <ImageView
                 android:id="@+id/imageView6"
                 android:layout_width="wrap_content"
-                android:layout_height="400dp"
+                android:layout_height="350dp"
                 android:layout_alignTop="@+id/mb"
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="-60dp"
+                android:layout_marginTop="-20dp"
                 android:layout_marginBottom="-10dp"
                 app:srcCompat="@drawable/line" />
 
             <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:id="@+id/round1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_alignTop="@+id/mb"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="15dp"
+                app:srcCompat="@drawable/round" />
+
+            <ImageView
+                android:id="@+id/round2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignTop="@+id/mb"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="120dp"
+                app:srcCompat="@drawable/round" />
+
+            <ImageView
+                android:id="@+id/round3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignTop="@+id/mb"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="170dp"
+                app:srcCompat="@drawable/round" />
+
+            <ImageView
+                android:id="@+id/round4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignTop="@+id/mb"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="215dp"
                 app:srcCompat="@drawable/round" />
 
         </RelativeLayout>
