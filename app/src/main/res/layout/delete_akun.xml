@@ -18,7 +18,7 @@
             android:paddingRight="20dp">
 
             <Button
-                android:id="@+id/bt_no"
+                android:id="@+id/bt_delete_no"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -30,9 +30,10 @@
                 android:textColor="@color/dark_cerulian" />
 
             <Button
+                android:id="@+id/bt_delete_yes"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/bt_no"
+                android:layout_alignTop="@+id/bt_delete_no"
                 android:layout_alignParentEnd="true"
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="0dp"
@@ -50,7 +51,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="40dp"
             android:fontFamily="@font/monts_regular"
-            android:text="Apa anda yakin?"
+            android:text="Apa anda yakin ingin menghapus akun?"
             android:textAlignment="center"
             android:textSize="16sp" />
 

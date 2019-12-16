@@ -1,8 +1,10 @@
 package android.example.drventryca.Fragment;
 
 import android.animation.ValueAnimator;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.example.drventryca.Activity.EditUser;
@@ -19,11 +21,14 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -159,7 +164,36 @@ public class ProfileFragment extends Fragment {
                 deleteAkun.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        startActivity(new Intent(getContext(), EditUser.class));
+                        dialog.setContentView(R.layout.delete_akun);
+                        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                        dialog.show();
+
+                        btn_yes = dialog.findViewById(R.id.bt_delete_yes);
+                        btn_no = dialog.findViewById(R.id.bt_delete_no);
+
+                        btn_yes.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                user.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        Intent intent = new Intent(getActivity().getApplicationContext(),Login.class);
+                                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                        startActivity(intent);
+                                    }
+                                });
+                            }
+                        });
+
+                        btn_no.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                dialog.dismiss();
+
+                            }
+                        });
+
 
                     }
                 });
@@ -171,7 +205,7 @@ public class ProfileFragment extends Fragment {
                         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                         dialog.show();
 
-                        btn_no = dialog.findViewById(R.id.bt_no);
+                        btn_no = dialog.findViewById(R.id.bt_delete_no);
                         btn_yes = dialog.findViewById(R.id.bt_yes);
 
                         btn_yes.setOnClickListener(new View.OnClickListener() {
