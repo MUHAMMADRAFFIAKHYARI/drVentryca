@@ -45,7 +45,7 @@
             android:foregroundGravity="center_vertical|center|center_horizontal"
             android:gravity="center|center_horizontal|center_vertical"
             android:lineSpacingExtra="4sp"
-            android:text="Apakah nyeri yang anda rasakan seperti ditusuk-tusuk ?"
+            android:text="Apakah anda sering buang air besar ?"
             android:textAlignment="center"
             android:textSize="18sp"
             android:textStyle="bold" />
