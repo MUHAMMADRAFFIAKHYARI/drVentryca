@@ -6,6 +6,8 @@ import android.example.drventryca.R;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
@@ -86,7 +88,7 @@ public class BMICalc extends AppCompatActivity {
             Snackbar.make(findViewById(R.id.calculate), "Kedua isian tidak boleh kosong", Snackbar.LENGTH_LONG).show();
 
         } else{
-            float mass, height, result_;
+            final float mass, height, result_;
 
             mass = Float.valueOf(massa_);
             height = Float.valueOf(tinggi_);
@@ -95,28 +97,18 @@ public class BMICalc extends AppCompatActivity {
             String yHasil = String.format("%.2f",result_);
             final float xHasil = Float.parseFloat(yHasil);
 
-            String status_;
+            final String status_;
 
             if(result_ < 18.5){
                 status_ = "Wah sepertinya kamu kekurangan massa tubuh";
-                circleResult.setBackgroundResource(R.drawable.circle_yellow);
-                circleResult.setTransitionAlpha(xHasil);
             } else if(result_>= 18.5 && result_ <= 24.9){
                 status_ = "Selamat massa tubuhmu sudah ideal :D";
-                circleResult.setBackgroundResource(R.drawable.circle_green);
-                circleResult.setTransitionAlpha(xHasil);
             } else if(result_ > 24.9 && result_ <= 29.9){
                 status_ = "Waduh kamu kelebihan berat badan, harus diet nih";
-                circleResult.setBackgroundResource(R.drawable.circle_red);
-                circleResult.setTransitionAlpha(xHasil);
             } else if (result_ > 29.9){
                 status_ = "Oh tidak!! kamu terkena obesitas, diperbaiki pola makannya ya";
-                circleResult.setBackgroundResource(R.drawable.circle_red);
-                circleResult.setTransitionAlpha(xHasil);
             } else{
                 status_ = "Oh tidak!! kamu terkena obesitas, diperbaiki pola makannya ya";
-                circleResult.setBackgroundResource(R.drawable.circle_red);
-                circleResult.setTransitionAlpha(xHasil);
             }status.setText(status_);
 
             AlphaAnimation animation1 = new AlphaAnimation(0f, 1.0f);
@@ -127,13 +119,38 @@ public class BMICalc extends AppCompatActivity {
 
             ValueAnimator animate_result;
             animate_result = ValueAnimator.ofFloat(0, xHasil);
-            animate_result.setDuration(2500);
+            animate_result.setDuration(2000);
             animate_result.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                 public void onAnimationUpdate(ValueAnimator animation) {
                     result.setText(animation.getAnimatedValue().toString());
-
                 }
             });animate_result.start();
+
+            int delay_result = Integer.valueOf((int) result_);
+            Log.d("delay_result","delay result0");
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    if(result_ < 18.5){
+                        circleResult.setBackgroundResource(R.drawable.circle_yellow);
+                        circleResult.setTransitionAlpha(xHasil);
+                    } else if(result_>= 18.5 && result_ <= 24.9){
+                        circleResult.setBackgroundResource(R.drawable.circle_green);
+                        circleResult.setTransitionAlpha(xHasil);
+                    } else if(result_ > 24.9 && result_ <= 29.9){
+                        circleResult.setBackgroundResource(R.drawable.circle_red);
+                        circleResult.setTransitionAlpha(xHasil);
+                    } else if (result_ > 29.9){
+                        circleResult.setBackgroundResource(R.drawable.circle_red);
+                        circleResult.setTransitionAlpha(xHasil);
+                    } else{
+                        circleResult.setBackgroundResource(R.drawable.circle_red);
+                        circleResult.setTransitionAlpha(xHasil);
+                    }
+                }
+            }, delay_result*50);
         }
 
     }
