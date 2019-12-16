@@ -27,14 +27,17 @@ public class DiagGeneral extends AppCompatActivity {
                 if (checkedId==R.id.radioButton){
                     Intent intent = new Intent(DiagGeneral.this, DiagTeng.class);
                     startActivity(intent);
+                    finish();
                 }
                 if (checkedId==R.id.radioButton2){
                     Intent intent = new Intent(DiagGeneral.this, DiagPer.class);
                     startActivity(intent);
+                    finish();
                 }
                 if (checkedId==R.id.radioButton3){
                     Intent intent = new Intent(DiagGeneral.this, DiagAn.class);
                     startActivity(intent);
+                    finish();
                 }
             }
         });

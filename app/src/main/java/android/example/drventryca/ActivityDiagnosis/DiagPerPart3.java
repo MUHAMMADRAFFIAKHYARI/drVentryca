@@ -27,10 +27,12 @@ public class DiagPerPart3 extends AppCompatActivity {
                 if (checkedId==R.id.radioButton1_per3){
                     Intent intent = new Intent(DiagPerPart3.this, DiagPerPart3_1.class);
                     startActivity(intent);
+                    finish();
                 }
                 if (checkedId==R.id.radioButton2_per3){
                     Intent intent = new Intent(DiagPerPart3.this, DiagPerPart3_2.class);
                     startActivity(intent);
+                    finish();
                 }
             }
         });

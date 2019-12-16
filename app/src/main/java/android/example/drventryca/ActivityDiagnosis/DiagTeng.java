@@ -27,10 +27,12 @@ public class DiagTeng extends AppCompatActivity {
                 if (checkedId==R.id.radioButton_teng){
                     Intent intent = new Intent(DiagTeng.this, DiagTengPart1.class);
                     startActivity(intent);
+                    finish();
                 }
                 if (checkedId==R.id.radioButton_teng2){
                     Intent intent = new Intent(DiagTeng.this, DiagTengPart2.class);
                     startActivity(intent);
+                    finish();
                 }
             }
         });

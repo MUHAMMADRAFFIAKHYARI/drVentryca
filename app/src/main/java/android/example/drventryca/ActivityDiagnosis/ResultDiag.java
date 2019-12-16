@@ -37,7 +37,6 @@ public class ResultDiag extends AppCompatActivity {
         endDiag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Landing.class));
                 finish();
             }
         });
@@ -45,7 +44,6 @@ public class ResultDiag extends AppCompatActivity {
         reDiag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), ReadyDiag.class));
                 finish();
             }
         });
