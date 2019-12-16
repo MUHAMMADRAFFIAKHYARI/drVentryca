@@ -11,7 +11,6 @@ import android.example.drventryca.R;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -58,7 +57,6 @@ public class ProfileFragment extends Fragment {
         age = view.findViewById(R.id.age);
         namdep = view.findViewById(R.id.nama_depan);
         nambel = view.findViewById(R.id.nama_belakang);
-        imgLogout = view.findViewById(R.id.imgLogout);
         keluar =view.findViewById(R.id.keluar);
         round1 = view.findViewById(R.id.round1);
         round2 = view.findViewById(R.id.round2);

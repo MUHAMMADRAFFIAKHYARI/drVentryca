@@ -48,6 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="50dp"
+            android:fontFamily="@font/monts_regular"
             android:text="Apakah anda yakin keluar aplikasi?"
             android:textAlignment="center"
             android:textSize="16sp" />
