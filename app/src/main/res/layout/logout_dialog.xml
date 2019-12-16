@@ -6,6 +6,8 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         app:cardCornerRadius="25dp">
 
         <RelativeLayout
@@ -47,9 +49,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="40dp"
             android:fontFamily="@font/monts_regular"
-            android:text="Apakah anda yakin keluar aplikasi?"
+            android:text="Apakah anda yakin\nkeluar aplikasi?"
             android:textAlignment="center"
             android:textSize="16sp" />
 

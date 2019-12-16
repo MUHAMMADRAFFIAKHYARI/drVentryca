@@ -1,10 +1,5 @@
 package android.example.drventryca.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Intent;
 import android.example.drventryca.Adapter.HealthNewsAdapter;
 import android.example.drventryca.Model.HealthNewsModel;
 import android.example.drventryca.Model.MySingleton;
@@ -15,6 +10,10 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -27,7 +26,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import java.lang.annotation.Documented;
 import java.util.ArrayList;
 
 public class HealthNews extends AppCompatActivity {
@@ -56,7 +54,7 @@ public class HealthNews extends AppCompatActivity {
     void initialHealthNews(){
         mQueue = MySingleton.getInstance(this).getRequestQueue();
 
-        String url ="https://www.mysitemapgenerator.com/shareapi/rss/1312171085";
+        String url ="https://www.mysitemapgenerator.com/shareapi/rss/1712171820";
         StringRequest mRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
