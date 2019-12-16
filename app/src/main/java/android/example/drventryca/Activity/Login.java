@@ -33,7 +33,7 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        btLogin = findViewById(R.id.bt_save);
+        btLogin = findViewById(R.id.bt_update);
         auth = FirebaseAuth.getInstance();
         etEmail = findViewById(R.id.namdep_edit);
         etPassword = findViewById(R.id.nambel_edit);

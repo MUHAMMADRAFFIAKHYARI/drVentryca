@@ -28,7 +28,7 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/editAkun"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -39,7 +39,7 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/textView14"
+            android:id="@+id/hapusAkun"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -50,6 +50,7 @@
             android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/keluar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"

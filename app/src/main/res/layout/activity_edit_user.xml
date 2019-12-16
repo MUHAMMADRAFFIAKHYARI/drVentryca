@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/imageView"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="170dp"
             android:fontFamily="@font/monts_black"
             android:text="UBAH DATA DIRI"
             android:textColor="@color/rajah"
@@ -38,34 +38,6 @@
             android:fontFamily="@font/monts_regular"
             android:hint="Nama Belakang"
             android:inputType="textPersonName"
-            android:paddingLeft="20dp"
-            android:textColorHint="#5C5C5C"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/edit_email"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@+id/edit_usia"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/fill_text"
-            android:fontFamily="@font/monts_regular"
-            android:hint="Email"
-            android:inputType="textPersonName"
-            android:paddingLeft="20dp"
-            android:textColorHint="#5C5C5C"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/edit_pass"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@+id/edit_email"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/fill_text"
-            android:fontFamily="@font/monts_regular"
-            android:hint="Password"
-            android:inputType="textPassword"
             android:paddingLeft="20dp"
             android:textColorHint="#5C5C5C"
             android:textSize="16sp" />
@@ -91,6 +63,7 @@
             android:layout_alignTop="@+id/edit_mass"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="0dp"
+            android:layout_marginEnd="2dp"
             android:background="@drawable/fill_text"
             android:ems="10"
             android:fontFamily="@font/monts_regular"
@@ -105,7 +78,7 @@
             android:id="@+id/edit_mass"
             android:layout_width="140dp"
             android:layout_height="50dp"
-            android:layout_below="@+id/spin_goldar"
+            android:layout_below="@+id/nambel_edit"
             android:layout_marginTop="15dp"
             android:background="@drawable/fill_text"
             android:ems="10"
@@ -132,28 +105,16 @@
             android:textColorHint="#5C5C5C"
             android:textSize="16sp" />
 
-        <Spinner
-            android:id="@+id/spin_goldar"
-            style="@style/SpinnerTextViewItem"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:layout_below="@+id/nambel_edit"
-            android:layout_marginTop="15dp"
-            android:clipToPadding="true"
-            android:paddingLeft="20dp"
-            android:popupBackground="@drawable/fill_text" />
-
         <Button
-            android:id="@+id/bt_save"
+            android:id="@+id/bt_update"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/edit_pass"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
+            android:layout_below="@+id/edit_usia"
+            android:layout_marginTop="82dp"
             android:background="@drawable/round_style5"
             android:fontFamily="@font/monts_regular"
             android:inputType="textEmailAddress"
-            android:text="SAVE"
+            android:text="UPDATE"
             android:textColor="@color/rajah"
             android:textStyle="bold" />
 

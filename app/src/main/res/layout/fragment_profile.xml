@@ -219,36 +219,7 @@
                     android:layout_marginTop="10dp"
                     app:srcCompat="@drawable/icon_age" />
 
-            <TextView
-                android:id="@+id/textLogout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/age"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="false"
-                android:layout_marginLeft="145dp"
-                android:layout_marginTop="80dp"
-                android:layout_marginEnd="164dp"
-                android:fontFamily="@font/monts_regular"
-                android:text="Logout"
-                android:textColor="@color/red_circle"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:id="@+id/imgLogout"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_alignTop="@+id/textLogout"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="145dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginEnd="0dp"
-                android:layout_toStartOf="@+id/textLogout"
-                app:srcCompat="@drawable/logout" />
-
-            <ImageView
+        <ImageView
                 android:id="@+id/imageView6"
                 android:layout_width="wrap_content"
                 android:layout_height="350dp"

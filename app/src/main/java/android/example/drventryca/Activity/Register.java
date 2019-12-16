@@ -70,7 +70,7 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
         etBeratBadan = findViewById(R.id.edit_mass);
         etTinggiBadan = findViewById(R.id.edit_ting);
         etUsia = findViewById(R.id.edit_usia);
-        btSubmitDB = findViewById(R.id.bt_save);
+        btSubmitDB = findViewById(R.id.bt_update);
         toHome = findViewById(R.id.goHome);
         etUserName = findViewById(R.id.edit_email);
         etPassword = findViewById(R.id.edit_pass);

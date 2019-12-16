@@ -5,11 +5,13 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.example.drventryca.Activity.EditUser;
 import android.example.drventryca.Activity.Login;
 import android.example.drventryca.R;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,7 +36,7 @@ import com.google.firebase.database.ValueEventListener;
 public class ProfileFragment extends Fragment {
 
     private ImageView image_user, imgLogout, round1, round2, round3, round4, goSett;
-    TextView massa, tinggi, gender, goldar, age, namdep, nambel, textLogout;
+    TextView massa, tinggi, gender, goldar, age, namdep, nambel, keluar, editAkun, deleteAkun;
     Button btn_yes, btn_no;
 
     DatabaseReference reference;
@@ -57,57 +59,14 @@ public class ProfileFragment extends Fragment {
         namdep = view.findViewById(R.id.nama_depan);
         nambel = view.findViewById(R.id.nama_belakang);
         imgLogout = view.findViewById(R.id.imgLogout);
-        textLogout =view.findViewById(R.id.textLogout);
+        keluar =view.findViewById(R.id.keluar);
         round1 = view.findViewById(R.id.round1);
         round2 = view.findViewById(R.id.round2);
         round3 = view.findViewById(R.id.round3);
         round4 = view.findViewById(R.id.round4);
         goSett = view.findViewById(R.id.goSett);
-
-        goSett.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final Dialog dialog = new Dialog(getContext());
-                dialog.setContentView(R.layout.akun_opsi);
-                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                dialog.show();
-            }
-        });
-
-        textLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final Dialog dialog = new Dialog(getContext());
-                dialog.setContentView(R.layout.logout_dialog);
-                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                dialog.show();
-
-                btn_no = dialog.findViewById(R.id.bt_no);
-                btn_yes = dialog.findViewById(R.id.bt_yes);
-
-                btn_yes.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        auth.signOut();
-                        Intent i = new Intent(getActivity().getApplicationContext(), Login.class);
-                        SharedPreferences pref = getActivity().getApplication().getSharedPreferences("myyPrefs", Context.MODE_PRIVATE);
-                        SharedPreferences.Editor editor = pref.edit();
-                        editor.putBoolean("isIntro0pened", false);
-                        editor.commit();
-                        getActivity().onBackPressed();
-                        startActivity(i);
-                    }
-                });
-
-                btn_no.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        dialog.dismiss();
-                    }
-                });
-
-            }
-        });
+        editAkun = view.findViewById(R.id.editAkun);
+        deleteAkun = view.findViewById(R.id.hapusAkun);
 
 
         auth = FirebaseAuth.getInstance();
@@ -177,6 +136,69 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
+            }
+        });
+
+        goSett.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Dialog dialog = new Dialog(getContext());
+                dialog.setContentView(R.layout.akun_opsi);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+
+                editAkun = dialog.findViewById(R.id.editAkun);
+                deleteAkun = dialog.findViewById(R.id.hapusAkun);
+                keluar = dialog.findViewById(R.id.keluar);
+
+                editAkun.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        startActivity(new Intent(getContext(), EditUser.class));
+                    }
+                });
+
+                deleteAkun.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        startActivity(new Intent(getContext(), EditUser.class));
+
+                    }
+                });
+                keluar.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        final Dialog dialog = new Dialog(getContext());
+                        dialog.setContentView(R.layout.logout_dialog);
+                        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                        dialog.show();
+
+                        btn_no = dialog.findViewById(R.id.bt_no);
+                        btn_yes = dialog.findViewById(R.id.bt_yes);
+
+                        btn_yes.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                auth.signOut();
+                                Intent i = new Intent(getActivity().getApplicationContext(), Login.class);
+                                SharedPreferences pref = getActivity().getApplication().getSharedPreferences("myyPrefs", Context.MODE_PRIVATE);
+                                SharedPreferences.Editor editor = pref.edit();
+                                editor.putBoolean("isIntro0pened", false);
+                                editor.commit();
+                                getActivity().onBackPressed();
+                                startActivity(i);
+                            }
+                        });
+
+                        btn_no.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                dialog.dismiss();
+                            }
+                        });
+
+                    }
+                });
             }
         });
 
