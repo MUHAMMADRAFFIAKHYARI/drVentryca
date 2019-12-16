@@ -217,13 +217,13 @@ public class InterpretasiDiagTeng2 {
         Log.d("hitung p4 akhir", String.valueOf(hitungP4));
 
         if (hitungP1 > hitungP2 && hitungP1 > hitungP3 && hitungP1 > hitungP4) {
-            setDiagnosis("Karsinoma Esofagus, anda memenuhi " + hitungP1 + " dari 6 gejala yang ada");
+            setDiagnosis("Karsinoma Esofagus\n\n Anda memenuhi " + hitungP1 + " dari 6 gejala yang ada");
         } else if (hitungP2 > hitungP1 && hitungP2 > hitungP3 && hitungP2 > hitungP4) {
-            setDiagnosis("Hernia Hiatus Esofagus, anda memenuhi " + hitungP2 + " dari 6 gejala yang ada");
+            setDiagnosis("Hernia Hiatus Esofagus\n\n Anda memenuhi " + hitungP2 + " dari 6 gejala yang ada");
         } else if (hitungP3 > hitungP1 && hitungP3 > hitungP2 && hitungP3 > hitungP4) {
-            setDiagnosis("GERD (Gastroesofageal Refluks Disorder), anda memenuhi " + hitungP3 + " dari 6 gejala yang ada");
+            setDiagnosis("GERD (Gastroesofageal Refluks Disorder)\n\n Anda memenuhi " + hitungP3 + " dari 6 gejala yang ada");
         } else if (hitungP4 > hitungP1 && hitungP4 > hitungP2 && hitungP4 > hitungP3) {
-            setDiagnosis("Akalasia, anda memenuhi " + hitungP4 + " dari 6 gejala yang ada");
+            setDiagnosis("Akalasia\n\n Anda memenuhi " + hitungP4 + " dari 6 gejala yang ada");
         }
         else if (hitungP1 == hitungP2 && hitungP1!=2) {
             setDiagnosis("Karsinoma Esofagus, anda memenuhi " + hitungP1 + " dari 6 gejala yang ada \n" +
@@ -242,6 +242,11 @@ public class InterpretasiDiagTeng2 {
         else if (hitungP2 == hitungP3 && hitungP2!=2) {
             setDiagnosis("Hernia Hiatus Esofagus, anda memenuhi " + hitungP2 + " dari 6 gejala yang ada \n" +
                     "GERD (Gastroesofageal Refluks Disorder), anda memenuhi " + hitungP3 + " dari 6 gejala yang ada");
+        }
+
+        else if (hitungP2 == hitungP4 && hitungP2!=2) {
+            setDiagnosis("Hernia Hiatus Esofagus, anda memenuhi " + hitungP2 + " dari 6 gejala yang ada \n" +
+                    "Akalasia, anda memenuhi " + hitungP4 + " dari 6 gejala yang ada");
         }
 
         else if (hitungP3 == hitungP4 && hitungP3!=2) {

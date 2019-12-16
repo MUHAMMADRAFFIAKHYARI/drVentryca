@@ -119,10 +119,10 @@ public class InterpretasiDiagTeng1 {
         Log.d("hitung p2 akhir", String.valueOf(hitungP2));
 
         if (hitungP1 > hitungP2) {
-            setDiagnosis("Esofagitis\n Anda memenuhi " + hitungP1 + " dari 5 gejala yang ada");
+            setDiagnosis("Esofagitis\n\n Anda memenuhi " + hitungP1 + " dari 5 gejala yang ada");
         } else if (hitungP2 > hitungP1) {
-            setDiagnosis("Strikus Esofagus\n Anda memenuhi " + hitungP2 + " dari 5 gejala yang ada");
-        } else if (hitungP2 == hitungP1) {
+            setDiagnosis("Strikus Esofagus\n\n Anda memenuhi " + hitungP2 + " dari 5 gejala yang ada");
+        } else if (hitungP2 == hitungP1 && hitungP2!=2) {
             setDiagnosis("Kami kekurangan data untuk mendiognosa keluhan anda, silahkan masukkan gejala dengan benar ^-^");
         }
         else {

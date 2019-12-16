@@ -81,7 +81,7 @@ public class HomeFragment extends Fragment {
                 String namaDepan = dataSnapshot.child("namaDepan").getValue().toString();
                 String namaBelakang = dataSnapshot.child("namaBelakang").getValue().toString();
                 etNama.setText(namaDepan.toUpperCase() +"!");
-                Toast.makeText(getContext(), "Selamat datang "+ namaDepan +" "+namaBelakang+"!", Toast.LENGTH_LONG).show();
+               /* Toast.makeText(getContext(), "Selamat datang "+ namaDepan +" "+namaBelakang+"!", Toast.LENGTH_LONG).show();*/
             }
 
             @Override
