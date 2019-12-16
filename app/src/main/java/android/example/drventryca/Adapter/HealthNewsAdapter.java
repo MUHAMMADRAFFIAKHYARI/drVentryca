@@ -2,8 +2,6 @@ package android.example.drventryca.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.example.drventryca.Activity.DetailDisease;
-import android.example.drventryca.Model.DiseaseModel;
 import android.example.drventryca.Model.HealthNewsModel;
 import android.example.drventryca.Model.MySingleton;
 import android.example.drventryca.R;
@@ -93,7 +91,7 @@ public class HealthNewsAdapter extends RecyclerView.Adapter<HealthNewsAdapter.Vi
         @Override
         public void onClick(View view){
 
-            String url = String.valueOf(desc);
+            String url = "https://lifestyle.okezone.com/health";
 
             // Parse the URI and create the intent.
             Uri webpage = Uri.parse(url);
