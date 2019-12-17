@@ -22,7 +22,6 @@
             android:layout_below="@+id/imageView"
             android:layout_marginTop="90dp"
             android:fontFamily="@font/monts_black"
-            android:onClick="skipHome"
             android:text="MASUKKAN\nDATA DIRI ANDA"
             android:textColor="@color/rajah"
             android:textSize="24sp"
@@ -39,6 +38,7 @@
             android:onClick="toLogin"
             android:text="Login"
             android:textColor="@color/dark_cerulian"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView
@@ -52,7 +52,7 @@
             android:fontFamily="@font/monts_regular"
             android:onClick="toLogin"
             android:text="Sudah punya akun?"
-            android:textStyle="bold" />
+            android:textSize="16sp" />
 
         <RadioGroup
             android:id="@+id/rg_kelamin"

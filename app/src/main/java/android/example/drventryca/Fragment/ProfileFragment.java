@@ -1,10 +1,8 @@
 package android.example.drventryca.Fragment;
 
 import android.animation.ValueAnimator;
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.example.drventryca.Activity.EditUser;
@@ -21,7 +19,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -158,6 +155,7 @@ public class ProfileFragment extends Fragment {
                     @Override
                     public void onClick(View view) {
                         startActivity(new Intent(getContext(), EditUser.class));
+                        getActivity().finish();
                     }
                 });
 
@@ -181,6 +179,7 @@ public class ProfileFragment extends Fragment {
                                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                         startActivity(intent);
+                                        getActivity().finish();
                                     }
                                 });
                             }

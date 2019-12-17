@@ -40,8 +40,9 @@ public class GetStarted extends AppCompatActivity {
     }
 
     public void getStarted(View view) {
-        Intent intent = new Intent(this, IntroduceSlide.class);
-        startActivity(intent);
+        startActivity(new Intent(this, IntroduceSlide.class));
+        finish();
+        finish();
     }
 
 

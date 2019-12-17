@@ -162,6 +162,7 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
                                                 public void onComplete(@NonNull Task<Void> task) {
                                                     Toast.makeText(getApplicationContext(), "Sekarang anda sudah terdaftar, silahkan lakukan login", Toast.LENGTH_LONG).show();
                                                     startActivity(new Intent(getApplicationContext(), Login.class));
+                                                    finish();
                                                 }
                                             });
                                 }
@@ -199,9 +200,6 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
 
     public void toLogin(View view){
         startActivity(new Intent(this, Login.class));
-    }
-
-    public void skipHome(View view) {
-        startActivity(new Intent(this,Landing.class));
+        finish();
     }
 }

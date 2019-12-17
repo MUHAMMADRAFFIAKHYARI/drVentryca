@@ -1,7 +1,6 @@
 package android.example.drventryca.Activity;
 
 import android.content.Intent;
-import android.example.drventryca.Fragment.ProfileFragment;
 import android.example.drventryca.R;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -11,7 +10,6 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -106,11 +104,10 @@ public class EditUser extends AppCompatActivity {
                 }
 
                 startActivity(new Intent(getApplicationContext(), Landing.class));
-
+                finish();
+                finish();
             }
         });
-
-
     }
 
 

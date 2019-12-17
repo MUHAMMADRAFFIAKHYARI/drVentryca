@@ -130,12 +130,10 @@
         </activity>
         <activity
             android:name=".Activity.Register"
-            android:noHistory="true"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme4" />
         <activity
             android:name=".Activity.IntroduceSlide"
-            android:noHistory="true"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.GetStarted"
