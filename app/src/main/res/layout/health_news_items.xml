@@ -63,7 +63,7 @@
                 android:layout_alignEnd="@+id/detailsText"
                 android:layout_marginStart="0dp"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="15dp"
                 android:fontFamily="@font/monts_thin"
