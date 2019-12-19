@@ -2,7 +2,6 @@ package android.example.drventryca.ActivityDiagnosis;
 
 import android.content.Intent;
 import android.example.drventryca.Activity.DataDisease;
-import android.example.drventryca.Activity.Landing;
 import android.example.drventryca.R;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -30,7 +29,7 @@ public class ResultDiag extends AppCompatActivity {
         goDisease = findViewById(R.id.goDisease);
         endDiag = findViewById(R.id.endDiag);
         /*docDiag = findViewById(R.id.docDiag);*/
-        reDiag = findViewById(R.id.reDiag);
+        /*reDiag = findViewById(R.id.reDiag);*/
 
         hasil.setAnimation(AnimationUtils.loadAnimation(this,R.anim.fade_scale));
 
@@ -41,12 +40,12 @@ public class ResultDiag extends AppCompatActivity {
             }
         });
 
-        reDiag.setOnClickListener(new View.OnClickListener() {
+       /* reDiag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
-        });
+        });*/
 
         goDisease.setOnClickListener(new View.OnClickListener() {
             @Override

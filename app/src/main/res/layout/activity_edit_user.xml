@@ -118,6 +118,19 @@
             android:textColor="@color/rajah"
             android:textStyle="bold" />
 
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bt_update"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/round_style5"
+            android:fontFamily="@font/monts_regular"
+            android:inputType="textEmailAddress"
+            android:text="CANCEL"
+            android:textColor="@color/rajah"
+            android:textStyle="bold" />
+
     </RelativeLayout>
 
 </LinearLayout>

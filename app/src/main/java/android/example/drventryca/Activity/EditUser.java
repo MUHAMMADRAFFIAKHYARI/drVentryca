@@ -30,7 +30,7 @@ public class EditUser extends AppCompatActivity {
 
     EditText edtNamaDepan, edtNamaBelakang, edtBeratBadan, edtTinggiBadan, edtUsia;
 
-    Button updateProfil;
+    Button updateProfil, btn_cancel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +48,7 @@ public class EditUser extends AppCompatActivity {
         edtTinggiBadan = findViewById(R.id.edit_ting);
         edtUsia = findViewById(R.id.edit_usia);
         updateProfil = findViewById(R.id.bt_update);
+        btn_cancel = findViewById(R.id.btn_cancel);
 
         //auth = FirebaseAuth.getInstance();
 
@@ -73,6 +74,14 @@ public class EditUser extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
+            }
+        });
+
+        btn_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getBaseContext(), Landing.class));
+                finish();
             }
         });
 
@@ -109,7 +118,6 @@ public class EditUser extends AppCompatActivity {
             }
         });
     }
-
 
 
     private void hideNotif(){

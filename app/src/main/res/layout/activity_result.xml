@@ -20,19 +20,6 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/reDiag"
-                android:layout_width="200dp"
-                android:layout_height="50dp"
-                android:layout_above="@+id/endDiag"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="11dp"
-                android:background="@drawable/round_style5"
-                android:fontFamily="@font/monts_regular"
-                android:text="Re-Diagnosis"
-                android:textColor="@color/rajah"
-                android:textStyle="bold" />
-
-            <Button
                 android:id="@+id/endDiag"
                 android:layout_width="200dp"
                 android:layout_height="50dp"
@@ -112,11 +99,11 @@
                 android:id="@+id/goDisease"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView6"
+                android:layout_above="@+id/endDiag"
                 android:layout_alignEnd="@+id/textdiag"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="121dp"
-                android:layout_marginEnd="-11dp"
+                android:layout_marginEnd="-18dp"
+                android:layout_marginBottom="77dp"
                 android:fontFamily="@font/monts_regular"
                 android:text="Lihat di Data Penyakit"
                 android:textColor="@color/dark_cerulian"
